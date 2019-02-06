@@ -56,6 +56,19 @@ body, html{
 
 h1, h2, h3, h4, h5, h6 { .reset; }
 
+.c-sheet_list {
+  [dir-Hero-Sheet-Ctrll] {
+    float: left;
+    margin-right: 20px;
+  }
+}
+@media only screen and (max-width: @desktop){ 
+  .c-sheet_list {
+    [dir-Hero-Sheet-Ctrll] { display: none; }
+    [dir-Hero-Sheet-Ctrll].selected { display: block; }
+  }
+}
+
 .c-main__container {
   position: relative;
   width: 100%;
