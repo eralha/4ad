@@ -124,7 +124,7 @@
 
           <select class="hidden_field" id="weaponSelectCBO" ng-model="weaponToAdd" ng-change="addItem('weapons', weaponToAdd);">
               <option value="{{emptyVal}}">Selecione</option>
-              <option value="{{$index}}" ng-repeat="item in dataWeapons">{{item.name}}</option>
+              <option value="{{$index}}" ng-repeat="item in dataWeapons">{{item.name}} {{item.value}}G</option>
             </select>
           <button type="button" class="btn btn--full btn-primary">Add Weapon</button>
       </div>
@@ -143,7 +143,7 @@
 
           <select class="hidden_field" id="armorSelectCBO" ng-model="armorToAdd" ng-change="addItem('armor', armorToAdd);">
                 <option value="{{emptyVal}}">Selecione</option>
-                <option value="{{$index}}" ng-repeat="item in dataArmor">{{item.name}}</option>
+                <option value="{{$index}}" ng-repeat="item in dataArmor">{{item.name}} {{item.value}}G</option>
               </select>
           <button type="button" class="btn btn--full btn-primary">Add Armor</button>
       </div>
@@ -167,7 +167,7 @@
           </div>
           <select class="hidden_field" id="itemSelectCBO" ng-model="itemToAdd" ng-change="addItem('items', itemToAdd);">
               <option value="{{emptyVal}}">Selecione</option>
-              <option value="{{$index}}" ng-repeat="item in dataItems">{{item.name}}</option>
+              <option value="{{$index}}" ng-repeat="item in dataItems">{{item.name}} {{item.value}}G</option>
             </select>
           <button type="button" class="btn btn--full btn-primary">Add Items</button>
       </div>
