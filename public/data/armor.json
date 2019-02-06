@@ -1,0 +1,117 @@
+[
+    {
+      "name": "light armor",
+      "image": "https://blzmedia-a.akamaihd.net/d3/icons/items/large/chestarmor_003_demonhunter_male.png",
+      "value": 30
+    },
+    {
+      "name": "heavy armor",
+      "image": "https://blzmedia-a.akamaihd.net/d3/icons/items/large/chestarmor_201_demonhunter_male.png",
+      "value": 50
+    },
+    {
+      "name": "shield",
+      "image": "https://blzmedia-a.akamaihd.net/d3/icons/items/large/shield_103_demonhunter_male.png",
+      "value": 30
+    },
+    {
+      "name": "light armor +1",
+      "image": "https://blzmedia-a.akamaihd.net/d3/icons/items/large/chestarmor_005_demonhunter_male.png",
+      "value": 1200
+    },
+    {
+      "name": "heavy armor +1",
+      "image": "https://blzmedia-a.akamaihd.net/d3/icons/items/large/chestarmor_102_demonhunter_male.png",
+      "value": 1200
+    },
+    {
+      "name": "shield +1",
+      "image": "https://blzmedia-a.akamaihd.net/d3/icons/items/large/shield_107_demonhunter_male.png",
+      "value": 1200
+    },
+    {
+      "name": "light armor +2",
+      "image": "https://blzmedia-a.akamaihd.net/d3/icons/items/large/unique_chest_001_x1_demonhunter_male.png",
+      "value": 2400
+    },
+    {
+      "name": "heavy armor +2",
+      "image": "https://blzmedia-a.akamaihd.net/d3/icons/items/large/chestarmor_208_demonhunter_male.png",
+      "value": 2400
+    },
+    {
+      "name": "shield +2",
+      "image": "https://blzmedia-a.akamaihd.net/d3/icons/items/large/unique_crushield_103_x1_demonhunter_male.png",
+      "value": 2400
+    },
+    {
+      "name": "-- Fiendish Foes --",
+      "image": "",
+      "value": ""
+    },
+    {
+      "name": "Magic light armor +1",
+      "image": "https://blzmedia-a.akamaihd.net/d3/icons/items/large/chestarmor_005_demonhunter_male.png",
+      "value": ""
+    },
+    {
+      "name": "Magic heavy armor +1",
+      "image": "https://blzmedia-a.akamaihd.net/d3/icons/items/large/chestarmor_102_demonhunter_male.png",
+      "value": ""
+    },
+    {
+      "name": "Magic shield +1",
+      "image": "https://blzmedia-a.akamaihd.net/d3/icons/items/large/shield_107_demonhunter_male.png",
+      "value": ""
+    },
+    {
+      "name": "Magic light armor +2",
+      "image": "https://blzmedia-a.akamaihd.net/d3/icons/items/large/unique_chest_027_1xx_demonhunter_male.png",
+      "value": ""
+    },
+    {
+      "name": "Magic heavy armor +2",
+      "image": "https://blzmedia-a.akamaihd.net/d3/icons/items/large/unique_chest_015_x1_demonhunter_male.png",
+      "value": ""
+    },
+    {
+      "name": "Magic shield +2",
+      "image": "https://blzmedia-a.akamaihd.net/d3/icons/items/large/unique_shield_012_1xx_demonhunter_male.png",
+      "value": ""
+    },
+    {
+      "name": "Magic Ring +1",
+      "image": "https://blzmedia-a.akamaihd.net/d3/icons/items/large/unique_ring_106_x1_demonhunter_male.png",
+      "value": ""
+    },
+    {
+      "name": "Magic Ring +2",
+      "image": "https://blzmedia-a.akamaihd.net/d3/icons/items/large/p6_unique_ring_04_demonhunter_male.png",
+      "value": ""
+    },
+    {
+      "name": "-- Abyss --",
+      "image": "",
+      "value": ""
+    },
+    {
+      "name": "Elfin Chain Mail light armor +1",
+      "image": "https://blzmedia-a.akamaihd.net/d3/icons/items/large/unique_chest_010_x1_demonhunter_male.png",
+      "value": ""
+    },
+    {
+      "name": "Suit of Enchanted Armor +1",
+      "image": "https://blzmedia-a.akamaihd.net/d3/icons/items/large/p6_necro_unique_chest_21_demonhunter_male.png",
+      "value": ""
+    },
+    {
+      "name": "Magic shield +1",
+      "image": "https://blzmedia-a.akamaihd.net/d3/icons/items/large/unique_shield_103_x1_demonhunter_male.png",
+      "value": ""
+    },
+    {
+      "name": "Ring of Defense +1",
+      "image": "https://blzmedia-a.akamaihd.net/d3/icons/items/large/ring_11_demonhunter_male.png",
+      "value": ""
+    }
+  ]

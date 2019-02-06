@@ -1,0 +1,383 @@
+@import "_normalize.less";
+@import "remixins.less";
+
+@import "_utils.less";
+@import "_grid.less";
+@import "_icons.less";
+@import "_config.less";
+
+/*CSS NAMESPACES
+
+Component:         c-  c-card c-checklist
+Layout module:     l-  l-grid l-container
+Helpers:           h-  h-show h-hide
+States:            is- has-  is-visible has-loaded
+JavaScript hooks:  js- js-tab-switcher
+
+*/
+
+
+/* styles */
+body, html{
+  font-size: 16px;
+  background-color: #fff;
+}
+.main { width: 100%; }
+.wrapper {
+  width: 450px;
+  .m_center;
+}
+@media only screen and (max-width: 1199px){ 
+  .wrapper { width: 100%; }
+}
+@media only screen and (max-width: @desktop){ 
+  .wrapper { width: 100%; }
+}
+@media only screen and (max-width: @ipadPortrait){ 
+  .wrapper { width: 100%; }
+}
+@media only screen and (max-width: @mobile){ 
+  .wrapper--interior .container_12 > .grid_3,
+  .wrapper--interior .container_12 > .grid_9 { width: @grid_12 !important; }
+}
+
+.visible_on_mobile { display: none; }
+.visible_on_ipadportrait { display: none; }
+@media only screen and (max-width: @ipadPortrait){
+  .visible_on_ipadportrait { display: block; }
+  .full_on_ipadportrait { width: @grid_12 !important; }
+  .hidden_on_ipadportrait { display: none; }
+}
+@media only screen and (max-width: @mobile){
+  .visible_on_mobile { display: block; }
+  .full_on_mobile { width: @grid_12 !important; }
+  .hidden_on_mobile { display: none; }
+}
+
+h1, h2, h3, h4, h5, h6 { .reset; }
+
+.c-main__container {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  padding-bottom: 80px;
+}
+
+.c-cycle {
+  width: 100%;
+  position: relative;
+  overflow: hidden;
+
+  .item {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background-position: center;
+    .bg-cover;
+    img { width: 100%; }
+  }
+  &.loading .item { display: none; }
+  .cycle-pager {
+    position: absolute;
+    z-index: 1000;
+    left: 50%;
+    bottom: 30px;
+    font-size: 0px;
+    ._transform(-50%, 0, 0);
+
+    span {
+      display: block;
+      width: 10px;
+      height: 10px;
+      margin: 0 5px;
+      float: left;
+      cursor: pointer;
+      background-color: transparent;
+      border: solid 1px #fff;
+      .rounded(100%);
+    }
+    span.cycle-pager-active,
+    span:hover {
+      background-color: rgb(255, 255, 255);
+    }
+  }
+}
+
+.c-slider_comp {
+  position: relative;
+
+  &.loading .item{
+    opacity: 0;
+  }
+  .item {
+    position: absolute;
+  }
+  .slider { width: 100%; }
+  .slider_container {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+  }
+  .anim { .transition(1s); }
+}
+
+.c-hero_sheet {
+  .hidden_field {
+    position: absolute;
+    width: 100%;
+    height: 27px;
+    opacity: 0;
+  }
+  .title,
+  .subtitle {
+    width: 100%;
+    padding: 5px 10px;
+    color: #fff;
+    font-size: 16px;
+    line-height: 16px;
+    background-color: @bg1;
+    text-align: center;
+    text-transform: uppercase;
+  }
+  .subtitle {
+    font-size: 13px;
+    line-height: 13px;
+    background-color: @bg2;
+  }
+  .label {
+    position: relative;
+    padding: 5px 10px;
+    min-height: 30px;
+    vertical-align: middle;
+    font-size: 12px;
+    font-weight: normal;
+    color: #000;
+    background-color: @bg3;
+    text-align: center;
+    .form-control {
+      width: 100%;
+      height: 100%;
+      line-height: 20px;
+      padding: 0;
+      text-align: center !important;
+    }
+    input[type="checkbox"] {
+      width: 100%;
+      height: 100%;
+      margin: 0;
+      top: 0px;
+      left: 0px;
+    }
+  }
+  .btn {
+    padding: 3px 6px;
+    text-transform: uppercase;
+    font-size: 13px;
+  }
+  .btn--full { width: 100%; }
+
+  .item_list {
+    .item {
+      padding: 5px;
+      border-bottom: solid 1px @bg3;
+      .boxsizing;
+    }
+    .name {
+      float: left;
+    }
+    .ctrl {
+      float: right;
+      .form-control {
+        display: inline-block;
+        width: 30px;
+        padding: 0;
+        text-align: center;
+      }
+    }
+    .image {
+      width: 50px;
+      float: left;
+      margin-right: 15px;
+      img {
+        width: 100%;
+        height: auto;
+      }
+    }
+  }
+  .item_list--items {
+    .name {
+      position: relative;
+      top: 10px;
+    }
+  }
+  .equiped_item_img {
+    width: 100%;
+    text-align: center;
+    margin-bottom: 15px;
+    img { width: 60px; }
+  }
+
+  .flex_list {
+    width: 100%;
+    .flex;
+    .flex-wrap;
+    div[class*='grid'] { float: none; }
+  }
+  .flex_list--equiped {
+    div[class*='grid'] { background-color: @bg3; }
+  }
+}
+
+.c-bottom_controlls {
+  position: fixed;
+  bottom: 0px;
+  width: 100%;
+
+  .btn {
+    padding: 3px 6px;
+    text-transform: uppercase;
+    font-size: 13px;
+    .boxsizing;
+  }
+  
+  .save {
+    width: 100%;
+  }
+  .list {
+    .flex;
+    .flex-wrap;
+    .btn { width: 25%; }
+  }
+  
+}
+
+.btn {
+  .rounded(0);
+}
+
+@import "_editor.less";
+
+/* helpers */
+.ir {
+    background-color: transparent;
+    border: 0;
+    overflow: hidden;
+    *text-indent: -9999px;
+}
+
+.ir:before {
+    content: "";
+    display: block;
+    width: 0;
+    height: 150%;
+}
+.hidden {
+    display: none !important;
+    visibility: hidden;
+}
+
+.visuallyhidden {
+    border: 0;
+    clip: rect(0 0 0 0);
+    height: 1px;
+    margin: -1px;
+    overflow: hidden;
+    padding: 0;
+    position: absolute;
+    width: 1px;
+}
+
+.visuallyhidden.focusable:active,
+.visuallyhidden.focusable:focus {
+    clip: auto;
+    height: auto;
+    margin: 0;
+    overflow: visible;
+    position: static;
+    width: auto;
+}
+.invisible {
+    visibility: hidden;
+}
+
+.cf:before,
+.cf:after {
+    content: " ";
+    display: table;
+}
+
+.cf:after {
+    clear: both;
+}
+
+.cf {
+    *zoom: 1;
+}
+
+
+/*UI VIEW ANIM*/
+[ui-view] {
+  position: relative;
+  z-index: 2;
+  width: 100%;
+  height: 100%;
+  background-color: #fff;
+  -webkit-transition:all .5s ease-in-out;
+  -moz-transition:all .5s ease-in-out;
+  -o-transition:all .5s ease-in-out;
+  transition:all .5s ease-in-out;
+}
+
+[ui-view].ng-enter, [ui-view].ng-leave {
+  
+}
+
+[ui-view].ng-enter {
+  position: absolute;
+  opacity: 0;
+  -webkit-transition-delay: 0.5s; /* Safari */
+  transition-delay: 0.5s;
+}
+
+[ui-view].ng-enter-active {
+  opacity: 1;
+}
+
+[ui-view].ng-leave {
+  opacity: 1; 
+}
+
+[ui-view].ng-leave-active {
+  opacity: 0;
+}
+
+
+/* Styling for the ngProgress itself */
+#ngProgress {
+    margin: 0;
+    padding: 0;
+    z-index: 99998;
+    background-color: #000 !important;
+    color: #000 !important;
+    box-shadow: 0 0 10px 0; /* Inherits the font color */
+    height: 2px;
+    opacity: 0;
+
+    /* Add CSS3 styles for transition smoothing */
+    -webkit-transition: all 0.5s ease-in-out;
+    -moz-transition: all 0.5s ease-in-out;
+    -o-transition: all 0.5s ease-in-out;
+    transition: all 0.5s ease-in-out;
+}
+
+/* Styling for the ngProgress-container */
+#ngProgress-container {
+    position: fixed;
+    margin: 0;
+    padding: 0;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 99999;
+}

@@ -1,0 +1,21 @@
+﻿
+  <div class="container_12">
+    <div class="wrapper">
+
+      <div dir-Hero-Sheet-Ctrll="heroSheet1" ng-show="sheetSelected == 'heroSheet1'"></div>
+      <div dir-Hero-Sheet-Ctrll="heroSheet2" ng-show="sheetSelected == 'heroSheet2'"></div>
+      <div dir-Hero-Sheet-Ctrll="heroSheet3" ng-show="sheetSelected == 'heroSheet3'"></div>
+      <div dir-Hero-Sheet-Ctrll="heroSheet4" ng-show="sheetSelected == 'heroSheet4'"></div>
+
+    </div>
+  </div>
+
+  <div class="c-bottom_controlls">
+    <button type="button" class="btn btn-warning save" ng-click="saveSheetData();">Save</button>
+    <div class="list">
+      <button type="button" class="btn btn--full btn-primary" ng-click="selectHeroSheet(1);" ng-class="{'btn-success' : sheetSelected == 'heroSheet1'}">Hero 1</button>
+      <button type="button" class="btn btn--full btn-primary" ng-click="selectHeroSheet(2);" ng-class="{'btn-success' : sheetSelected == 'heroSheet2'}">Hero 2</button>
+      <button type="button" class="btn btn--full btn-primary" ng-click="selectHeroSheet(3);" ng-class="{'btn-success' : sheetSelected == 'heroSheet3'}">Hero 3</button>
+      <button type="button" class="btn btn--full btn-primary" ng-click="selectHeroSheet(4);" ng-class="{'btn-success' : sheetSelected == 'heroSheet4'}">Hero 4</button>
+    </div>
+  </div>

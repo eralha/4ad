@@ -1,0 +1,277 @@
+html,
+button,
+input,
+select,
+textarea {
+    color: #222;
+}
+
+body {
+    font-size: 1em;
+    line-height: 1.4;
+}
+
+::-moz-selection {
+    background: #b3d4fc;
+    text-shadow: none;
+}
+
+::selection {
+    background: #b3d4fc;
+    text-shadow: none;
+}
+
+hr {
+    display: block;
+    height: 1px;
+    border: 0;
+    border-top: 1px solid #ccc;
+    margin: 1em 0;
+    padding: 0;
+}
+
+
+img {
+    vertical-align: middle;
+}
+
+fieldset {
+    border: 0;
+    margin: 0;
+    padding: 0;
+}
+
+textarea {
+    resize: vertical;
+}
+
+.chromeframe {
+    margin: 0.2em 0;
+    background: #ccc;
+    color: #000;
+    padding: 0.2em 0;
+}
+
+/* forms */
+.form{
+    ul{list-style: none;}
+    textarea,
+    input[type="text"],
+    input[type="password"]{
+        width:350px;
+        height:26px
+    }
+    label{
+        text-align:right;
+        line-height:30px;
+        cursor: pointer;
+        display: inline-block;
+        width:190px;
+        vertical-align: top;
+        padding:0 15px 0 0;
+        position:relative;
+    }
+    textarea{height:200px;}
+    .small{width:80px !important}
+    .half{width:174px !important}
+    .desc{
+        display:inline-block;
+        margin-left:14px;
+    }
+    .rdio{
+        line-height:30px;
+        vertical-align:middle;
+        display:inline-block;
+        input[type="radio"]{height:13px;}
+        span{margin:0 15px 0 5px;}
+    }
+    select{
+        width:355px;
+        height:30px;
+        &.half{width:184px !important}
+        &.multiple{height: auto !important}
+    }
+    input[type="file"]{width:374px;}
+
+    input[type="text"].error,
+    textarea.error {
+        
+    }
+    span.error{
+        color:red;
+        line-height:30px;
+    }
+    .obg{
+        
+    }
+    .legal{margin-left:208px;}
+    .termos{margin-left:208px}
+    .checkboxAuto{float:left;margin-left:185px;margin-top:5px}
+    input[type="button"],
+    input[type="submit"],
+    input[type="reset"]{
+        height:30px;
+        border:1px solid #ccc;
+        line-height:1em
+    }
+    .buttonForm{margin-left:208px}
+}
+
+/*FONTS*/
+
+.f_pt_reg { 
+  font-family: 'PT Sans', sans-serif;
+  font-weight: 400;
+}
+.f_pt_bold { 
+  font-family: 'PT Sans', sans-serif;
+  font-weight: 700;
+}
+
+/*HELPERS*/
+.rounded(@size){
+    -moz-border-radius: @size;border-radius: @size;}
+.ul_reset{margin:0px;padding:0px;li{list-style:none;}}
+.reset{margin:0px;padding:0px;}
+._sprite(@left, @top){
+    background-position:-@left -@top;
+}
+.sprite{background-image:url('/images/sprite.png');background-repeat:no-repeat;}
+.sprite-x2{background-image:url('/images/sprite_retina.png');background-repeat:no-repeat;background-size:400px 400px;}
+@media 
+(-webkit-min-device-pixel-ratio: 2), 
+(min-resolution: 192dpi) { 
+  .sprite { .sprite-x2; }
+}
+.transparent{
+   zoom: 1;
+   filter: alpha(opacity=70);
+   opacity: 0.7;
+}
+.fLeft{float:left;}
+.fRight{float:right;}
+.tLeft { text-align: left; }
+.tRight { text-align: right; }
+.tCenter { text-align: center; }
+.m_center{margin-left:auto;margin-right:auto;}
+.boxsizing{
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;  
+}
+.clear { clear: both; }
+.no-underline {
+  a { text-decoration: none !important; }
+}
+.outer-center{float: right;right: 50%;position: relative;}
+.inner-center{float: right;right: -50%;position: relative;}
+.shadow (@ho, @vo, @br, @sr, @c){
+  -moz-box-shadow:    @ho @vo @br @sr @c;
+  -webkit-box-shadow: @ho @vo @br @sr @c;
+  box-shadow:         @ho @vo @br @sr @c;
+}
+.transition(@time) {
+  -webkit-transition: all @time ease-in-out;
+  -moz-transition: all @time ease-in-out;
+  transition: all @time ease-in-out;
+}
+.color__temp(@out, @hover) {
+  color: @out;
+  a { color: @out; text-decoration: underline; }
+  a:hover { color: @hover; }
+}
+.no-highlight {
+   outline: 0;
+   -webkit-tap-highlight-color: rgba(0,0,0,0);
+   -webkit-tap-highlight-color: transparent;
+   -webkit-touch-callout: none;
+   -webkit-user-select: none;
+      -moz-user-select: none;
+       -ms-user-select: none;
+           user-select: none;
+}
+.placeholderColor(@color){
+  ::-webkit-input-placeholder { /* WebKit browsers */
+      color:    @color;
+  }
+  :-moz-placeholder { /* Mozilla Firefox 4 to 18 */
+     color:    @color;
+     opacity:  1;
+  }
+  ::-moz-placeholder { /* Mozilla Firefox 19+ */
+     color:    @color;
+     opacity:  1;
+  }
+  :-ms-input-placeholder { /* Internet Explorer 10+ */
+     color:    @color;
+  }
+}
+.bg-cover {
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+}
+
+._rotation (@rot) {
+  -ms-transform: rotate(@rot); /* IE 9 */
+  -webkit-transform: rotate(@rot); /* Chrome, Safari, Opera */
+  transform: rotate(@rot);
+}
+
+._scale (@sx, @sy) {
+  -ms-transform: scale(@sx, @sy); /* IE 9 */
+  -webkit-transform: scale(@sx, @sy); /* Chrome, Safari, Opera */
+  transform: scale(@sx, @sy);
+}
+._transform(@x, @y, @z) {
+  -moz-transform: translate3d(@x, @y, @z);
+  -webkit-transform: translate3d(@x, @y, @z);
+  transform: translate3d(@x, @y, @z);
+}
+._placeholderColor(@color){
+  ::-webkit-input-placeholder { /* Chrome/Opera/Safari */
+    color: @color;
+  }
+  ::-moz-placeholder { /* Firefox 19+ */
+    color: @color;
+  }
+  :-ms-input-placeholder { /* IE 10+ */
+    color: @color;
+  }
+  :-moz-placeholder { /* Firefox 18- */
+    color: @color;
+  }
+}
+
+.flex {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+.flex-wrap {
+ -ms-flex-wrap: wrap;
+ flex-wrap: wrap;
+}
+.flex-grow {
+ -webkit-box-flex:1;
+ -ms-flex-positive:1;
+ flex-grow:1;
+}
+
+.js_loading,
+.angular-loading { display: none; }
+
+[data-href] { cursor: pointer; }
+
+.visible_on_768 { display: none; }
+.visible_on_500 { display: none; }
+
+@media only screen and (max-width: 500px){
+  .hidde_on_500 { display: none; }
+  .visible_on_500 { display: block; }
+}
+@media only screen and (max-width: 768px){
+  .hidde_on_768 { display: none; }
+  .visible_on_768 { display: block; }
+}

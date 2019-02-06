@@ -1,0 +1,67 @@
+[
+    {
+      "name": "Fireball",
+      "image": "https://blzmedia-a.akamaihd.net/d3/icons/skills/64/wizard_meteor.png",
+      "effect": ""
+    },
+    {
+      "name": "Blessing",
+      "image": "https://blzmedia-a.akamaihd.net/d3/icons/skills/64/x1_crusader_heavensfury3.png",
+      "effect": ""
+    },
+    {
+      "name": "Lightning Bolt",
+      "image": "https://blzmedia-a.akamaihd.net/d3/icons/skills/64/wizard_shockpulse.png",
+      "effect": ""
+    },
+    {
+      "name": "Sleep",
+      "image": "https://blzmedia-a.akamaihd.net/d3/icons/skills/64/x1_crusader_smite.png",
+      "effect": ""
+    },
+    {
+      "name": "Escape",
+      "image": "https://blzmedia-a.akamaihd.net/d3/icons/skills/64/wizard_teleport.png",
+      "effect": ""
+    },
+    {
+      "name": "Protect",
+      "image": "https://blzmedia-a.akamaihd.net/d3/icons/skills/64/wizard_diamondskin.png",
+      "effect": ""
+    },
+    {
+      "name": "Healing",
+      "image": "https://blzmedia-a.akamaihd.net/d3/icons/skills/64/x1_crusader_lawsofhope2.png",
+      "effect": ""
+    },
+    {
+      "name": "Healing Surge",
+      "image": "https://blzmedia-a.akamaihd.net/d3/icons/skills/64/monk_passive_beaconofytar.png",
+      "effect": "Heal 2 life all heros minus caster, vampires -2 life"
+    },
+    {
+      "name": "Mass teleport",
+      "image": "https://blzmedia-a.akamaihd.net/d3/icons/skills/64/wizard_teleport.png",
+      "effect": "Teleport all party out of the dungeon or to any room 1dmg to wizard for every hero"
+    },
+    {
+      "name": "Aura of Terror",
+      "image": "https://blzmedia-a.akamaihd.net/d3/icons/skills/64/p6_necro_bloodnova.png",
+      "effect": "Minion or boss to make moral roll, undead and fear are imune"
+    },
+    {
+      "name": "Reverse Gaze",
+      "image": "https://blzmedia-a.akamaihd.net/d3/icons/skills/64/wizard_mirrorimage.png",
+      "effect": "when tested by gaze test it on the monster instead d8 + wiz lvl"
+    },
+    {
+      "name": "Life force control",
+      "image": "https://blzmedia-a.akamaihd.net/d3/icons/skills/64/p6_necro_siphonblood.png",
+      "effect": "Trade life with another hero, against vampires lose 1 life"
+    },
+    {
+      "name": "Infalible missile",
+      "image": "https://blzmedia-a.akamaihd.net/d3/icons/skills/64/wizard_magicmissile.png",
+      "effect": "Auto dmg , rol a d8 on a explode inflic another dmg"
+    }
+  ]

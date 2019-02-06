@@ -1,0 +1,201 @@
+﻿
+
+  <div class="container_12 c-hero_sheet cf" ng-controller="HeroCtrll">
+    <div class="wrapper">
+
+      <div class="grid_12">
+        <h1 class="title">Hero sheet</h1>
+      </div>
+
+      <div class="grid_12">
+        <h1 class="subtitle">Class <span>- {{hero.class}}</span></h1>
+        <select class="form-control" ng-model="selectedClass" ng-change="heroClassSelected()">
+          <option value="{{emptyVal}}">Select Class</option>
+            <option value="{{$index}}" ng-repeat="class in heroClasses">{{class.class}}</option>
+        </select>
+      </div>
+
+      <div class="clear"></div>
+      <div class="grid_6">
+          <h1 class="subtitle">Level</h1>
+          <div class="label">
+            <select class="form-control" ng-model="hero.level">
+                <option value="0">Level</option>
+                <option ng-value="{{$index + 1}}" ng-repeat="item in numberList">{{$index + 1}}</option>
+              </select>
+          </div>
+      </div>
+      <div class="grid_6">
+          <h1 class="subtitle">Gold</h1>
+          <div class="label"><input type="number" class="form-control" ng-model="hero.gold"/></div>
+      </div>
+
+      <div class="clear"></div>
+      <div class="grid_6">
+          <h1 class="subtitle">ATK</h1>
+          <div class="label"><b>{{ GETHEROATTACK(hero.SelectedWeapon) }}</b></div>
+      </div>
+      <div class="grid_6">
+          <h1 class="subtitle">DEF</h1>
+          <div class="label"><b>{{ GETHERODEFENSE(hero.armorSlot1, hero.armorSlot2, '', '') }}</b></div>
+      </div>
+      
+
+      <div class="clear"></div>
+      <div class="grid_12">
+          <h1 class="subtitle">Abilities</h1>
+          <div class="label">{{hero.heroDataTbl.abilities}} {{hero.heroDataTbl.equipment}}</div>
+      </div>
+
+      <div class="clear"></div>
+      <div class="grid_12">
+          <h1 class="subtitle">Expert Skills</h1>
+          <div class="label"></div>
+      </div>
+      
+
+      <div class="clear"></div>
+      <div class="grid_4">
+          <h1 class="subtitle">Lanter</h1>
+          <div class="label"><input class="form-check-input" type="checkbox" value="" ng-model="hero.haveLanter"/></div>
+      </div>
+      <div class="grid_4">
+          <h1 class="subtitle">Bandaged</h1>
+          <div class="label"><input class="form-check-input" type="checkbox" value="" ng-model="hero.isBandaged"/></div>
+      </div>
+      <div class="grid_4">
+          <h1 class="subtitle">Life <span>({{hero.life}})</span></h1>
+          <div class="label">
+              <select class="form-control" ng-model="hero.wounds">
+                <option value="0">Wounds</option>
+                <option value="{{$index + 1}}" ng-repeat="item in numberList">{{$index + 1}}</option>
+              </select>
+          </div>
+      </div>
+
+
+      <div class="clear"></div>
+      <div class="flex_list flex_list--equiped">
+        <div class="grid_4">
+            <h1 class="subtitle">Eqp Weapon</h1>
+            <div class="label">
+                <div class="equiped_item_img" ng-if="hero.SelectedWeapon && hero.SelectedWeapon != emptyVal"><img src="{{hero.weapons[hero.SelectedWeapon].image}}" alt="" /></div>
+                <select class="form-control" ng-model="hero.SelectedWeapon">
+                  <option value="{{emptyVal}}">None</option>
+                  <option value="{{$index}}" ng-repeat="item in hero.weapons track by item.id">{{item.name}}</option>
+                </select>
+            </div>
+        </div>
+        <div class="grid_4">
+            <h1 class="subtitle">Eqp Armor</h1>
+            <div class="label">
+                <div class="equiped_item_img" ng-if="hero.armorSlot1 && hero.armorSlot1 != emptyVal"><img src="{{hero.armor[hero.armorSlot1].image}}" alt="" /></div>
+                <select class="form-control" ng-model="hero.armorSlot1">
+                  <option value="{{emptyVal}}">None</option>
+                  <option value="{{$index}}" ng-repeat="item in hero.armor track by item.id">{{item.name}}</option>
+                </select>
+            </div>
+        </div>
+        <div class="grid_4">
+            <h1 class="subtitle">Eqp Shield</h1>
+            <div class="label">
+                <div class="equiped_item_img" ng-if="hero.armorSlot2 && hero.armorSlot2 != emptyVal"><img src="{{hero.armor[hero.armorSlot2].image}}" alt="" /></div>
+                <select class="form-control" ng-model="hero.armorSlot2">
+                  <option value="{{emptyVal}}">None</option>
+                  <option value="{{$index}}" ng-repeat="item in hero.armor track by item.id">{{item.name}}</option>
+                </select>
+            </div>
+        </div>
+      </div>
+
+
+
+      <div class="clear"></div>
+      <div class="grid_12">
+          <h1 class="subtitle">Weapons</h1>
+          <div class="item_list">
+            <div class="item cf" ng-repeat="item in hero.weapons track by item.id">
+              <div class="name">{{item.name}}</div>
+              <div class="ctrl"><button type="button" class="btn btn-danger" ng-click="removeItem('weapons', $index);">X</button></div>
+            </div><!-- end item -->
+          </div>
+
+          <select class="hidden_field" id="weaponSelectCBO" ng-model="weaponToAdd" ng-change="addItem('weapons', weaponToAdd);">
+              <option value="{{emptyVal}}">Selecione</option>
+              <option value="{{$index}}" ng-repeat="item in dataWeapons">{{item.name}}</option>
+            </select>
+          <button type="button" class="btn btn--full btn-primary">Add Weapon</button>
+      </div>
+
+
+
+      <div class="clear"></div>
+      <div class="grid_12">
+          <h1 class="subtitle">Armor</h1>
+          <div class="item_list">
+            <div class="item cf" ng-repeat="item in hero.armor track by item.id">
+              <div class="name">{{item.name}}</div>
+              <div class="ctrl"><button type="button" class="btn btn-danger" ng-click="removeItem('armor', $index);">X</button></div>
+            </div><!-- end item -->
+          </div>
+
+          <select class="hidden_field" id="armorSelectCBO" ng-model="armorToAdd" ng-change="addItem('armor', armorToAdd);">
+                <option value="{{emptyVal}}">Selecione</option>
+                <option value="{{$index}}" ng-repeat="item in dataArmor">{{item.name}}</option>
+              </select>
+          <button type="button" class="btn btn--full btn-primary">Add Armor</button>
+      </div>
+
+
+      
+
+
+      <div class="clear"></div>
+      <div class="grid_12">
+          <h1 class="subtitle">Items</h1>
+          <div class="item_list item_list--items">
+            <div class="item cf" ng-repeat="item in hero.items track by item.id">
+              <div class="image"><img src="{{getItemImage(item)}}" alt=""></div>
+              <div class="name">{{item.name}}</div>
+              <div class="ctrl">
+                <input type="number" placeholder="1" class="form-control" ng-model="item.controllValue"/>
+                <button type="button" class="btn btn-danger" ng-click="removeItem('items', $index);">X</button>
+              </div>
+            </div><!-- end item -->
+          </div>
+          <select class="hidden_field" id="itemSelectCBO" ng-model="itemToAdd" ng-change="addItem('items', itemToAdd);">
+              <option value="{{emptyVal}}">Selecione</option>
+              <option value="{{$index}}" ng-repeat="item in dataItems">{{item.name}}</option>
+            </select>
+          <button type="button" class="btn btn--full btn-primary">Add Items</button>
+      </div>
+
+
+
+
+
+      <div class="clear"></div>
+      <div class="grid_12">
+          <h1 class="subtitle">Spells</h1>
+          <div class="item_list item_list--items">
+            <div class="item cf" ng-repeat="item in hero.spells track by item.id">
+              <div class="image"><img src="{{getItemImage(item)}}" alt=""></div>
+              <div class="name">{{item.name}}</div>
+              <div class="ctrl">
+                <input type="number" placeholder="1" class="form-control" ng-model="item.controllValue"/>
+                <button type="button" class="btn btn-danger" ng-click="removeItem('spells', $index);">X</button>
+              </div>
+            </div><!-- end item -->
+          </div>
+          <select class="hidden_field" id="itemSelectCBO" ng-model="spellsToAdd" ng-change="addItem('spells', spellsToAdd);">
+              <option value="{{emptyVal}}">Selecione</option>
+              <option value="{{$index}}" ng-repeat="item in dataSpells">{{item.name}}</option>
+            </select>
+          <button type="button" class="btn btn--full btn-primary">Add Spells</button>
+      </div>
+
+
+
+
+    </div>
+  </div>

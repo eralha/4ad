@@ -1,0 +1,66 @@
+[
+  {
+    "class": "Cleric",
+    "atk": "1/2 lvl+roll+wpn",
+    "def": "roll+armor+shield",
+    "abilities": "Undead: lvl + roll + wpn; Healing x3 d6 + lvl;",
+    "startLife": 4,
+    "equipment": "wpn: 1H,2H,sling (no bow); armor: Any"
+  },
+  {
+    "class": "Rogue",
+    "atk": "roll+wpn",
+    "def": "roll+armor+lvl",
+    "abilities": "If minion/vermin < party: lvl+roll+wpn; Disarm traps: +lvl",
+    "startLife": 3,
+    "equipment": "wpn: Light wpn, sling; armor: light armor"
+  },
+  {
+    "class": "Wizard",
+    "atk": "roll+wpn",
+    "def": "roll",
+    "abilities": "spell attack: Roll + lvl; Puzzles/Riddles: +lvl",
+    "startLife": 2,
+    "equipment": "wpn: light wpn,sling; armor: none"
+  },
+  {
+    "class": "Barbarian",
+    "atk": "Lvl+roll+wpn",
+    "def": "roll+armor+shield",
+    "abilities": "Rage:Roll x3, take best one; 2 wounds if vs boss",
+    "startLife": 7,
+    "equipment": "wpn: Any; armor: shield, light armor"
+  },
+  {
+    "class": "Elf",
+    "atk": "lvl+roll+wpn",
+    "def": "roll+armor+shield",
+    "abilities": "With 2h weapon: roll + wpn always +1 vs anything with \"orc\" in name",
+    "startLife": 4,
+    "equipment": "wpn: any; armor: any"
+  },
+  {
+    "class": "Dwarf",
+    "atk": "lvl+roll+wpn",
+    "def": "roll+armor+shield | +1 vs troll,ogre,giant",
+    "abilities": "Ranged attack: roll + wpn - always +1 vs goblin; paid 20% more for gems; can smell treasure d6+lvl",
+    "startLife": 5,
+    "equipment": "apn: any; armor: any"
+  },
+  {
+    "class": "Warrior",
+    "atk": "Lvl+roll+wpn",
+    "def": "roll+armor+shield",
+    "abilities": "",
+    "startLife": 6,
+    "equipment": "wpn: any; armor: any"
+  },
+  {
+    "class": "Halfling",
+    "atk": "roll+wpn",
+    "def": "roll+armor | + lvl if vs giant, troll, ogre",
+    "abilities": "roll+wpn; Luck points (lvl +1) May re-roll dice attack,defense, search,treasure, magic treasure tables (may not reroll a reroll)",
+    "startLife": 3,
+    "equipment": "wpn: Light wpn, sling; armor: light armor"
+  }
+]

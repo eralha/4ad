@@ -1,0 +1,7 @@
+---------------------------
+last update: ALS@17-02-2016
+---------------------------
+
+Os validators com multi-lingua (validators-lang.js) estao a funcionar em:
+
+- dsvrotadofresco2014v100
