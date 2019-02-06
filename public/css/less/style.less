@@ -268,11 +268,15 @@ h1, h2, h3, h4, h5, h6 { .reset; }
     width: 100%;
   }
   .list {
-    .flex;
+    display: none;
     .flex-wrap;
     .btn { width: 25%; }
   }
-  
+}
+@media only screen and (max-width: @ipadPortrait){
+  .c-bottom_controlls {
+    .list { .flex; }
+  }
 }
 
 .btn {
