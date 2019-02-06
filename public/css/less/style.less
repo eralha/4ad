@@ -57,14 +57,22 @@ body, html{
 h1, h2, h3, h4, h5, h6 { .reset; }
 
 .c-sheet_list {
+  .wrapper {
+    width: 100%;
+  }
   [dir-Hero-Sheet-Ctrll] {
+    width: 400px;
     float: left;
     margin-right: 20px;
   }
 }
 @media only screen and (max-width: @desktop){ 
   .c-sheet_list {
-    [dir-Hero-Sheet-Ctrll] { display: none; }
+    [dir-Hero-Sheet-Ctrll] { 
+      width: 100%;
+      display: none; 
+      float: none;
+    }
     [dir-Hero-Sheet-Ctrll].selected { display: block; }
   }
 }
