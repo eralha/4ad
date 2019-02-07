@@ -228,6 +228,8 @@ define('module/angular/app__main', [
 					if(String(selectedWeapon).indexOf('2h') != -1){ data = 1; }
 					
 					if(String(selectedWeapon).indexOf('+1') != -1){ data = data + 1; }
+					if(String(selectedWeapon).indexOf('+2') != -1){ data = data + 2; }
+					if(String(selectedWeapon).indexOf('+3') != -1){ data = data + 3; }
 					
 					if(heroName == 'Warrior'){ data = data + lvl; }
 					if(heroName == 'Dwarf'){ data = data + lvl; }
