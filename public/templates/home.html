@@ -40,10 +40,17 @@
         <h1>Saved Parties</h1>
         <ul class="list-group">
           <a ui-sref="party({partyId: item.id})" ng-repeat="item in gamesData track by item.id"><li class="list-group-item">{{item.name}}</li></a>
+
+          <li class="list-group-item" ng-if="gamesData.length == 0">No Parties found, start by creating one.</li>
         </ul>
 
         <div class="mt_20">
             <button type="button" class="btn btn-secondary btn--full" ng-click="showNewGameModal();">Create New Party</button>
+        </div>
+
+        <div class="mt_20">
+          This module is in developmen, ui will change with future versions.<br>
+          Beta version 0.0.1
         </div>
 
       </div>
