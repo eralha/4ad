@@ -2,6 +2,7 @@
   "name": "vtex-static",
   "version": "0.1.0",
   "scripts": {
+    "heroku-postbuild": "grunt def",
     "start": "node web.js"
   },
   "devDependencies": {
