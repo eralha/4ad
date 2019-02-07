@@ -225,9 +225,9 @@ textarea {
   transform: scale(@sx, @sy);
 }
 ._transform(@x, @y, @z) {
-  -moz-transform: translate3d(@x, @y, @z);
-  -webkit-transform: translate3d(@x, @y, @z);
-  transform: translate3d(@x, @y, @z);
+  -moz-transform: translate(@x, @y);
+  -webkit-transform: translate(@x, @y);
+  transform: translate(@x, @y);
 }
 ._placeholderColor(@color){
   ::-webkit-input-placeholder { /* Chrome/Opera/Safari */

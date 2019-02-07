@@ -38,8 +38,8 @@ define('module/angular/app__main', [
 
 
 	    //generic controlers go here
-	    app.controller('MainCtrll', ['$scope', '$rootScope', 'dataService', 'langService', 'ngProgressFactory', '$state', '$sce', '$filter',
-	    	function($scope, $rootScope, dataService, langService, ngProgressFactory, $state, $sce, $filter) {
+	    app.controller('MainCtrll', ['$scope', '$rootScope', 'dataService', 'langService', 'ngProgressFactory', '$state', '$sce', '$filter', '$compile',
+	    	function($scope, $rootScope, dataService, langService, ngProgressFactory, $state, $sce, $filter, $compile) {
 
 	    	$scope.progressbar = ngProgressFactory.createInstance();
 
@@ -68,6 +68,12 @@ define('module/angular/app__main', [
 
 			$scope.toggleMenu = function(){
 				$scope.menuVisible = !$scope.menuVisible;
+			}
+
+			$rootScope.addLayerDice = function(dice, sheetName){
+				var compiled = $compile('<div dir-Layer dir-Layer-Roll="'+dice+'" data-sheet="'+sheetName+'"></div>')($scope);
+				
+				$('body').append(compiled);
 			}
 			
 			$rootScope.scrollToElement = function(selector){
@@ -120,6 +126,10 @@ define('module/angular/app__main', [
 			scope.sheetSelected = 'heroSheet1';
 			scope.selectHeroSheet = function(sheetNum){
 				scope.sheetSelected = 'heroSheet'+sheetNum;
+			}
+
+			scope.rollDice = function(dice){
+				$rootScope.addLayerDice(dice, scope.sheetSelected);
 			}
 
 		}]);
@@ -291,6 +301,7 @@ define('module/angular/app__main', [
 				if(stored){
 					hero = angular.copy(stored);
 					scope.hero = hero;
+					$rootScope[sheetName] = scope.hero;
 					scope.$apply();
 				}
 
@@ -299,6 +310,9 @@ define('module/angular/app__main', [
 					if(hero.heroDataTbl){
 						hero.life = hero.heroDataTbl.startLife + parseInt(hero.level);
 						hero.life = hero.life - parseInt(hero.wounds);
+
+						hero.atkStr = scope.GETHEROATTACK(hero.SelectedWeapon);
+						hero.defStr = scope.GETHERODEFENSE(hero.armorSlot1, hero.armorSlot2, '', '');
 					}
 	
 					if(!$rootScope.sheetData){ $rootScope.sheetData = {}; }

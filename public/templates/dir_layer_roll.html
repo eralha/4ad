@@ -1,0 +1,15 @@
+﻿<div class="c-layer">
+    <div class="bg"></div>
+    <div class="content">
+      <div class="roll_result">{{roll}}</div>
+      <div class="info">
+        {{hero.atkStr}}<br />
+        {{hero.defStr}}
+      </div>
+      <h2 class="wound_title">Add/remove wounds W({{hero.wounds}}) L({{hero.life}})</h2>
+      <div class="btn-group">
+          <button type="button" class="btn btn-success" ng-click="remWound();">-</button>
+          <button type="button" class="btn btn-danger" ng-click="addWound();">+</button>
+      </div>
+    </div>
+  </div>

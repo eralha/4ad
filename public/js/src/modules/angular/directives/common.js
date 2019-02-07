@@ -92,13 +92,40 @@ define('module/angular/directives/common', [
 		        //console.log($(e).html(), arguments);
 		        return function(scope, elem, attrs) {
 
-		        	$(elem).find('.c-layer__content, .container').click(function(e){
+		        	$(elem).find('.content').click(function(e){
 		        		e.stopPropagation();
-		        	});
-
-		        	$(elem).click(function(){
+							});
+							
+		        	$(elem).find('.bg').click(function(){
 		        		$(elem).remove();
 		        	});
+
+		        }
+		    }
+		  };
+		}]);
+
+		module.directive('dirLayerRoll', ['$rootScope', '$injector', function($rootScope, $injector) {
+		  return {
+				restrict: 'EA',
+				scope: {},
+				templateUrl: '/templates/dir_layer_roll.html',
+		    compile: function(e, a){
+		        //console.log($(e).html(), arguments);
+		        return function(scope, elem, attrs) {
+
+							var sheetName = attrs.sheet;
+							var dice = parseInt(attrs.dirLayerRoll);
+							scope.hero = $rootScope[sheetName];
+							scope.roll = Math.round(Math.random()*dice);
+
+							scope.remWound = function(){
+								scope.hero.wounds = parseInt(scope.hero.wounds) - 1;
+							}
+
+							scope.addWound = function(){
+								scope.hero.wounds = parseInt(scope.hero.wounds) + 1;
+							}
 
 		        }
 		    }

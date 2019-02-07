@@ -67,7 +67,7 @@
           <div class="label">
               <select class="form-control" ng-model="hero.wounds">
                 <option value="0">Wounds</option>
-                <option value="{{$index + 1}}" ng-repeat="item in numberList">{{$index + 1}}</option>
+                <option ng-value="{{$index + 1}}" ng-repeat="item in numberList">{{$index + 1}}</option>
               </select>
           </div>
       </div>
