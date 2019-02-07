@@ -132,6 +132,21 @@ define('module/angular/directives/common', [
 		  };
 		}]);
 
+		module.directive('dirLayerItemInfo', ['$rootScope', '$injector', function($rootScope, $injector) {
+		  return {
+				restrict: 'EA',
+				scope: {
+					item: '='
+				},
+				templateUrl: '/templates/dir_item_info.html',
+		    compile: function(e, a){
+		        //console.log($(e).html(), arguments);
+		        return function(scope, elem, attrs) {
+		        }
+		    }
+		  };
+		}]);
+
 
 		module.directive('dirHeroSheetCtrll', ['$rootScope', '$injector', function($rootScope, $injector) {
 		  return {
@@ -143,6 +158,7 @@ define('module/angular/directives/common', [
 		        return function(scope, elem, attrs) {
 
 							scope.sheetName = attrs.dirHeroSheetCtrll;
+							scope.addLayerItemInfo = $rootScope.addLayerItemInfo;
 
 		        }
 		    }

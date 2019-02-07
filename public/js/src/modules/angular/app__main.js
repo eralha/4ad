@@ -75,6 +75,15 @@ define('module/angular/app__main', [
 				
 				$('body').append(compiled);
 			}
+
+			$rootScope.addLayerItemInfo = function(item){
+				var layerScope = $scope.$new(true);
+					layerScope.item = item;
+
+				var compiled = $compile('<div dir-Layer dir-Layer-Item-Info item="item"></div>')(layerScope);
+				
+				$('body').append(compiled);
+			}
 			
 			$rootScope.scrollToElement = function(selector){
 	    		if($(selector).length == 0){ return; }
@@ -150,17 +159,19 @@ define('module/angular/app__main', [
 				//class
 				//atkValue
 				//defValue
-				hero.level = 1;//level
+				hero.level = 1;
+				hero.clues = 0;
+				hero.madness = 0;
 				//life
-				hero.wounds = '0';//wounds
+				hero.wounds = '0';
 				//status
 				//clues
 				//madness
 				//expertSkills
-				hero.weapons = new Array(); //weapons
-				hero.armor = new Array(); //armor
-				hero.items = new Array(); //items
-				hero.spells = new Array(); //spells
+				hero.weapons = new Array();
+				hero.armor = new Array();
+				hero.items = new Array();
+				hero.spells = new Array();
 				//heroDataTbl
 
 			

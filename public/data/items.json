@@ -162,7 +162,7 @@
     {
       "name": "Orb of scouting",
       "image": "https://i.imgur.com/8pOftgr.png",
-      "value": 40,
+      "value": 20,
       "vendor": "TRUE",
       "effect": "Wiz or elf only, spend 1 to scout one room ahead",
       "stock": ""
@@ -205,46 +205,6 @@
       "value": 200,
       "vendor": "FALSE",
       "effect": "",
-      "stock": ""
-    },
-    {
-      "name": "Material dust of Diamond",
-      "image": "https://blzmedia-a.akamaihd.net/d3/icons/items/large/p3_gem_convert_diamond_demonhunter_male.png",
-      "value": 50,
-      "vendor": "FALSE",
-      "effect": "Usefull to craft weapons",
-      "stock": ""
-    },
-    {
-      "name": "Material dust of Ruby",
-      "image": "https://blzmedia-a.akamaihd.net/d3/icons/items/large/p3_gem_convert_ruby_demonhunter_male.png",
-      "value": 50,
-      "vendor": "FALSE",
-      "effect": "Usefull to craft weapons",
-      "stock": ""
-    },
-    {
-      "name": "Material dust of Topaz",
-      "image": "https://blzmedia-a.akamaihd.net/d3/icons/items/large/p3_gem_convert_topaz_demonhunter_male.png",
-      "value": 50,
-      "vendor": "FALSE",
-      "effect": "Usefull to craft weapons",
-      "stock": ""
-    },
-    {
-      "name": "Material dust of Emerald",
-      "image": "https://blzmedia-a.akamaihd.net/d3/icons/items/large/p3_gem_convert_emerald_demonhunter_male.png",
-      "value": 50,
-      "vendor": "FALSE",
-      "effect": "Usefull to craft weapons",
-      "stock": ""
-    },
-    {
-      "name": "Material dust of Amethyst",
-      "image": "https://blzmedia-a.akamaihd.net/d3/icons/items/large/p3_gem_convert_amethyst_demonhunter_male.png",
-      "value": 50,
-      "vendor": "FALSE",
-      "effect": "Usefull to craft weapons",
       "stock": ""
     },
     {

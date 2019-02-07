@@ -154,8 +154,8 @@
           <h1 class="subtitle">Items</h1>
           <div class="item_list item_list--items">
             <div class="item cf" ng-repeat="item in hero.items track by item.id">
-              <div class="image"><img src="{{getItemImage(item)}}" alt=""></div>
-              <div class="name">{{item.name}}</div>
+              <div class="image" ng-click="addLayerItemInfo(item);"><img src="{{getItemImage(item)}}" alt=""></div>
+              <div class="name">{{item.name}}<br />{{item.value}}G</div>
               <div class="ctrl">
                 <input type="number" placeholder="1" class="form-control" ng-model="item.controllValue"/>
                 <button type="button" class="btn btn-danger" ng-click="removeItem('items', $index);">X</button>
@@ -164,7 +164,7 @@
           </div>
           <select class="hidden_field" id="itemSelectCBO" ng-model="itemToAdd" ng-change="addItem('items', itemToAdd);">
               <option value="{{emptyVal}}">Selecione</option>
-              <option value="{{$index}}" ng-repeat="item in dataItems">{{item.name}} {{item.value}}G</option>
+              <option value="{{$index}}" ng-repeat="item in dataItems">{{item.name}} - {{item.value}}G</option>
             </select>
           <button type="button" class="btn btn--full btn-dark">Add Items</button>
       </div>
@@ -192,6 +192,21 @@
             </select>
           <button type="button" class="btn btn--full btn-dark">Add Spells</button>
       </div>
+
+
+      <div class="clear"></div>
+      <div class="grid_6">
+          <h1 class="subtitle">Clues</h1>
+          <div class="label">
+            <input type="number" class="form-control" ng-model="hero.clues"/>
+          </div>
+      </div>
+      <div class="grid_6">
+        <h1 class="subtitle">Madness</h1>
+        <div class="label">
+          <input type="number" class="form-control" ng-model="hero.madness"/>
+        </div>
+    </div>
 
 
 
