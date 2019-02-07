@@ -70,8 +70,10 @@ h1, h2, h3, h4, h5, h6 { .reset; }
   .c-sheet_list {
     [dir-Hero-Sheet-Ctrll] { 
       width: 100%;
+      max-width: 600px;
       display: none; 
       float: none;
+      .m_center;
     }
     [dir-Hero-Sheet-Ctrll].selected { display: block; }
   }
@@ -79,9 +81,14 @@ h1, h2, h3, h4, h5, h6 { .reset; }
 
 .c-main__container {
   position: relative;
-  width: 100%;
+  width: 1700px;
   height: 100%;
   padding-bottom: 80px;
+}
+@media only screen and (max-width: @desktop){
+  .c-main__container {
+    width: 100%;
+  }
 }
 
 .c-cycle {
