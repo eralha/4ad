@@ -43,6 +43,10 @@ body, html{
 
 .visible_on_mobile { display: none; }
 .visible_on_ipadportrait { display: none; }
+.visible_on_desktop { display: none; }
+@media only screen and (max-width: @desktop){
+  .visible_on_desktop { display: block; }
+}
 @media only screen and (max-width: @ipadPortrait){
   .visible_on_ipadportrait { display: block; }
   .full_on_ipadportrait { width: @grid_12 !important; }
@@ -287,7 +291,7 @@ h1, h2, h3, h4, h5, h6 { .reset; }
     .btn { width: 25%; }
   }
 }
-@media only screen and (max-width: @ipadPortrait){
+@media only screen and (max-width: @desktop){
   .c-bottom_controlls {
     .list { .flex; }
   }
