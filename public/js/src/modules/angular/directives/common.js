@@ -117,7 +117,7 @@ define('module/angular/directives/common', [
 							var sheetName = attrs.sheet;
 							var dice = parseInt(attrs.dirLayerRoll);
 							scope.hero = $rootScope[sheetName];
-							scope.roll = Math.round(Math.random()*dice);
+							scope.roll = Math.ceil(Math.random()*dice);
 
 							scope.remWound = function(){
 								scope.hero.wounds = parseInt(scope.hero.wounds) - 1;
