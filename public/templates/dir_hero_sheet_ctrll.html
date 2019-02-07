@@ -19,10 +19,7 @@
       <div class="grid_6">
           <h1 class="subtitle">Level</h1>
           <div class="label">
-            <select class="form-control" ng-model="hero.level">
-                <option value="0">Level</option>
-                <option ng-value="{{$index + 1}}" ng-repeat="item in numberList">{{$index + 1}}</option>
-              </select>
+            <input type="number" class="form-control" ng-model="hero.level"/>
           </div>
       </div>
       <div class="grid_6">
