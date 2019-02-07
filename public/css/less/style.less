@@ -260,6 +260,9 @@ h1, h2, h3, h4, h5, h6 { .reset; }
   position: fixed;
   bottom: 0px;
   width: 100%;
+  -webkit-box-shadow: 0px 0px 24px 1px rgba(0,0,0,0.75);
+  -moz-box-shadow: 0px 0px 24px 1px rgba(0,0,0,0.75);
+  box-shadow: 0px 0px 24px 1px rgba(0,0,0,0.75);
 
   .btn {
     padding: 3px 6px;
@@ -285,6 +288,47 @@ h1, h2, h3, h4, h5, h6 { .reset; }
 
 .btn {
   .rounded(0);
+}
+.btn--full {
+  width: 100%;
+}
+
+.c-games {
+  a { color: #000; }
+  .book_image {
+    width: 100%;
+    margin-top: 40px;
+    margin-bottom: 10px;
+    text-align: center;
+  }
+  .text {
+    padding: 0 10px;
+    font-size: 13px;
+    color: rgb(197, 197, 197);
+    text-align: center;
+    .boxsizing;
+  }
+  h1 {
+    margin-top: 30px;
+    margin-bottom: 20px;
+    color: rgb(197, 197, 197);
+    text-align: center;
+    text-transform: uppercase;
+  }
+  .list-group-item {
+    background-color: #cecece;
+  }
+}
+
+.list-group-item {
+  .rounded(0px) !important;
+}
+
+.modal {
+  background-color: rgba(0,0,0,0.7);
+}
+.modal--visible {
+  display: block;
 }
 
 @import "_editor.less";

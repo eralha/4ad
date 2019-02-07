@@ -1,0 +1,29 @@
+﻿
+  <div class="container_12 c-sheet_list">
+    <div class="wrapper">
+
+      <div dir-Hero-Sheet-Ctrll="heroSheet1" ng-class="{'selected' : sheetSelected == 'heroSheet1'}"></div>
+      <div dir-Hero-Sheet-Ctrll="heroSheet2" ng-class="{'selected' : sheetSelected == 'heroSheet2'}"></div>
+      <div dir-Hero-Sheet-Ctrll="heroSheet3" ng-class="{'selected' : sheetSelected == 'heroSheet3'}"></div>
+      <div dir-Hero-Sheet-Ctrll="heroSheet4" ng-class="{'selected' : sheetSelected == 'heroSheet4'}"></div>
+
+      <div class="mt_20">
+        <a ui-sref="home()"><button type="button" class="btn btn-warning btn--full">MAIN MENU</button></a>
+      </div>
+
+    </div>
+  </div>
+
+  <div class="c-bottom_controlls">
+    <div class="btn-group list">
+        <!-- <button type="button" class="btn btn-warning" ng-click="saveSheetData();">Save</button> -->
+        <button type="button" class="btn btn-secondary" ng-click="rollDice(6);">Roll d6</button>
+        <button type="button" class="btn btn-secondary" ng-click="rollDice(6);">Roll d8</button>
+    </div>
+    <div class="list visible_on_mobile">
+      <button type="button" class="btn btn--full btn-primary" ng-click="selectHeroSheet(1);" ng-class="{'btn-success' : sheetSelected == 'heroSheet1'}">Hero 1</button>
+      <button type="button" class="btn btn--full btn-primary" ng-click="selectHeroSheet(2);" ng-class="{'btn-success' : sheetSelected == 'heroSheet2'}">Hero 2</button>
+      <button type="button" class="btn btn--full btn-primary" ng-click="selectHeroSheet(3);" ng-class="{'btn-success' : sheetSelected == 'heroSheet3'}">Hero 3</button>
+      <button type="button" class="btn btn--full btn-primary" ng-click="selectHeroSheet(4);" ng-class="{'btn-success' : sheetSelected == 'heroSheet4'}">Hero 4</button>
+    </div>
+  </div>

@@ -13,7 +13,7 @@ define('module/angular/app__main', [
 		app.config(['$stateProvider', '$urlRouterProvider', '$locationProvider', function($stateProvider, $urlRouterProvider, $locationProvider) {
 
 			$locationProvider.html5Mode({
-			  enabled: true,
+			  enabled: false,
 			  requireBase: false
 			});
 
@@ -22,7 +22,16 @@ define('module/angular/app__main', [
 				  url: "/",
 				  controller: 'HomeCtrll',
 			      templateUrl: "/templates/home.html"
-			    });
+				})
+				.state('party', {
+					url: "/party/:partyId",
+					controller: 'PartyCtrll',
+					templateUrl: "/templates/party.html"
+				})
+				
+				;
+
+				$urlRouterProvider.otherwise("/");
 
 	    }]);
 		
@@ -53,10 +62,6 @@ define('module/angular/app__main', [
 	    		return langService.translate(key);
 	    	}
 
-	    	$scope.changeLang = function(lang){
-	    		$scope.lang = lang;
-	    	}
-
 			$scope.scrollToTop = function(selector){
 	    		$("html, body").stop().animate({scrollTop: 0}, 1000, 'swing');
 			}
@@ -80,34 +85,48 @@ define('module/angular/app__main', [
 
 		}]);
 
-		app.controller('HomeCtrll', ['$scope', '$rootScope', 'dataService', 'langService', 'ngProgressFactory', '$state', '$sce', '$filter',
-		function($scope, $rootScope, dataService, langService, ngProgressFactory, $state, $sce, $filter) {
+		app.controller('HomeCtrll', ['$scope', '$rootScope', 'dataService', 'gameDataService', 'ngProgressFactory', '$state', '$sce', '$filter',
+		function($scope, $rootScope, dataService, gameDataService, ngProgressFactory, $state, $sce, $filter) {
+
+			$rootScope.gamesData = gameDataService.getGamesData();
+
+			$scope.showNewGameModal = function(){
+				$scope.newGameName = '';
+				$scope.isCreateGameVisible = true;
+			}
+
+			$scope.closeNewGameModal = function(){
+				$scope.isCreateGameVisible = false;
+			}
+
+			$scope.startNewGame = function(){
+				if($scope.newGameName == ''){ return; }
+
+				var gameObj = gameDataService.createNewGame($scope.newGameName);
+
+				$scope.closeNewGameModal();
+				$state.go('party', {partyId: gameObj.id});
+			}
+
+		}]);
+
+		app.controller('PartyCtrll', ['$scope', '$rootScope', 'dataService', 'langService', 'ngProgressFactory', '$state', '$sce', '$filter', '$stateParams',
+		function($scope, $rootScope, dataService, langService, ngProgressFactory, $state, $sce, $filter, $stateParams) {
 
 			var scope = $scope;
 
-			scope.sheetSelected = 'heroSheet1';
+			scope.partyId = $stateParams.partyId;
 
+			scope.sheetSelected = 'heroSheet1';
 			scope.selectHeroSheet = function(sheetNum){
 				scope.sheetSelected = 'heroSheet'+sheetNum;
-			}
-
-			scope.saveSheetData = function() {
-				console.log('savingData', $rootScope.sheetData);
-				localStorage.setItem('sheetData', angular.toJson($rootScope.sheetData));
-			}
-
-			$rootScope.getSheetData = function(sheetName) {
-				var data = localStorage.getItem('sheetData');
-					data = angular.fromJson(data);
-
-				return (data)? data[sheetName] : null;
 			}
 
 		}]);
 		
 		//generic controlers go here
-	    app.controller('HeroCtrll', ['$scope', '$rootScope', 'dataService', 'ngProgressFactory', '$state', '$sce', '$filter',
-		function($scope, $rootScope, dataService, ngProgressFactory, $state, $sce, $filter) {
+	    app.controller('HeroCtrll', ['$scope', '$rootScope', 'dataService', 'ngProgressFactory', '$state', '$sce', '$filter', 'gameDataService', '$stateParams',
+		function($scope, $rootScope, dataService, ngProgressFactory, $state, $sce, $filter, gameDataService, $stateParams) {
 
 			var scope =  $scope;
 
@@ -180,22 +199,6 @@ define('module/angular/app__main', [
 				var classData = scope.heroClasses[scope.selectedClass];
 				hero.class = classData.class;
 				hero.heroDataTbl = classData;
-			}
-
-			scope.$watch('hero', function(){
-				console.log(hero, scope.sheetName);
-				if(hero.heroDataTbl){
-					hero.life = hero.heroDataTbl.startLife + parseInt(hero.level);
-					hero.life = hero.life - parseInt(hero.wounds);
-				}
-
-				if(!$rootScope.sheetData){ $rootScope.sheetData = {}; }
-
-				$rootScope.sheetData[scope.sheetName] = angular.copy(hero);
-			}, true);
-
-			scope.getItemImage = function(item){
-				return item.image;
 			}
 
 			scope.addItem = function(placeholder, item){
@@ -281,14 +284,29 @@ define('module/angular/app__main', [
 			//ve se existe data gravada
 			setTimeout(function(){
 				var sheetName = scope.sheetName;
+				var stored = gameDataService.getSheetData($stateParams.partyId, sheetName);
 
-				var stored = $rootScope.getSheetData(sheetName);
+				//console.log('partyid', $stateParams.partyId, 'sheetname', sheetName, 'stored', stored);
 
 				if(stored){
 					hero = angular.copy(stored);
 					scope.hero = hero;
 					scope.$apply();
 				}
+
+				scope.$watch('hero', function(){
+					//console.log(hero, scope.sheetName);
+					if(hero.heroDataTbl){
+						hero.life = hero.heroDataTbl.startLife + parseInt(hero.level);
+						hero.life = hero.life - parseInt(hero.wounds);
+					}
+	
+					if(!$rootScope.sheetData){ $rootScope.sheetData = {}; }
+	
+					if(scope.sheetName){
+						gameDataService.saveSheetData($stateParams.partyId, scope.sheetName, angular.copy(hero));
+					}
+				}, true);
 			}, 10);
 
 		}]);

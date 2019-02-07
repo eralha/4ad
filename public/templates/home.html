@@ -1,21 +1,53 @@
 ﻿
-  <div class="container_12 c-sheet_list">
-    <div class="wrapper">
-
-      <div dir-Hero-Sheet-Ctrll="heroSheet1" ng-class="{'selected' : sheetSelected == 'heroSheet1'}"></div>
-      <div dir-Hero-Sheet-Ctrll="heroSheet2" ng-class="{'selected' : sheetSelected == 'heroSheet2'}"></div>
-      <div dir-Hero-Sheet-Ctrll="heroSheet3" ng-class="{'selected' : sheetSelected == 'heroSheet3'}"></div>
-      <div dir-Hero-Sheet-Ctrll="heroSheet4" ng-class="{'selected' : sheetSelected == 'heroSheet4'}"></div>
-
+  
+  <div class="modal" ng-class="{'modal--visible' : isCreateGameVisible}">
+    <div class="modal-dialog" role="document">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title">Create New Party</h5>
+          <button type="button" class="close" ng-click="closeNewGameModal();">
+            <span aria-hidden="true">&times;</span>
+          </button>
+        </div>
+        <div class="modal-body">
+          <p>Choose a name for your party and start a new adventure.</p>
+          <div class="form-group">
+            <label for="exampleInputEmail1">Party Name:</label>
+            <input type="text" class="form-control" ng-model="newGameName">
+          </div>
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-secondary" ng-click="closeNewGameModal();">Close</button>
+          <button type="button" class="btn btn-primary" ng-click="startNewGame();">Start New Game</button>
+        </div>
+      </div>
     </div>
   </div>
+  
+  
+  <div class="container_12">
+    <div class="wrapper">
 
-  <div class="c-bottom_controlls">
-    <button type="button" class="btn btn-warning save" ng-click="saveSheetData();">Save</button>
-    <div class="list visible_on_mobile">
-      <button type="button" class="btn btn--full btn-primary" ng-click="selectHeroSheet(1);" ng-class="{'btn-success' : sheetSelected == 'heroSheet1'}">Hero 1</button>
-      <button type="button" class="btn btn--full btn-primary" ng-click="selectHeroSheet(2);" ng-class="{'btn-success' : sheetSelected == 'heroSheet2'}">Hero 2</button>
-      <button type="button" class="btn btn--full btn-primary" ng-click="selectHeroSheet(3);" ng-class="{'btn-success' : sheetSelected == 'heroSheet3'}">Hero 3</button>
-      <button type="button" class="btn btn--full btn-primary" ng-click="selectHeroSheet(4);" ng-class="{'btn-success' : sheetSelected == 'heroSheet4'}">Hero 4</button>
+      
+      <div class="grid_12 c-games">
+
+        <div class="book_image"><img src="/images/home_img1.jpg" alt="" /></div>
+
+        <div class="text">
+          Choose one of your previous saved parties, if you dont have any party created yet, just create a new one and start playing.
+        </div>
+
+        <h1>Saved Parties</h1>
+        <ul class="list-group">
+          <a ui-sref="party({partyId: item.id})" ng-repeat="item in gamesData track by item.id"><li class="list-group-item">{{item.name}}</li></a>
+        </ul>
+
+        <div class="mt_20">
+            <button type="button" class="btn btn-secondary btn--full" ng-click="showNewGameModal();">Create New Party</button>
+        </div>
+
+      </div>
+      
+
     </div>
   </div>

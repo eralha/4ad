@@ -6,16 +6,95 @@ define('module/angular/services/main', [
 	var module = angular.module('app.Services', []);
 
 
-        module.service('langService', ['$q', '$http', '$filter', '$rootScope', function($q, $http, $filter, $rootScope) {
+        module.service('gameDataService', ['$q', '$http', '$filter', '$rootScope', function($q, $http, $filter, $rootScope) {
 
-        	this.lang;
-        	this.langData = {};
-        	this.langDefer = $q.defer();
-        	this.loading;
-        	var sup = this;
+			var dataBaseName = 'fourADDataBase';
+			var data = localStorage.getItem(dataBaseName);
+				data = angular.fromJson(data);
+
+			//se não existir data guardada associamos a um array
+			/*
+				estrutura:
+				[
+					game = {
+						name: 
+						id:
+						party : [
+							"sheet1" : {}
+							"sheet2" : {}
+							"sheet3" : {}
+							"sheet4" : {}
+						]
+					}
+				]
+			*/
+			if(!data){
+				data = [];
+			}
+
+			this.getGamesData = function(){
+				return data;
+			}
+
+			this.createNewGame = function(gameName){
+				var obj = {};
+					obj.name = gameName;
+					obj.id = Math.round(Math.random()*999999999999);
+					obj.party = {};
+
+				data.push(obj);
+
+				this.saveData();
+
+				return obj;
+			}
+
+			this.saveSheetData = function(partyId, sheetName, sheetData){
+				partyId = parseInt(partyId);
+				var game = $filter('filter')(data, {id: partyId}, true)[0];
+
+				//console.log(game, sheetName, sheetData, partyId);
+
+				//se nao encontrar nenhuma party
+				if(!game){ return; }
+
+					game.party[sheetName] = sheetData;
+
+				this.saveData();
+			}
+
+			this.saveData = function(){
+				localStorage.setItem(dataBaseName, angular.toJson(data));
+			}
+
+			this.getSheetData = function(partyId, sheetName){
+				partyId = parseInt(partyId);
+				var game = $filter('filter')(data, {id: partyId}, true)[0];
+
+				//console.log('get sheet data', game);
+
+				return (game) ? game.party[sheetName] : null;
+			}
+
+			this.getPartyData = function(partyId){
+				partyId = parseInt(partyId);
+				return $filter('filter')(data, {id: partyId}, true)[0];
+			}
 
             return this;
-        }]);
+		}]);
+		
+
+		module.service('langService', ['$q', '$http', '$filter', '$rootScope', function($q, $http, $filter, $rootScope) {
+			
+			this.lang;
+			this.langData = {};
+			this.langDefer = $q.defer();
+			this.loading;
+			var sup = this;
+
+			return this;
+		}]);
 	    
 
 		module.service('dataService', ['$q', '$http', '$filter', 'langService', function($q, $http, $filter, langService) {
