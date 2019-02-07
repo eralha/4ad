@@ -121,7 +121,7 @@ define('module/angular/app__main', [
 				//class
 				//atkValue
 				//defValue
-				hero.level = '1';//level
+				hero.level = 1;//level
 				//life
 				hero.wounds = '0';//wounds
 				//status
