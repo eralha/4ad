@@ -78,6 +78,7 @@ define('module/angular/app__main', [
 			}
 
 			$rootScope.addLayerDice = function(dice, sheetName){
+				//$rootScope.scrollToElement('.JS_ATK_DEF_INFO');
 				var compiled = $compile('<div dir-Layer dir-Layer-Roll="'+dice+'" data-sheet="'+sheetName+'"></div>')($scope);
 				
 				$('body').append(compiled);
@@ -96,13 +97,8 @@ define('module/angular/app__main', [
 	    		if($(selector).length == 0){ return; }
 
 				var sc = $(selector).offset().top;
-					sc -= 120;
 
-	    		if($(window).width() < mobile){
-	    			sc -= 80;
-	    		}
-
-	    		$("html, body").stop().animate({scrollTop: sc}, 1000, 'swing');
+	    		$("html, body").stop().animate({scrollTop: sc}, 0, 'swing');
 	    	}
 
 		}]);

@@ -38,16 +38,6 @@
           <h1 class="subtitle">Counter</h1>
           <div class="label"><input type="number" class="form-control" ng-model="hero.customCounter"/></div>
       </div>
-
-      <div class="clear"></div>
-      <div class="grid_6">
-          <h1 class="subtitle">ATK</h1>
-          <div class="label"><b>{{ GETHEROATTACK(hero.SelectedWeapon) }}</b></div>
-      </div>
-      <div class="grid_6">
-          <h1 class="subtitle">DEF</h1>
-          <div class="label"><b>{{ GETHERODEFENSE(hero.armorSlot1, hero.armorSlot2, '', '') }}</b></div>
-      </div>
       
 
       <div class="clear"></div>
@@ -97,6 +87,17 @@
                 <option ng-value="{{$index + 1}}" ng-repeat="item in numberList">{{$index + 1}}</option>
               </select>
           </div>
+      </div>
+
+
+      <div class="clear JS_ATK_DEF_INFO"></div>
+      <div class="grid_6">
+          <h1 class="subtitle">ATK</h1>
+          <div class="label"><b>{{ GETHEROATTACK(hero.SelectedWeapon) }}</b></div>
+      </div>
+      <div class="grid_6">
+          <h1 class="subtitle">DEF</h1>
+          <div class="label"><b>{{ GETHERODEFENSE(hero.armorSlot1, hero.armorSlot2, '', '') }}</b></div>
       </div>
 
 
