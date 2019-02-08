@@ -181,10 +181,12 @@ define('module/angular/directives/common', [
 							console.log(scope);
 
 							scope.remVal = function(){
+								if(!scope.obj[scope.prop]){ scope.obj[scope.prop] = 1; }
 								scope.obj[scope.prop] = parseInt(scope.obj[scope.prop]) - 1;
 							}
 
 							scope.addVal = function(){
+								if(!scope.obj[scope.prop]){ scope.obj[scope.prop] = 1; }
 								scope.obj[scope.prop] = parseInt(scope.obj[scope.prop]) + 1;
 							}
 
