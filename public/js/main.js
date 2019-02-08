@@ -163,7 +163,12 @@ require(['plugins'], function(plugins){
 
             if($(this).attr("data-init") == "false") { return; }
 
-            require([$(this).attr("data-angular-module")]);
+            require([$(this).attr("data-angular-module")], function(){
+                $('.js_loading').removeClass('js_loading');
+                $('.angular-loading').removeClass('angular-loading');
+                
+                angular.bootstrap(document, ['app']);
+            });
         });
     });
 

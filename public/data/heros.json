@@ -51,7 +51,7 @@
     "class": "Warrior",
     "atk": "Lvl+roll+wpn",
     "def": "roll+armor+shield",
-    "abilities": "",
+    "abilities": "spell attack: Roll + lvl; Puzzles/Riddles: +lvl",
     "startLife": 6,
     "equipment": "wpn: any; armor: any"
   },
@@ -62,5 +62,13 @@
     "abilities": "roll+wpn; Luck points (lvl +1) May re-roll dice attack,defense, search,treasure, magic treasure tables (may not reroll a reroll)",
     "startLife": 3,
     "equipment": "wpn: Light wpn, sling; armor: light armor"
+  },
+  {
+    "class": "Swashbuckler",
+    "atk": "1/2 lvl+roll+wpn",
+    "def": "1/2 lvl+roll",
+    "abilities": "When kill amonster gain a panache point (max = lvl), can be spent to add +1 to ATK or DEF, only one per roll.",
+    "startLife": 4,
+    "equipment": "wpn: 1h, lh, no bow; armor: rings only"
   }
 ]

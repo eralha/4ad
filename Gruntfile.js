@@ -9,7 +9,7 @@ module.exports = function(grunt) {
           dest:     'public/js/dist/template.js',
           options:  {
             url:    function(url) { 
-              url = url.replace('public/templates/', 'https://vtex-static.herokuapp.com/templates/');
+              url = url.replace('public/templates/', '/templates/');
               return url;
             }
           }
@@ -70,6 +70,7 @@ module.exports = function(grunt) {
   
     // Default task(s).
     //grunt.registerTask('css', ['less', 'cssmin', 'autoprefixer']);
-    grunt.registerTask('def', ['ngtemplates', 'uglify', 'less', 'cssmin']);
+    //grunt.registerTask('def', ['ngtemplates', 'uglify', 'less', 'cssmin']);
+    grunt.registerTask('def', ['uglify', 'less', 'cssmin']);
   
   };

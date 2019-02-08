@@ -41,7 +41,10 @@
       <div class="clear"></div>
       <div class="grid_12">
           <h1 class="subtitle">Abilities</h1>
-          <div class="label">{{hero.heroDataTbl.abilities}} {{hero.heroDataTbl.equipment}}</div>
+          <div class="label">
+            {{hero.heroDataTbl.abilities}} - {{hero.heroDataTbl.equipment}}<br />
+            Def: {{hero.heroDataTbl.def}} - Atk: {{hero.heroDataTbl.atk}}
+          </div>
       </div>
 
 <div ng-if="hero.level >= 5">

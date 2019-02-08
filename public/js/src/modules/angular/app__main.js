@@ -348,6 +348,7 @@ define('module/angular/app__main', [
 					if(heroName == 'Cleric'){ data = data + Math.floor(lvl / 2); }
 					if(heroName == 'Halfling'){}
 					if(heroName == 'Wizard'){}
+					if(heroName == 'Swashbuckler'){ data = data + Math.floor(lvl / 2); }
 				}
 				
 				return 'Attack ('+data+'+roll)';
@@ -375,6 +376,11 @@ define('module/angular/app__main', [
 					if(String(searchArr[i]).indexOf(plusMods[j].name) != -1){ data = data + plusMods[j].mod; }
 					}
 				}
+
+				//class specific
+				var heroName = hero.class;
+				if(heroName == 'Swashbuckler'){ data = data + Math.floor(lvl / 2); }
+				if(heroName == 'Rogue'){ data = data + lvl; }
 				
 				return 'Deffense ('+data+')';
 			}
@@ -426,11 +432,6 @@ define('module/angular/app__main', [
 			}, 10);
 
 		}]);
-	    
-    $('.js_loading').removeClass('js_loading');
-    $('.angular-loading').removeClass('angular-loading');
-    
-    angular.bootstrap(document, ['app']);
 
     return app;
 
