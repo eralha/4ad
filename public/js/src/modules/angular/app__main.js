@@ -225,6 +225,7 @@ define('module/angular/app__main', [
 				//class
 				//atkValue
 				//defValue
+				hero.customCounter = 0;
 				hero.level = 1;
 				hero.clues = 0;
 				hero.madness = 0;
@@ -367,13 +368,14 @@ define('module/angular/app__main', [
 				
 				for(var i = 0; i < searchArr.length; i++){
 					for(var j = 0; j < armorTypes.length; j++){
-					if(String(searchArr[i]).indexOf(armorTypes[j].name) != -1){ data = data + armorTypes[j].mod; }
+						var name = String(armorTypes[j].name).toLocaleLowerCase();
+						if(String(searchArr[i]).indexOf(name) != -1){ data = data + armorTypes[j].mod; }
 					}
 				}
 				
 				for(var i = 0; i < searchArr.length; i++){
 					for(var j = 0; j < plusMods.length; j++){
-					if(String(searchArr[i]).indexOf(plusMods[j].name) != -1){ data = data + plusMods[j].mod; }
+						if(String(searchArr[i]).indexOf(plusMods[j].name) != -1){ data = data + plusMods[j].mod; }
 					}
 				}
 
@@ -402,7 +404,8 @@ define('module/angular/app__main', [
 				//console.log('partyid', $stateParams.partyId, 'sheetname', sheetName, 'stored', stored);
 
 				if(stored){
-					hero = angular.copy(stored);
+					stored = angular.copy(stored);
+					hero = Object.assign({}, hero, stored);
 
 					//check for missing propertis between versions
 					if(!hero.expertSkills){
@@ -421,6 +424,7 @@ define('module/angular/app__main', [
 						hero.life = hero.life - parseInt(hero.wounds);
 
 						hero.atkStr = scope.GETHEROATTACK(hero.SelectedWeapon);
+						hero.atkStrOH = scope.GETHEROATTACK(hero.SelectedWeaponOffHand);
 						hero.defStr = scope.GETHERODEFENSE(hero.armorSlot1, hero.armorSlot2, '', '');
 					}
 	

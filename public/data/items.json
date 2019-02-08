@@ -1,522 +1,530 @@
 [
-    {
-      "name": "Holy water vial",
-      "image": "https://blzmedia-a.akamaihd.net/d3/icons/items/large/p2_actbountyreagent_05_demonhunter_male.png",
-      "value": 30,
-      "vendor": "TRUE",
-      "effect": "",
-      "stock": ""
-    },
-    {
-      "name": "Bandage",
-      "image": "https://blzmedia-a.akamaihd.net/d3/icons/items/large/p2_actbountyreagent_03_demonhunter_male.png",
-      "value": 5,
-      "vendor": "TRUE",
-      "effect": "heal 1 life",
-      "stock": ""
-    },
-    {
-      "name": "Small Pot of healing",
-      "image": "https://blzmedia-a.akamaihd.net/d3/icons/items/large/healthpotionbottomless_demonhunter_male.png",
-      "value": 50,
-      "vendor": "TRUE",
-      "effect": "heal half of hero life round up",
-      "stock": ""
-    },
-    {
-      "name": "Potion of healing",
-      "image": "https://blzmedia-a.akamaihd.net/d3/icons/items/large/healthpotionlegendary_09_demonhunter_male.png",
-      "value": 100,
-      "vendor": "TRUE",
-      "effect": "heal hero total life points",
-      "stock": ""
-    },
-    {
-      "name": "Rope",
-      "image": "https://blzmedia-a.akamaihd.net/d3/icons/items/large/p43_unique_belt_001_x1_demonhunter_male.png",
-      "value": 4,
-      "vendor": "TRUE",
-      "effect": "",
-      "stock": ""
-    },
-    {
-      "name": "Book Res Ritual",
-      "image": "https://blzmedia-a.akamaihd.net/d3/icons/items/large/templar_special_101_demonhunter_male.png",
-      "value": 1000,
-      "vendor": "TRUE",
-      "effect": "",
-      "stock": ""
-    },
-    {
-      "name": "Ring of teleport",
-      "image": "https://blzmedia-a.akamaihd.net/d3/icons/items/large/p43_retroring_002_demonhunter_male.png",
-      "value": "",
-      "vendor": "FALSE",
-      "effect": "",
-      "stock": ""
-    },
-    {
-      "name": "Fireball Staff",
-      "image": "https://www.diablohub.com/static/images/database/items/the_grand_vizier.png",
-      "value": "",
-      "vendor": "FALSE",
-      "effect": "",
-      "stock": ""
-    },
-    {
-      "name": "Wand of sleep x3",
-      "image": "https://www.diablohub.com/static/images/database/items/fragment_of_destiny.png",
-      "value": "",
-      "vendor": "FALSE",
-      "effect": "",
-      "stock": ""
-    },
-    {
-      "name": "Fools gold",
-      "image": "https://blzmedia-a.akamaihd.net/d3/icons/items/large/templar_special_102_demonhunter_male.png",
-      "value": "",
-      "vendor": "FALSE",
-      "effect": "",
-      "stock": ""
-    },
-    {
-      "name": "Gem",
-      "image": "https://blzmedia-a.akamaihd.net/d3/icons/items/large/x1_ruby_02_demonhunter_male.png",
-      "value": "",
-      "vendor": "FALSE",
-      "effect": "",
-      "stock": ""
-    },
-    {
-      "name": "Jewelry",
-      "image": "https://blzmedia-a.akamaihd.net/d3/icons/items/large/unique_gem_019_x1_demonhunter_male.png",
-      "value": "",
-      "vendor": "FALSE",
-      "effect": "",
-      "stock": ""
-    },
-    {
-      "name": "Book of Skalitos",
-      "image": "https://i.imgur.com/l7RQoIu.png",
-      "value": "",
-      "vendor": "FALSE",
-      "effect": "One scroll of all six spells; can be sold for 650 if no scrolls used; destroyed by dragon breath",
-      "stock": ""
-    },
-    {
-      "name": "Scroll of reroll",
-      "image": "",
-      "value": 100,
-      "vendor": "TRUE",
-      "effect": "on anything",
-      "stock": ""
-    },
-    {
-      "name": "Scroll Fireball",
-      "image": "",
-      "value": 100,
-      "vendor": "FALSE",
-      "effect": "",
-      "stock": ""
-    },
-    {
-      "name": "Scroll Blessing",
-      "image": "",
-      "value": 100,
-      "vendor": "FALSE",
-      "effect": "",
-      "stock": ""
-    },
-    {
-      "name": "Scroll Lightning Bolt",
-      "image": "",
-      "value": 100,
-      "vendor": "FALSE",
-      "effect": "",
-      "stock": ""
-    },
-    {
-      "name": "Scroll Sleep",
-      "image": "",
-      "value": 100,
-      "vendor": "FALSE",
-      "effect": "",
-      "stock": ""
-    },
-    {
-      "name": "Scroll Escape",
-      "image": "",
-      "value": 100,
-      "vendor": "FALSE",
-      "effect": "",
-      "stock": ""
-    },
-    {
-      "name": "Scroll Protect",
-      "image": "",
-      "value": 100,
-      "vendor": "FALSE",
-      "effect": "",
-      "stock": ""
-    },
-    {
-      "name": "Orb of scouting",
-      "image": "https://i.imgur.com/8pOftgr.png",
-      "value": 20,
-      "vendor": "TRUE",
-      "effect": "Wiz or elf only, spend 1 to scout one room ahead",
-      "stock": ""
-    },
-    {
-      "name": "Essence of Diamond +1 def",
-      "image": "https://blzmedia-a.akamaihd.net/d3/icons/items/large/p3_gem_convert_diamond_demonhunter_male.png",
-      "value": 150,
-      "vendor": "TRUE",
-      "effect": "Enchant armor +1 def until wounded",
-      "stock": ""
-    },
-    {
-      "name": "Essence of Ruby +1 att",
-      "image": "https://blzmedia-a.akamaihd.net/d3/icons/items/large/p3_gem_convert_ruby_demonhunter_male.png",
-      "value": 100,
-      "vendor": "TRUE",
-      "effect": "Enchant weapon +1 attack for one adventure (one per wpn)",
-      "stock": ""
-    },
-    {
-      "name": "Essence of Topaz +1 dmg",
-      "image": "https://blzmedia-a.akamaihd.net/d3/icons/items/large/p3_gem_convert_topaz_demonhunter_male.png",
-      "value": 150,
-      "vendor": "TRUE",
-      "effect": "Enchant weapon on a sucess hit, roll, on a 4, 5, 6  +1 dmg for one adv (one per wpn)",
-      "stock": ""
-    },
-    {
-      "name": "Essence of Emerald",
-      "image": "https://blzmedia-a.akamaihd.net/d3/icons/items/large/p3_gem_convert_emerald_demonhunter_male.png",
-      "value": 100,
-      "vendor": "FALSE",
-      "effect": "Enchanted Weapon - for rest of dungeon, roll 2 dice choose best; can be used for monsters who require magic",
-      "stock": ""
-    },
-    {
-      "name": "Essence of Amethyst",
-      "image": "https://blzmedia-a.akamaihd.net/d3/icons/items/large/p3_gem_convert_amethyst_demonhunter_male.png",
-      "value": 200,
-      "vendor": "FALSE",
-      "effect": "",
-      "stock": ""
-    },
-    {
-      "name": "--- Missile Ammo ---",
-      "image": "",
-      "value": "",
-      "vendor": "TRUE",
-      "effect": "",
-      "stock": ""
-    },
-    {
-      "name": "Steel Arrows +1",
-      "image": "https://blzmedia-a.akamaihd.net/d3/icons/items/large/quiver_002_demonhunter_male.png",
-      "value": 30,
-      "vendor": "TRUE",
-      "effect": "ATK +1",
-      "stock": 5
-    },
-    {
-      "name": "Lightning Arrows",
-      "image": "https://blzmedia-a.akamaihd.net/d3/icons/items/large/unique_quiver_003_x1_demonhunter_male.png",
-      "value": 40,
-      "vendor": "TRUE",
-      "effect": "50% chance of spell effect",
-      "stock": 5
-    },
-    {
-      "name": "Fire Arrows",
-      "image": "https://blzmedia-a.akamaihd.net/d3/icons/items/large/quiver_207_demonhunter_male.png",
-      "value": 40,
-      "vendor": "TRUE",
-      "effect": "50 %chance of spell effect",
-      "stock": 5
-    },
-    {
-      "name": "Enchanted Sling Arrows",
-      "image": "https://blzmedia-a.akamaihd.net/d3/icons/items/large/quiver_206_demonhunter_male.png",
-      "value": 30,
-      "vendor": "TRUE",
-      "effect": "2 in 6 chance of causing minions or vermin to flee",
-      "stock": 5
-    },
-    {
-      "name": "Sharpened Sling Arrows +1",
-      "image": "https://blzmedia-a.akamaihd.net/d3/icons/items/large/quiver_204_demonhunter_male.png",
-      "value": 30,
-      "vendor": "TRUE",
-      "effect": "ATK +1",
-      "stock": 5
-    },
-    {
-      "name": "-- Fiendish foes --",
-      "image": "",
-      "value": "",
-      "vendor": "FALSE",
-      "effect": "",
-      "stock": ""
-    },
-    {
-      "name": "Prayer beads",
-      "image": "https://blzmedia-a.akamaihd.net/d3/icons/items/large/amulet08_demonhunter_male.png",
-      "value": "",
-      "vendor": "FALSE",
-      "effect": "This is a necklace with d6 beads. Each bead is one use only. When used while a cleric performs a bless or heal, roll a d6; on a 4 or more, the bless or heal power is not counted as “spent”, and may be used again in the current adventure. One bead is used up with each roll, even if the 4+ roll fails.",
-      "stock": ""
-    },
-    {
-      "name": "Enchanted paint.",
-      "image": "https://i.imgur.com/l7RQoIu.png",
-      "value": "",
-      "vendor": "FALSE",
-      "effect": "Whatever is painted becomes real. If you draw a door on a wall, an actual door will appear. You can then roll for a room as normal, or connect two existing rooms. You can also draw normal weapons, armor or equipment and they will become real. The item drawn must be non magical and no more than 15gp in value. Liquids cannot be drawn. Each time the paint is used, roll a d6; on a 1, it runs out.",
-      "stock": ""
-    },
-    {
-      "name": "Wand of power",
-      "image": "https://blzmedia-a.akamaihd.net/d3/icons/items/large/unique_staff_102_x1_demonhunter_male.png",
-      "value": "",
-      "vendor": "FALSE",
-      "effect": "This is only usable by wizards, and has 2d3 charges. Each charge adds 1 level to any cast spell. You can also add multiple charges to a single spell. For example, a 5th level wizard casts a sleep spell using 2 charges - the spell is cast as if by a 7th level wizard.",
-      "stock": ""
-    },
-    {
-      "name": "Vials of liquid Acid",
-      "image": "https://blzmedia-a.akamaihd.net/d3/icons/items/large/templar_special_103_demonhunter_male.png",
-      "value": "",
-      "vendor": "FALSE",
-      "effect": "",
-      "stock": ""
-    },
-    {
-      "name": "--- Abyss items ---",
-      "image": "",
-      "value": "",
-      "vendor": "FALSE",
-      "effect": "",
-      "stock": ""
-    },
-    {
-      "name": "Scroll Healing Surge",
-      "image": "",
-      "value": "",
-      "vendor": "FALSE",
-      "effect": "Heal 2 life all heros minus caster, vampires -2 life",
-      "stock": ""
-    },
-    {
-      "name": "Scroll Mass teleport",
-      "image": "",
-      "value": "",
-      "vendor": "FALSE",
-      "effect": "Teleport all party out of the dungeon or to any room 1dmg to wizard for every hero",
-      "stock": ""
-    },
-    {
-      "name": "Scroll Aura of Terror",
-      "image": "",
-      "value": "",
-      "vendor": "FALSE",
-      "effect": "Minion or boss to make moral roll, undead and fear are imune",
-      "stock": ""
-    },
-    {
-      "name": "Scroll Reverse Gaze",
-      "image": "",
-      "value": "",
-      "vendor": "FALSE",
-      "effect": "when tested by gaze test it on the monster instead d8 + wiz lvl",
-      "stock": ""
-    },
-    {
-      "name": "Scroll Life force control",
-      "image": "",
-      "value": "",
-      "vendor": "FALSE",
-      "effect": "Trade life with another hero, against vampires lose 1 life",
-      "stock": ""
-    },
-    {
-      "name": "Scroll Infalible missile",
-      "image": "",
-      "value": "",
-      "vendor": "FALSE",
-      "effect": "Auto dmg , rol a d8 on a explode inflic another dmg",
-      "stock": ""
-    },
-    {
-      "name": "Amulet of Protection",
-      "image": "https://blzmedia-a.akamaihd.net/d3/icons/items/large/amulet17_demonhunter_male.png",
-      "value": "",
-      "vendor": "FALSE",
-      "effect": "The wearer has +1 to Defense rolls and saving rolls against attacks by undead monsters. It may be sold for 250 gp. Multiple amulets of the same type do not stack, so a",
-      "stock": ""
-    },
-    {
-      "name": "Medallion of Snake Charming",
-      "image": "https://blzmedia-a.akamaihd.net/d3/icons/items/large/unique_amulet_106_x1_demonhunter_male.png",
-      "value": "",
-      "vendor": "FALSE",
-      "effect": "The wearer may roll d8 + L against a group of snakes or lizardmen minions, including the champions of ssikliss. If the character rolls the minions' level or higher, the minions 2 automatically friendly and will ignore the party until medallion is with the party or until they are attacked. The medallion may be sold for 100gp.",
-      "stock": ""
-    },
-    {
-      "name": "Parchment of Banishing",
-      "image": "https://blzmedia-a.akamaihd.net/d3/icons/items/large/orb_002_demonhunter_male.png",
-      "value": "",
-      "vendor": "FALSE",
-      "effect": "This page from an old holy book can be used as a scroll. Due to its complex language, it may be used only by wizards and clerics. It automatically inflicts 2 wounds to one undead or demon creature. Once used, it turns to dust.",
-      "stock": ""
-    },
-    {
-      "name": "Philter of Fire Breathing",
-      "image": "https://blzmedia-a.akamaihd.net/d3/icons/items/large/dye_vanishing_demonhunter_male.png",
-      "value": 80,
-      "vendor": "FALSE",
-      "effect": "This potion renders its drinker immune to dragon fire attacks for the duration of one encounter. In addition, the drinker may breathe fire once, automatically inflicting 2 wounds to a boss or weird monster, or automatically killing two minions or vermin monsters (that counts as the character's attack for that turn). Fire breathing has no effect on dragons. The philter may be sold for 80 gp.",
-      "stock": ""
-    },
-    {
-      "name": "Ring of Three Wishes",
-      "image": "https://blzmedia-a.akamaihd.net/d3/icons/items/large/ring_12_demonhunter_male.png",
-      "value": 0,
-      "vendor": "FALSE",
-      "effect": "This ring gives the wearer d3 wishes. Each wish may be used to do one of the following: 1) Reroll any failed die roll; 2) Automatically inflict 2 wounds to any monster, or kill 2 minions; 3) create any non-magical treasure or single piece of equipment worth 6 300 gp or less; 4) cast any one spell from the basic spell list (NOT the Abyss spell list); 5) heal all damage and Madness on the wearer. Once all three wishes have been used, the ring becomes a simple golden ring that can be sold for 3d8 gp. An unused ring of wishes may be sold for 200 gp per each wish still on the ring.",
-      "stock": ""
-    },
-    {
-      "name": "Cross against Vampires +2 def",
-      "image": "https://blzmedia-a.akamaihd.net/d3/icons/items/large/scoundrel_special_103_demonhunter_male.png",
-      "value": 0,
-      "vendor": "FALSE",
-      "effect": "",
-      "stock": ""
-    },
-    {
-      "name": "Brownie Ward",
-      "image": "https://blzmedia-a.akamaihd.net/d3/icons/items/large/orb_001_demonhunter_male.png",
-      "value": 0,
-      "vendor": "FALSE",
-      "effect": "If the wearer of this talisman encounters brownies, the brownies must immediately make a morale roll.",
-      "stock": ""
-    },
-    {
-      "name": "Blessed horseshoe",
-      "image": "https://blzmedia-a.akamaihd.net/d3/icons/items/large/fistweapon_1h_104_demonhunter_male.png",
-      "value": 0,
-      "vendor": "FALSE",
-      "effect": "The character carrying this horseshoe in his pocket may reroll any one die roll, then the talisman loses its powers. Barbarians are allowed to use this item. An unused blessed horseshoe can be sold for 10 gp.",
-      "stock": ""
-    },
-    {
-      "name": "Wolvesbane",
-      "image": "https://blzmedia-a.akamaihd.net/d3/icons/items/large/dye_03_demonhunter_male.png",
-      "value": 0,
-      "vendor": "FALSE",
-      "effect": "This dried herb may be thrown against a were-creature or a wolf causing a morale roll. Throwing the wolvesbane requires the character to forfeit his Attack roll but hits automatically. A bunch of wolvesbane may be sold for 10 gp.",
-      "stock": ""
-    },
-    {
-      "name": "Loaves of elven bread",
-      "image": "https://i.imgur.com/abYqXfO.jpg",
-      "value": 0,
-      "vendor": "FALSE",
-      "effect": "Any character eating a loaf heals 1 life or removes the Dark Plague. Elves eating them heal 3 life. A character may benefit from eating elven bread only once per game. Elven bread is rare outside of elven communities and the loaves may be sold for 10 gp each. Elven bread never goes bad so you can keep it for future adventures. Elven bread is not considered a magic item so barbarians may use it.",
-      "stock": ""
-    },
-    {
-      "name": "Potion of darksight",
-      "image": "https://blzmedia-a.akamaihd.net/d3/icons/items/large/dye_20_demonhunter_male.png",
-      "value": 0,
-      "vendor": "FALSE",
-      "effect": "",
-      "stock": ""
-    },
-    {
-      "name": "Potion fo vigor",
-      "image": "https://blzmedia-a.akamaihd.net/d3/icons/items/large/dye_04_demonhunter_male.png",
-      "value": 0,
-      "vendor": "FALSE",
-      "effect": "",
-      "stock": ""
-    },
-    {
-      "name": "Garlic Poultrice",
-      "image": "https://blzmedia-a.akamaihd.net/d3/icons/items/large/dye_11_demonhunter_male.png",
-      "value": 0,
-      "vendor": "FALSE",
-      "effect": "",
-      "stock": ""
-    },
-    {
-      "name": "Elfblood Ointment",
-      "image": "https://blzmedia-a.akamaihd.net/d3/icons/items/large/dye_05_demonhunter_male.png",
-      "value": 0,
-      "vendor": "FALSE",
-      "effect": "",
-      "stock": ""
-    },
-    {
-      "name": "Mindworth Extract",
-      "image": "https://blzmedia-a.akamaihd.net/d3/icons/items/large/dye_remover_demonhunter_male.png",
-      "value": 0,
-      "vendor": "FALSE",
-      "effect": "",
-      "stock": ""
-    },
-    {
-      "name": "Elixir of long Life",
-      "image": "https://blzmedia-a.akamaihd.net/d3/icons/items/large/dye_ce_01_demonhunter_male.png",
-      "value": 0,
-      "vendor": "FALSE",
-      "effect": "",
-      "stock": ""
-    },
-    {
-      "name": "-- Netherworld --",
-      "image": "",
-      "value": "",
-      "vendor": "",
-      "effect": "",
-      "stock": ""
-    },
-    {
-      "name": "Soul cube",
-      "image": "https://i.imgur.com/BZfQdzV.png",
-      "value": "50N",
-      "vendor": "FALSE",
-      "effect": "",
-      "stock": ""
-    },
-    {
-      "name": "Food Ration",
-      "image": "https://i.imgur.com/IwvkdNY.png",
-      "value": "1N",
-      "vendor": "FALSE",
-      "effect": "",
-      "stock": ""
-    },
-    {
-      "name": "Unkown Food Ration",
-      "image": "https://i.imgur.com/Nh5nY0f.png",
-      "value": "1N",
-      "vendor": "FALSE",
-      "effect": "",
-      "stock": ""
-    },
-    {
-      "name": "Human Flesh",
-      "image": "https://i.imgur.com/ZG98yBv.png",
-      "value": "1N",
-      "vendor": "FALSE",
-      "effect": "consume this will make a madness check",
-      "stock": ""
-    }
-  ]
+  {
+    "name": "Holy water vial",
+    "image": "https://blzmedia-a.akamaihd.net/d3/icons/items/large/p2_actbountyreagent_05_demonhunter_male.png",
+    "value": 30,
+    "vendor": "TRUE",
+    "effect": "",
+    "stock": ""
+  },
+  {
+    "name": "Bandage",
+    "image": "https://i.imgur.com/NXNYi5y.png",
+    "value": 5,
+    "vendor": "TRUE",
+    "effect": "heal 1 life",
+    "stock": ""
+  },
+  {
+    "name": "Small Pot of healing",
+    "image": "https://blzmedia-a.akamaihd.net/d3/icons/items/large/healthpotionbottomless_demonhunter_male.png",
+    "value": 50,
+    "vendor": "TRUE",
+    "effect": "heal half of hero life round up",
+    "stock": ""
+  },
+  {
+    "name": "Potion of healing",
+    "image": "https://blzmedia-a.akamaihd.net/d3/icons/items/large/healthpotionlegendary_09_demonhunter_male.png",
+    "value": 100,
+    "vendor": "TRUE",
+    "effect": "heal hero total life points",
+    "stock": ""
+  },
+  {
+    "name": "Rope",
+    "image": "https://blzmedia-a.akamaihd.net/d3/icons/items/large/p43_unique_belt_001_x1_demonhunter_male.png",
+    "value": 4,
+    "vendor": "TRUE",
+    "effect": "",
+    "stock": ""
+  },
+  {
+    "name": "Book Res Ritual",
+    "image": "https://blzmedia-a.akamaihd.net/d3/icons/items/large/templar_special_101_demonhunter_male.png",
+    "value": 1000,
+    "vendor": "TRUE",
+    "effect": "",
+    "stock": ""
+  },
+  {
+    "name": "Ring of teleport",
+    "image": "https://blzmedia-a.akamaihd.net/d3/icons/items/large/p43_retroring_002_demonhunter_male.png",
+    "value": "",
+    "vendor": "FALSE",
+    "effect": "",
+    "stock": ""
+  },
+  {
+    "name": "Fireball Staff",
+    "image": "https://www.diablohub.com/static/images/database/items/the_grand_vizier.png",
+    "value": "",
+    "vendor": "FALSE",
+    "effect": "",
+    "stock": ""
+  },
+  {
+    "name": "Wand of sleep x3",
+    "image": "https://www.diablohub.com/static/images/database/items/fragment_of_destiny.png",
+    "value": "",
+    "vendor": "FALSE",
+    "effect": "",
+    "stock": ""
+  },
+  {
+    "name": "Fools gold",
+    "image": "https://blzmedia-a.akamaihd.net/d3/icons/items/large/templar_special_102_demonhunter_male.png",
+    "value": "",
+    "vendor": "FALSE",
+    "effect": "",
+    "stock": ""
+  },
+  {
+    "name": "Gem",
+    "image": "https://blzmedia-a.akamaihd.net/d3/icons/items/large/x1_ruby_02_demonhunter_male.png",
+    "value": "",
+    "vendor": "FALSE",
+    "effect": "",
+    "stock": ""
+  },
+  {
+    "name": "Jewelry",
+    "image": "https://blzmedia-a.akamaihd.net/d3/icons/items/large/unique_gem_019_x1_demonhunter_male.png",
+    "value": "",
+    "vendor": "FALSE",
+    "effect": "",
+    "stock": ""
+  },
+  {
+    "name": "Book of Skalitos",
+    "image": "https://i.imgur.com/l7RQoIu.png",
+    "value": "",
+    "vendor": "FALSE",
+    "effect": "One scroll of all six spells; can be sold for 650 if no scrolls used; destroyed by dragon breath",
+    "stock": ""
+  },
+  {
+    "name": "Scroll of reroll",
+    "image": "",
+    "value": 100,
+    "vendor": "TRUE",
+    "effect": "on anything",
+    "stock": ""
+  },
+  {
+    "name": "Scroll Fireball",
+    "image": "",
+    "value": 100,
+    "vendor": "FALSE",
+    "effect": "",
+    "stock": ""
+  },
+  {
+    "name": "Scroll Blessing",
+    "image": "",
+    "value": 100,
+    "vendor": "FALSE",
+    "effect": "",
+    "stock": ""
+  },
+  {
+    "name": "Scroll Lightning Bolt",
+    "image": "",
+    "value": 100,
+    "vendor": "FALSE",
+    "effect": "",
+    "stock": ""
+  },
+  {
+    "name": "Scroll Sleep",
+    "image": "",
+    "value": 100,
+    "vendor": "FALSE",
+    "effect": "",
+    "stock": ""
+  },
+  {
+    "name": "Scroll Escape",
+    "image": "",
+    "value": 100,
+    "vendor": "FALSE",
+    "effect": "",
+    "stock": ""
+  },
+  {
+    "name": "Scroll Protect",
+    "image": "",
+    "value": 100,
+    "vendor": "FALSE",
+    "effect": "",
+    "stock": ""
+  },
+  {
+    "name": "Orb of scouting",
+    "image": "https://i.imgur.com/8pOftgr.png",
+    "value": 20,
+    "vendor": "TRUE",
+    "effect": "Wiz or elf only, spend 1 to scout one room ahead",
+    "stock": ""
+  },
+  {
+    "name": "Essence of Diamond +1 def",
+    "image": "https://blzmedia-a.akamaihd.net/d3/icons/items/large/p3_gem_convert_diamond_demonhunter_male.png",
+    "value": 150,
+    "vendor": "TRUE",
+    "effect": "Enchant armor +1 def until wounded",
+    "stock": ""
+  },
+  {
+    "name": "Essence of Ruby +1 att",
+    "image": "https://blzmedia-a.akamaihd.net/d3/icons/items/large/p3_gem_convert_ruby_demonhunter_male.png",
+    "value": 100,
+    "vendor": "TRUE",
+    "effect": "Enchant weapon +1 attack for one adventure (one per wpn)",
+    "stock": ""
+  },
+  {
+    "name": "Essence of Topaz +1 dmg",
+    "image": "https://blzmedia-a.akamaihd.net/d3/icons/items/large/p3_gem_convert_topaz_demonhunter_male.png",
+    "value": 150,
+    "vendor": "TRUE",
+    "effect": "Enchant weapon on a sucess hit, roll, on a 4, 5, 6  +1 dmg for one adv (one per wpn)",
+    "stock": ""
+  },
+  {
+    "name": "Essence of Emerald",
+    "image": "https://blzmedia-a.akamaihd.net/d3/icons/items/large/p3_gem_convert_emerald_demonhunter_male.png",
+    "value": 100,
+    "vendor": "FALSE",
+    "effect": "Enchanted Weapon - for rest of dungeon, roll 2 dice choose best; can be used for monsters who require magic",
+    "stock": ""
+  },
+  {
+    "name": "Essence of Amethyst",
+    "image": "https://blzmedia-a.akamaihd.net/d3/icons/items/large/p3_gem_convert_amethyst_demonhunter_male.png",
+    "value": 200,
+    "vendor": "FALSE",
+    "effect": "",
+    "stock": ""
+  },
+  {
+    "name": "--- Missile Ammo ---",
+    "image": "",
+    "value": "",
+    "vendor": "TRUE",
+    "effect": "",
+    "stock": ""
+  },
+  {
+    "name": "Steel Arrows +1",
+    "image": "https://blzmedia-a.akamaihd.net/d3/icons/items/large/quiver_002_demonhunter_male.png",
+    "value": 30,
+    "vendor": "TRUE",
+    "effect": "ATK +1",
+    "stock": 5
+  },
+  {
+    "name": "Lightning Arrows",
+    "image": "https://blzmedia-a.akamaihd.net/d3/icons/items/large/unique_quiver_003_x1_demonhunter_male.png",
+    "value": 40,
+    "vendor": "TRUE",
+    "effect": "50% chance of spell effect",
+    "stock": 5
+  },
+  {
+    "name": "Fire Arrows",
+    "image": "https://blzmedia-a.akamaihd.net/d3/icons/items/large/quiver_207_demonhunter_male.png",
+    "value": 40,
+    "vendor": "TRUE",
+    "effect": "50 %chance of spell effect",
+    "stock": 5
+  },
+  {
+    "name": "Enchanted Sling Arrows",
+    "image": "https://blzmedia-a.akamaihd.net/d3/icons/items/large/quiver_206_demonhunter_male.png",
+    "value": 30,
+    "vendor": "TRUE",
+    "effect": "2 in 6 chance of causing minions or vermin to flee",
+    "stock": 5
+  },
+  {
+    "name": "Sharpened Sling Arrows +1",
+    "image": "https://blzmedia-a.akamaihd.net/d3/icons/items/large/quiver_204_demonhunter_male.png",
+    "value": 30,
+    "vendor": "TRUE",
+    "effect": "ATK +1",
+    "stock": 5
+  },
+  {
+    "name": "-- Fiendish foes --",
+    "image": "",
+    "value": "",
+    "vendor": "FALSE",
+    "effect": "",
+    "stock": ""
+  },
+  {
+    "name": "Box of nails",
+    "image": "https://i.imgur.com/Pz1trPO.png",
+    "value": "4",
+    "vendor": "FALSE",
+    "effect": "To put on doors while resting",
+    "stock": ""
+  },
+  {
+    "name": "Prayer beads",
+    "image": "https://blzmedia-a.akamaihd.net/d3/icons/items/large/amulet08_demonhunter_male.png",
+    "value": "",
+    "vendor": "FALSE",
+    "effect": "This is a necklace with d6 beads. Each bead is one use only. When used while a cleric performs a bless or heal, roll a d6; on a 4 or more, the bless or heal power is not counted as “spent”, and may be used again in the current adventure. One bead is used up with each roll, even if the 4+ roll fails.",
+    "stock": ""
+  },
+  {
+    "name": "Enchanted paint.",
+    "image": "https://i.imgur.com/l7RQoIu.png",
+    "value": "",
+    "vendor": "FALSE",
+    "effect": "Whatever is painted becomes real. If you draw a door on a wall, an actual door will appear. You can then roll for a room as normal, or connect two existing rooms. You can also draw normal weapons, armor or equipment and they will become real. The item drawn must be non magical and no more than 15gp in value. Liquids cannot be drawn. Each time the paint is used, roll a d6; on a 1, it runs out.",
+    "stock": ""
+  },
+  {
+    "name": "Wand of power",
+    "image": "https://blzmedia-a.akamaihd.net/d3/icons/items/large/unique_staff_102_x1_demonhunter_male.png",
+    "value": "",
+    "vendor": "FALSE",
+    "effect": "This is only usable by wizards, and has 2d3 charges. Each charge adds 1 level to any cast spell. You can also add multiple charges to a single spell. For example, a 5th level wizard casts a sleep spell using 2 charges - the spell is cast as if by a 7th level wizard.",
+    "stock": ""
+  },
+  {
+    "name": "Vials of liquid Acid",
+    "image": "https://blzmedia-a.akamaihd.net/d3/icons/items/large/templar_special_103_demonhunter_male.png",
+    "value": "",
+    "vendor": "FALSE",
+    "effect": "",
+    "stock": ""
+  },
+  {
+    "name": "--- Abyss items ---",
+    "image": "",
+    "value": "",
+    "vendor": "FALSE",
+    "effect": "",
+    "stock": ""
+  },
+  {
+    "name": "Scroll Healing Surge",
+    "image": "",
+    "value": "",
+    "vendor": "FALSE",
+    "effect": "Heal 2 life all heros minus caster, vampires -2 life",
+    "stock": ""
+  },
+  {
+    "name": "Scroll Mass teleport",
+    "image": "",
+    "value": "",
+    "vendor": "FALSE",
+    "effect": "Teleport all party out of the dungeon or to any room 1dmg to wizard for every hero",
+    "stock": ""
+  },
+  {
+    "name": "Scroll Aura of Terror",
+    "image": "",
+    "value": "",
+    "vendor": "FALSE",
+    "effect": "Minion or boss to make moral roll, undead and fear are imune",
+    "stock": ""
+  },
+  {
+    "name": "Scroll Reverse Gaze",
+    "image": "",
+    "value": "",
+    "vendor": "FALSE",
+    "effect": "when tested by gaze test it on the monster instead d8 + wiz lvl",
+    "stock": ""
+  },
+  {
+    "name": "Scroll Life force control",
+    "image": "",
+    "value": "",
+    "vendor": "FALSE",
+    "effect": "Trade life with another hero, against vampires lose 1 life",
+    "stock": ""
+  },
+  {
+    "name": "Scroll Infalible missile",
+    "image": "",
+    "value": "",
+    "vendor": "FALSE",
+    "effect": "Auto dmg , rol a d8 on a explode inflic another dmg",
+    "stock": ""
+  },
+  {
+    "name": "Amulet of Protection",
+    "image": "https://blzmedia-a.akamaihd.net/d3/icons/items/large/amulet17_demonhunter_male.png",
+    "value": "",
+    "vendor": "FALSE",
+    "effect": "The wearer has +1 to Defense rolls and saving rolls against attacks by undead monsters. It may be sold for 250 gp. Multiple amulets of the same type do not stack, so a",
+    "stock": ""
+  },
+  {
+    "name": "Medallion of Snake Charming",
+    "image": "https://blzmedia-a.akamaihd.net/d3/icons/items/large/unique_amulet_106_x1_demonhunter_male.png",
+    "value": "",
+    "vendor": "FALSE",
+    "effect": "The wearer may roll d8 + L against a group of snakes or lizardmen minions, including the champions of ssikliss. If the character rolls the minions' level or higher, the minions 2 automatically friendly and will ignore the party until medallion is with the party or until they are attacked. The medallion may be sold for 100gp.",
+    "stock": ""
+  },
+  {
+    "name": "Parchment of Banishing",
+    "image": "https://blzmedia-a.akamaihd.net/d3/icons/items/large/orb_002_demonhunter_male.png",
+    "value": "",
+    "vendor": "FALSE",
+    "effect": "This page from an old holy book can be used as a scroll. Due to its complex language, it may be used only by wizards and clerics. It automatically inflicts 2 wounds to one undead or demon creature. Once used, it turns to dust.",
+    "stock": ""
+  },
+  {
+    "name": "Philter of Fire Breathing",
+    "image": "https://blzmedia-a.akamaihd.net/d3/icons/items/large/dye_vanishing_demonhunter_male.png",
+    "value": 80,
+    "vendor": "FALSE",
+    "effect": "This potion renders its drinker immune to dragon fire attacks for the duration of one encounter. In addition, the drinker may breathe fire once, automatically inflicting 2 wounds to a boss or weird monster, or automatically killing two minions or vermin monsters (that counts as the character's attack for that turn). Fire breathing has no effect on dragons. The philter may be sold for 80 gp.",
+    "stock": ""
+  },
+  {
+    "name": "Ring of Three Wishes",
+    "image": "https://blzmedia-a.akamaihd.net/d3/icons/items/large/ring_12_demonhunter_male.png",
+    "value": 0,
+    "vendor": "FALSE",
+    "effect": "This ring gives the wearer d3 wishes. Each wish may be used to do one of the following: 1) Reroll any failed die roll; 2) Automatically inflict 2 wounds to any monster, or kill 2 minions; 3) create any non-magical treasure or single piece of equipment worth 6 300 gp or less; 4) cast any one spell from the basic spell list (NOT the Abyss spell list); 5) heal all damage and Madness on the wearer. Once all three wishes have been used, the ring becomes a simple golden ring that can be sold for 3d8 gp. An unused ring of wishes may be sold for 200 gp per each wish still on the ring.",
+    "stock": ""
+  },
+  {
+    "name": "Cross against Vampires +2 def",
+    "image": "https://blzmedia-a.akamaihd.net/d3/icons/items/large/scoundrel_special_103_demonhunter_male.png",
+    "value": 0,
+    "vendor": "FALSE",
+    "effect": "",
+    "stock": ""
+  },
+  {
+    "name": "Brownie Ward",
+    "image": "https://blzmedia-a.akamaihd.net/d3/icons/items/large/orb_001_demonhunter_male.png",
+    "value": 0,
+    "vendor": "FALSE",
+    "effect": "If the wearer of this talisman encounters brownies, the brownies must immediately make a morale roll.",
+    "stock": ""
+  },
+  {
+    "name": "Blessed horseshoe",
+    "image": "https://blzmedia-a.akamaihd.net/d3/icons/items/large/fistweapon_1h_104_demonhunter_male.png",
+    "value": 0,
+    "vendor": "FALSE",
+    "effect": "The character carrying this horseshoe in his pocket may reroll any one die roll, then the talisman loses its powers. Barbarians are allowed to use this item. An unused blessed horseshoe can be sold for 10 gp.",
+    "stock": ""
+  },
+  {
+    "name": "Wolvesbane",
+    "image": "https://blzmedia-a.akamaihd.net/d3/icons/items/large/dye_03_demonhunter_male.png",
+    "value": 0,
+    "vendor": "FALSE",
+    "effect": "This dried herb may be thrown against a were-creature or a wolf causing a morale roll. Throwing the wolvesbane requires the character to forfeit his Attack roll but hits automatically. A bunch of wolvesbane may be sold for 10 gp.",
+    "stock": ""
+  },
+  {
+    "name": "Loaves of elven bread",
+    "image": "https://i.imgur.com/abYqXfO.jpg",
+    "value": 0,
+    "vendor": "FALSE",
+    "effect": "Any character eating a loaf heals 1 life or removes the Dark Plague. Elves eating them heal 3 life. A character may benefit from eating elven bread only once per game. Elven bread is rare outside of elven communities and the loaves may be sold for 10 gp each. Elven bread never goes bad so you can keep it for future adventures. Elven bread is not considered a magic item so barbarians may use it.",
+    "stock": ""
+  },
+  {
+    "name": "Potion of darksight",
+    "image": "https://blzmedia-a.akamaihd.net/d3/icons/items/large/dye_20_demonhunter_male.png",
+    "value": 0,
+    "vendor": "FALSE",
+    "effect": "",
+    "stock": ""
+  },
+  {
+    "name": "Potion fo vigor",
+    "image": "https://blzmedia-a.akamaihd.net/d3/icons/items/large/dye_04_demonhunter_male.png",
+    "value": 0,
+    "vendor": "FALSE",
+    "effect": "",
+    "stock": ""
+  },
+  {
+    "name": "Garlic Poultrice",
+    "image": "https://blzmedia-a.akamaihd.net/d3/icons/items/large/dye_11_demonhunter_male.png",
+    "value": 0,
+    "vendor": "FALSE",
+    "effect": "",
+    "stock": ""
+  },
+  {
+    "name": "Elfblood Ointment",
+    "image": "https://blzmedia-a.akamaihd.net/d3/icons/items/large/dye_05_demonhunter_male.png",
+    "value": 0,
+    "vendor": "FALSE",
+    "effect": "",
+    "stock": ""
+  },
+  {
+    "name": "Mindworth Extract",
+    "image": "https://blzmedia-a.akamaihd.net/d3/icons/items/large/dye_remover_demonhunter_male.png",
+    "value": 0,
+    "vendor": "FALSE",
+    "effect": "",
+    "stock": ""
+  },
+  {
+    "name": "Elixir of long Life",
+    "image": "https://blzmedia-a.akamaihd.net/d3/icons/items/large/dye_ce_01_demonhunter_male.png",
+    "value": 0,
+    "vendor": "FALSE",
+    "effect": "",
+    "stock": ""
+  },
+  {
+    "name": "-- Netherworld --",
+    "image": "",
+    "value": "",
+    "vendor": "",
+    "effect": "",
+    "stock": ""
+  },
+  {
+    "name": "Soul cube",
+    "image": "https://i.imgur.com/BZfQdzV.png",
+    "value": "50N",
+    "vendor": "FALSE",
+    "effect": "",
+    "stock": ""
+  },
+  {
+    "name": "Food Ration",
+    "image": "https://i.imgur.com/IwvkdNY.png",
+    "value": "1N",
+    "vendor": "FALSE",
+    "effect": "",
+    "stock": ""
+  },
+  {
+    "name": "Unkown Food Ration",
+    "image": "https://i.imgur.com/Nh5nY0f.png",
+    "value": "1N",
+    "vendor": "FALSE",
+    "effect": "",
+    "stock": ""
+  },
+  {
+    "name": "Human Flesh",
+    "image": "https://i.imgur.com/ZG98yBv.png",
+    "value": "1N",
+    "vendor": "FALSE",
+    "effect": "consume this will make a madness check",
+    "stock": ""
+  }
+]

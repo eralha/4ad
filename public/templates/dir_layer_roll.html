@@ -4,7 +4,8 @@
       <div class="roll_result">{{roll}}</div>
       <div class="info">
         <b>{{hero.class}}</b> lvl {{hero.level}}<br />
-        {{hero.atkStr}}<br />
+        H: {{hero.atkStr}}<br />
+        <span ng-if="hero.SelectedWeaponOffHand != '--'">OH: {{hero.atkStrOH}}<br /></span>
         {{hero.defStr}}
       </div>
       <h2 class="wound_title">Add/remove wounds W({{hero.wounds}}) L({{hero.life}})</h2>

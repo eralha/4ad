@@ -1,6 +1,6 @@
 ﻿
 
-  <div class="container_12 c-hero_sheet cf" ng-controller="HeroCtrll">
+  <div class="container_12 c-hero_sheet cf" ng-controller="HeroCtrll" ng-class="{'c-hero_sheet--dead' : hero.life <= 0}">
     <div class="wrapper">
 
       <div class="grid_12">
@@ -9,10 +9,18 @@
 
       <div class="grid_12">
         <h1 class="subtitle">Class <span>- {{hero.class}}</span></h1>
-        <select class="form-control" ng-model="selectedClass" ng-change="heroClassSelected()">
-          <option value="{{emptyVal}}">Select Class</option>
-            <option value="{{$index}}" ng-repeat="class in heroClasses">{{class.class}}</option>
-        </select>
+        <div class="label">
+          <select class="form-control" ng-model="selectedClass" ng-change="heroClassSelected()">
+            <option value="{{emptyVal}}">Select Class</option>
+              <option value="{{$index}}" ng-repeat="class in heroClasses">{{class.class}}</option>
+          </select>
+        </div>
+        <div class="label">
+          <input type="text" class="form-control form-control--big" ng-model="hero.epicName" placeholder="Hero Epic Name"/>
+        </div>
+        <div class="label">
+          <input type="text" class="form-control form-control--big" ng-model="hero.conditionEffect" placeholder="Satus/Condition"/>
+        </div>
       </div>
 
       <div class="clear"></div>
@@ -97,7 +105,9 @@
         <div class="grid_3">
             <h1 class="subtitle">Hand</h1>
             <div class="label">
-                <div class="equiped_item_img" ng-if="hero.SelectedWeapon && hero.SelectedWeapon != emptyVal"><img src="{{hero.weapons[hero.SelectedWeapon].image}}" alt="" /></div>
+                <div class="equiped_item_img" ng-if="hero.SelectedWeapon && hero.SelectedWeapon != emptyVal">
+                  <img src="{{hero.weapons[hero.SelectedWeapon].image}}" alt="" ng-click="addLayerItemInfo(hero.weapons[hero.SelectedWeapon]);" />
+                </div>
                 <select class="form-control" ng-model="hero.SelectedWeapon">
                   <option value="{{emptyVal}}">None</option>
                   <option value="{{$index}}" ng-repeat="item in hero.weapons track by item.id">{{item.name}}</option>
@@ -107,7 +117,9 @@
         <div class="grid_3">
             <h1 class="subtitle">Off Hand</h1>
             <div class="label">
-                <div class="equiped_item_img" ng-if="hero.SelectedWeaponOffHand && hero.SelectedWeaponOffHand != emptyVal"><img src="{{hero.weapons[hero.SelectedWeaponOffHand].image}}" alt="" /></div>
+                <div class="equiped_item_img" ng-if="hero.SelectedWeaponOffHand && hero.SelectedWeaponOffHand != emptyVal">
+                  <img src="{{hero.weapons[hero.SelectedWeaponOffHand].image}}" alt="" ng-click="addLayerItemInfo(hero.weapons[hero.SelectedWeaponOffHand]);" />
+                </div>
                 <select class="form-control" ng-model="hero.SelectedWeaponOffHand">
                   <option value="{{emptyVal}}">None</option>
                   <option value="{{$index}}" ng-repeat="item in hero.weapons track by item.id">{{item.name}}</option>
