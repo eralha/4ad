@@ -310,12 +310,14 @@ define('module/angular/app__main', [
 
 				item = angular.copy(item);
 
+				//needs to be here DON MOVE
+				item.id = Math.random()*60000000;
+
 				if(placeholder == 'items' || placeholder == 'spells'){
 					item.controllValue = 1;
-					item.id = Math.random()*60000000;
 				}
 
-				console.log(hero);
+				console.log(item, hero[placeholder]);
 
 				hero[placeholder].push(item);
 			}

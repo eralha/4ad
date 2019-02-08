@@ -154,7 +154,7 @@
       <div class="grid_12">
           <h1 class="subtitle">Weapons</h1>
           <div class="item_list">
-            <div class="item cf" ng-repeat="item in hero.weapons track by item.id">
+            <div class="item cf" ng-repeat="item in hero.weapons track by $index">
               <div class="name">{{item.name}}</div>
               <div class="ctrl"><button type="button" class="btn btn-danger" ng-click="removeItem('weapons', $index);">X</button></div>
             </div><!-- end item -->
