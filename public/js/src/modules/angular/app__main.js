@@ -113,12 +113,37 @@ define('module/angular/app__main', [
 			var data = $stateParams.linkData;
 			var json = Base64.decode(data);
 
-			console.log(json);
+			//add link data to scope variable
+			$scope.linkData = angular.fromJson(json);
+
+			$scope.overwriteData = function(){
+				if(!$scope.linkData){ return; }
+				gameDataService.overWriteData($scope.linkData);
+
+				$scope.linkData = null;
+
+				$state.go('home');
+			}
+
+			$scope.concatenateData = function(){
+				if(!$scope.linkData){ return; }
+				gameDataService.concatenateData($scope.linkData);
+
+				$scope.linkData = null;
+
+				$state.go('home');
+			}
 
 		}]);
 
 		app.controller('HomeCtrll', ['$scope', '$rootScope', 'dataService', 'gameDataService', 'ngProgressFactory', '$state', '$sce', '$filter',
 		function($scope, $rootScope, dataService, gameDataService, ngProgressFactory, $state, $sce, $filter) {
+
+			$rootScope.$on('$viewContentLoaded', 
+			function(event, toState, toParams, fromState, fromParams, options){ 
+			    $scope.dataCopied = null;
+				$scope.dataLink = null;
+			});
 
 			$rootScope.gamesData = gameDataService.getGamesData();
 
@@ -140,13 +165,28 @@ define('module/angular/app__main', [
 				$state.go('party', {partyId: gameObj.id});
 			}
 
+			function copyToClipboard(_text) {
+				var $temp = $("<input>");
+				$("body").append($temp);
+				$temp.val(_text).select();
+				document.execCommand("copy");
+				$temp.remove();
+			  }
+
 			$scope.getLinkToData = function(){
 				var adress = 'http://fouragainstdarkness.herokuapp.com/#!/parse_link/';
+				//var adress = 'http://localhost:8080/#!/parse_link/';
 				var data = gameDataService.getGamesData();
 
 				var link = adress + Base64.encode(angular.toJson(data));
+				copyToClipboard(link);
 
-				console.log(link);
+				$scope.dataCopied = true;
+				$scope.dataLink = link;
+			}
+
+			$scope.shareData = function(){
+				window.open("http://www.facebook.com/sharer/sharer.php?u="+$scope.dataLink+"?v="+Math.random());
 			}
 
 		}]);

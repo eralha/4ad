@@ -157,6 +157,7 @@
               <div class="image" ng-click="addLayerItemInfo(item);"><img src="{{getItemImage(item)}}" alt=""></div>
               <div class="name">{{item.name}}<br />{{item.value}}G</div>
               <div class="ctrl">
+                <div dir-Qty-Control="" class="btn-group" obj="item" prop="controllValue"></div>
                 <input type="number" placeholder="1" class="form-control" ng-model="item.controllValue"/>
                 <button type="button" class="btn btn-danger" ng-click="removeItem('items', $index);">X</button>
               </div>

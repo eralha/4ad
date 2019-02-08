@@ -165,6 +165,34 @@ define('module/angular/directives/common', [
 		  };
 		}]);
 
+		
+		module.directive('dirQtyControl', ['$rootScope', '$injector', function($rootScope, $injector) {
+		  return {
+				restrict: 'EA',
+				scope: {
+					obj: '=',
+					prop: '@'
+				},
+				templateUrl: '/templates/dir_qty_control.html',
+		    compile: function(e, a){
+		        //console.log($(e).html(), arguments);
+		        return function(scope, elem, attrs) {
+
+							console.log(scope);
+
+							scope.remVal = function(){
+								scope.obj[scope.prop] = parseInt(scope.obj[scope.prop]) - 1;
+							}
+
+							scope.addVal = function(){
+								scope.obj[scope.prop] = parseInt(scope.obj[scope.prop]) + 1;
+							}
+
+		        }
+		    }
+		  };
+		}]);
+
 
     return module;
 

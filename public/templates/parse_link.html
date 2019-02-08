@@ -1,59 +1,34 @@
 ﻿
   
-  <div class="modal" ng-class="{'modal--visible' : isCreateGameVisible}">
-    <div class="modal-dialog" role="document">
-      <div class="modal-content">
-        <div class="modal-header">
-          <h5 class="modal-title">Create New Party</h5>
-          <button type="button" class="close" ng-click="closeNewGameModal();">
-            <span aria-hidden="true">&times;</span>
-          </button>
-        </div>
-        <div class="modal-body">
-          <p>Choose a name for your party and start a new adventure.</p>
-          <div class="form-group">
-            <label for="exampleInputEmail1">Party Name:</label>
-            <input type="text" class="form-control" ng-model="newGameName">
-          </div>
-        </div>
-        <div class="modal-footer">
-          <button type="button" class="btn btn-secondary" ng-click="closeNewGameModal();">Close</button>
-          <button type="button" class="btn btn-primary" ng-click="startNewGame();">Start New Game</button>
-        </div>
-      </div>
-    </div>
-  </div>
-  
-  
   <div class="container_12">
     <div class="wrapper">
 
       
       <div class="grid_12 c-games">
 
-        <div class="book_image"><a href="https://gumroad.com/ganeshagames?fbclid=IwAR3YnhpDU0GOi4C7OgaB3El-Cm6P1qbwQdBBIGdTSGcVavm6R_EoMsucO64" target="_blank">
-            <img src="/images/home_img1.jpg" alt="" /></a></div>
-
+        <h1>Party Data</h1>
         <div class="text">
-          Choose one of your previous saved parties, if you dont have any party created yet, just create a new one and start playing.
+          We detected the following party data on the url link, what do you want to do?
         </div>
 
-        <h1>Saved Parties</h1>
         <ul class="list-group">
-          <a ui-sref="party({partyId: item.id})" ng-repeat="item in gamesData track by item.id"><li class="list-group-item">{{item.name}}</li></a>
+          <a ui-sref="party({partyId: item.id})" ng-repeat="item in linkData track by item.id"><li class="list-group-item">{{item.name}}</li></a>
 
-          <li class="list-group-item" ng-if="gamesData.length == 0">No Parties found, start by creating one.</li>
+          <li class="list-group-item" ng-if="linkData.length == 0">No Parties found, start by creating one.</li>
         </ul>
 
         <div class="mt_20">
-            <button type="button" class="btn btn-secondary btn--full" ng-click="showNewGameModal();">Create New Party</button>
-
-            <button type="button" class="btn btn-secondary btn-sm mt_20" ng-click="getLinkToData();">Get link to party data</button>
+            <button type="button" class="btn btn-danger btn--full" ng-click="overwriteData();">Overwrite Data</button>
+            <div class="text">
+              This will erase your current data on this device e replace it with this party data set.
+            </div>
         </div>
 
-        <div class="text mt_20">
-          This module is in developmen, ui will change with future versions.<br>
-          Beta version 0.0.1
+        <div class="mt_20">
+            <button type="button" class="btn btn-warning btn--full" ng-click="concatenateData();">Add to current data.</button>
+            <div class="text">
+              This option will merge the 2 data set's, the old data you have and this link data.
+            </div>
         </div>
 
       </div>

@@ -47,8 +47,14 @@
 
         <div class="mt_20">
             <button type="button" class="btn btn-secondary btn--full" ng-click="showNewGameModal();">Create New Party</button>
+        </div>
 
-            <!-- <button type="button" class="btn btn-secondary btn-sm mt_20" ng-click="getLinkToData();">Get link to party data</button> -->
+        <div class="mt_30 tCenter">
+            <button type="button" class="btn btn-secondary btn-sm mt_20" ng-click="getLinkToData();">Get link to party data</button>
+            <div class="alert alert-info mt_10" ng-if="dataCopied">
+              Party data link copied to clip board, use the link to access your data on another device.
+            </div>
+            <button type="button" class="btn btn-primary btn-sm mt_10" ng-if="dataCopied" ng-click="shareData();">Share party on FB</button>
         </div>
 
         <div class="text mt_20">
