@@ -132,7 +132,7 @@
     "image": "https://blzmedia-a.akamaihd.net/d3/icons/items/large/p61_unique_orb_002_demonhunter_male.png",
     "value": 200,
     "vender": "",
-    "effect": "when casting lightning bolt +a ATK",
+    "effect": "when casting lightning bolt +1 ATK",
     "stock": ""
   },
   {

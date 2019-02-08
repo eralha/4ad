@@ -317,7 +317,7 @@ define('module/angular/app__main', [
 					item.controllValue = 1;
 				}
 
-				console.log(item, hero[placeholder]);
+				//console.log(item, hero[placeholder]);
 
 				hero[placeholder].push(item);
 			}
