@@ -94,8 +94,8 @@
 
       <div class="clear"></div>
       <div class="flex_list flex_list--equiped">
-        <div class="grid_4">
-            <h1 class="subtitle">Eqp Weapon</h1>
+        <div class="grid_3">
+            <h1 class="subtitle">Hand</h1>
             <div class="label">
                 <div class="equiped_item_img" ng-if="hero.SelectedWeapon && hero.SelectedWeapon != emptyVal"><img src="{{hero.weapons[hero.SelectedWeapon].image}}" alt="" /></div>
                 <select class="form-control" ng-model="hero.SelectedWeapon">
@@ -104,8 +104,18 @@
                 </select>
             </div>
         </div>
-        <div class="grid_4">
-            <h1 class="subtitle">Eqp Armor 1</h1>
+        <div class="grid_3">
+            <h1 class="subtitle">Off Hand</h1>
+            <div class="label">
+                <div class="equiped_item_img" ng-if="hero.SelectedWeaponOffHand && hero.SelectedWeaponOffHand != emptyVal"><img src="{{hero.weapons[hero.SelectedWeaponOffHand].image}}" alt="" /></div>
+                <select class="form-control" ng-model="hero.SelectedWeaponOffHand">
+                  <option value="{{emptyVal}}">None</option>
+                  <option value="{{$index}}" ng-repeat="item in hero.weapons track by item.id">{{item.name}}</option>
+                </select>
+            </div>
+        </div>
+        <div class="grid_3">
+            <h1 class="subtitle">Armor 1</h1>
             <div class="label">
                 <div class="equiped_item_img" ng-if="hero.armorSlot1 && hero.armorSlot1 != emptyVal"><img src="{{hero.armor[hero.armorSlot1].image}}" alt="" /></div>
                 <select class="form-control" ng-model="hero.armorSlot1">
@@ -114,8 +124,8 @@
                 </select>
             </div>
         </div>
-        <div class="grid_4">
-            <h1 class="subtitle">Eqp Armor 2</h1>
+        <div class="grid_3">
+            <h1 class="subtitle">Armor 2</h1>
             <div class="label">
                 <div class="equiped_item_img" ng-if="hero.armorSlot2 && hero.armorSlot2 != emptyVal"><img src="{{hero.armor[hero.armorSlot2].image}}" alt="" /></div>
                 <select class="form-control" ng-model="hero.armorSlot2">

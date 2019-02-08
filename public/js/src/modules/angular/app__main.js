@@ -379,6 +379,7 @@ define('module/angular/app__main', [
 
 				//class specific
 				var heroName = hero.class;
+				var lvl = parseInt(hero.level);
 				if(heroName == 'Swashbuckler'){ data = data + Math.floor(lvl / 2); }
 				if(heroName == 'Rogue'){ data = data + lvl; }
 				
