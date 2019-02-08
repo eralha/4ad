@@ -16,15 +16,19 @@
       </div>
 
       <div class="clear"></div>
-      <div class="grid_6">
+      <div class="grid_4">
           <h1 class="subtitle">Level</h1>
           <div class="label">
             <input type="number" class="form-control" ng-model="hero.level"/>
           </div>
       </div>
-      <div class="grid_6">
+      <div class="grid_4">
           <h1 class="subtitle">Gold</h1>
           <div class="label"><input type="number" class="form-control" ng-model="hero.gold"/></div>
+      </div>
+      <div class="grid_4">
+          <h1 class="subtitle">Counter</h1>
+          <div class="label"><input type="number" class="form-control" ng-model="hero.customCounter"/></div>
       </div>
 
       <div class="clear"></div>
@@ -42,8 +46,8 @@
       <div class="grid_12">
           <h1 class="subtitle">Abilities</h1>
           <div class="label">
-            {{hero.heroDataTbl.abilities}} - {{hero.heroDataTbl.equipment}}<br />
-            Def: {{hero.heroDataTbl.def}} - Atk: {{hero.heroDataTbl.atk}}
+            {{hero.heroDataTbl.abilities}} {{hero.heroDataTbl.equipment}}<br />
+            Def: {{hero.heroDataTbl.def}} | Atk: {{hero.heroDataTbl.atk}}
           </div>
       </div>
 

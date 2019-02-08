@@ -107,8 +107,8 @@ define('module/angular/app__main', [
 
 		}]);
 
-		app.controller('ParseLinkCtrll', ['$scope', '$rootScope', 'dataService', 'gameDataService', 'ngProgressFactory', '$stateParams', '$sce', '$filter',
-		function($scope, $rootScope, dataService, gameDataService, ngProgressFactory, $stateParams, $sce, $filter) {
+		app.controller('ParseLinkCtrll', ['$scope', '$rootScope', 'dataService', 'gameDataService', 'ngProgressFactory', '$stateParams', '$sce', '$filter', '$state',
+		function($scope, $rootScope, dataService, gameDataService, ngProgressFactory, $stateParams, $sce, $filter, $state) {
 
 			var data = $stateParams.linkData;
 			var json = Base64.decode(data);
