@@ -235,6 +235,7 @@ define('module/angular/app__main', [
 				hero.armor = new Array();
 				hero.items = new Array();
 				hero.spells = new Array();
+				hero.customCounters = new Array({name: 'Clues', controllValue:0, id:0 }, {name: 'Madness', controllValue:0, id:1 });
 				//heroDataTbl
 
 				//added later need to check this on store load
@@ -303,6 +304,10 @@ define('module/angular/app__main', [
 				if(placeholder == 'armor'){ item = scope.dataArmor[item]; }
 				if(placeholder == 'spells'){ item = scope.dataSpells[item]; }
 				if(placeholder == 'expertSkills'){ item = scope.dataExpertSkills[item]; }
+
+				if(placeholder == 'customCounters'){ 
+					item = { name: '', controllValue:0 };
+				}
 
 				item = angular.copy(item);
 

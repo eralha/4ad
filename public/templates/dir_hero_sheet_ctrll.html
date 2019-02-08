@@ -24,19 +24,15 @@
       </div>
 
       <div class="clear"></div>
-      <div class="grid_4">
+      <div class="grid_6">
           <h1 class="subtitle">Level</h1>
           <div class="label">
             <input type="number" class="form-control" ng-model="hero.level"/>
           </div>
       </div>
-      <div class="grid_4">
+      <div class="grid_6">
           <h1 class="subtitle">Gold</h1>
           <div class="label"><input type="number" class="form-control" ng-model="hero.gold"/></div>
-      </div>
-      <div class="grid_4">
-          <h1 class="subtitle">Counter</h1>
-          <div class="label"><input type="number" class="form-control" ng-model="hero.customCounter"/></div>
       </div>
       
 
@@ -48,6 +44,24 @@
             Def: {{hero.heroDataTbl.def}} | Atk: {{hero.heroDataTbl.atk}}
           </div>
       </div>
+
+  
+      <div class="clear"></div>
+      <div class="grid_12">
+          <h1 class="subtitle">Counters</h1>
+          <div class="item_list item_list--counters">
+            <div class="item cf" ng-repeat="item in hero.customCounters track by item.id">
+              <div class="name"><input type="text" class="form-control" ng-model="item.name" placeholder="Custom counter Name"/></div>
+              <div class="ctrl">
+                <div dir-Qty-Control="" class="btn-group" obj="item" prop="controllValue"></div>
+                <input type="number" placeholder="1" class="form-control" ng-model="item.controllValue"/>
+                <button type="button" class="btn btn-danger" ng-click="removeItem('customCounters', $index);">X</button>
+              </div>
+            </div><!-- end item -->
+          </div>
+          <button type="button" class="btn btn--full btn-dark" ng-click="addItem('customCounters', 0);">Add Custom counter</button>
+      </div>
+  
 
 <div ng-if="hero.level >= 5">
     <div class="clear"></div>
@@ -236,22 +250,6 @@
             </select>
           <button type="button" class="btn btn--full btn-dark">Add Spells</button>
       </div>
-
-
-      <div class="clear"></div>
-      <div class="grid_6">
-          <h1 class="subtitle">Clues</h1>
-          <div class="label">
-            <input type="number" class="form-control" ng-model="hero.clues"/>
-          </div>
-      </div>
-      <div class="grid_6">
-        <h1 class="subtitle">Madness</h1>
-        <div class="label">
-          <input type="number" class="form-control" ng-model="hero.madness"/>
-        </div>
-    </div>
-
 
 
 
