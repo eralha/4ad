@@ -45,11 +45,23 @@
       </div>
 
 <div ng-if="hero.level >= 5">
-      <div class="clear"></div>
-      <div class="grid_12">
-          <h1 class="subtitle">Expert Skills</h1>
-          <div class="label"></div>
-      </div>
+    <div class="clear"></div>
+    <div class="grid_12">
+        <h1 class="subtitle">Expert Skills</h1>
+        <div class="item_list">
+          <div class="item cf" ng-repeat="item in hero.expertSkills track by item.id">
+            <div class="name">{{item.name}}</div>
+            <div class="ctrl">
+              <button type="button" class="btn btn-danger" ng-click="removeItem('expertSkills', $index);">X</button>
+            </div>
+          </div><!-- end item -->
+        </div>
+        <select class="hidden_field" id="itemSelectCBO" ng-model="skillToAdd" ng-change="addItem('expertSkills', skillToAdd);">
+            <option value="{{emptyVal}}">Selecione</option>
+            <option value="{{$index}}" ng-repeat="item in dataExpertSkills">{{item.name}} - {{item.value}}G</option>
+          </select>
+        <button type="button" class="btn btn--full btn-dark">Add Skill</button>
+    </div>
 </div>
       
 

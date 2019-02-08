@@ -3,592 +3,608 @@
     "name": "lhCR staff",
     "image": "https://blzmedia-a.akamaihd.net/d3/icons/items/large/unique_staff_001_x1_demonhunter_male.png",
     "value": 5,
-    "vendor": "TRUE",
+    "vender": "TRUE",
     "effect": "",
-    "Stock": ""
+    "stock": ""
   },
   {
     "name": "lhCR sling",
     "image": "https://blzmedia-a.akamaihd.net/d3/icons/items/large/handxbow_203_demonhunter_male.png",
     "value": 5,
-    "vendor": "TRUE",
+    "vender": "TRUE",
     "effect": "",
-    "Stock": ""
+    "stock": ""
   },
   {
     "name": "lhSL dagger",
     "image": "https://blzmedia-a.akamaihd.net/d3/icons/items/large/dagger_004_demonhunter_male.png",
     "value": 5,
-    "vendor": "TRUE",
+    "vender": "TRUE",
     "effect": "",
-    "Stock": ""
+    "stock": ""
   },
   {
     "name": "1hCR mace",
     "image": "https://www.diablohub.com/static/images/database/items/mad_monarchs_scepter.png",
     "value": 6,
-    "vendor": "TRUE",
+    "vender": "TRUE",
     "effect": "",
-    "Stock": ""
+    "stock": ""
   },
   {
     "name": "1hCR hammer",
     "image": "https://www.diablohub.com/static/images/database/items/sun_keeper.png",
     "value": 6,
-    "vendor": "TRUE",
+    "vender": "TRUE",
     "effect": "",
-    "Stock": ""
+    "stock": ""
   },
   {
     "name": "2hCR war-hammer",
     "image": "https://www.diablohub.com/static/images/database/items/sledge_of_athskeleng.png",
     "value": 15,
-    "vendor": "TRUE",
+    "vender": "TRUE",
     "effect": "",
-    "Stock": ""
+    "stock": ""
   },
   {
     "name": "2hCR quarterstaff",
     "image": "https://blzmedia-a.akamaihd.net/d3/icons/items/large/p4_unique_wand_010_demonhunter_male.png",
     "value": 15,
-    "vendor": "TRUE",
+    "vender": "TRUE",
     "effect": "",
-    "Stock": ""
+    "stock": ""
   },
   {
     "name": "SL bow",
     "image": "https://blzmedia-a.akamaihd.net/d3/icons/items/large/bow_001_demonhunter_male.png",
     "value": 15,
-    "vendor": "TRUE",
+    "vender": "TRUE",
     "effect": "",
-    "Stock": ""
+    "stock": ""
   },
   {
     "name": "SL crossbow",
     "image": "https://www.diablohub.com/static/images/database/items/wojahnni_assaulter.png",
     "value": 15,
-    "vendor": "TRUE",
+    "vender": "TRUE",
     "effect": "",
-    "Stock": ""
+    "stock": ""
   },
   {
     "name": "1hSL sword",
     "image": "https://blzmedia-a.akamaihd.net/d3/icons/items/large/sword_1h_007_demonhunter_male.png",
     "value": 6,
-    "vendor": "TRUE",
+    "vender": "TRUE",
     "effect": "",
-    "Stock": ""
+    "stock": ""
   },
   {
     "name": "1hSL axe",
     "image": "https://blzmedia-a.akamaihd.net/d3/icons/items/large/axe_1h_001_demonhunter_male.png",
     "value": 6,
-    "vendor": "TRUE",
+    "vender": "TRUE",
     "effect": "",
-    "Stock": ""
+    "stock": ""
   },
   {
     "name": "1hSL spear",
     "image": "https://blzmedia-a.akamaihd.net/d3/icons/items/large/spear_001_demonhunter_male.png",
     "value": 6,
-    "vendor": "TRUE",
+    "vender": "TRUE",
     "effect": "",
-    "Stock": ""
+    "stock": ""
   },
   {
     "name": "2hSL Scythe",
     "image": "https://blzmedia-a.akamaihd.net/d3/icons/items/large/scythe_1h_000_demonhunter_male.png",
     "value": 15,
-    "vendor": "TRUE",
+    "vender": "TRUE",
     "effect": "",
-    "Stock": ""
+    "stock": ""
   },
   {
     "name": "2hSL sword",
     "image": "https://blzmedia-a.akamaihd.net/d3/icons/items/large/sword_2h_001_demonhunter_male.png",
     "value": 15,
-    "vendor": "TRUE",
+    "vender": "TRUE",
     "effect": "",
-    "Stock": ""
+    "stock": ""
   },
   {
     "name": "2hSL glaive",
     "image": "https://blzmedia-a.akamaihd.net/d3/icons/items/large/transmogpolearm_241_001_demonhunter_male.png",
     "value": 15,
-    "vendor": "TRUE",
+    "vender": "TRUE",
     "effect": "",
-    "Stock": ""
+    "stock": ""
   },
   {
     "name": "Wizard Orb of fire",
     "image": "https://blzmedia-a.akamaihd.net/d3/icons/items/large/unique_orb_011_x1_demonhunter_male.png",
     "value": 200,
-    "vendor": "TRUE",
+    "vender": "TRUE",
     "effect": "when casting fire spell +1 ATK",
-    "Stock": ""
+    "stock": ""
   },
   {
     "name": "Wizard Orb of lightning",
     "image": "https://blzmedia-a.akamaihd.net/d3/icons/items/large/p61_unique_orb_002_demonhunter_male.png",
     "value": 200,
-    "vendor": "",
+    "vender": "",
     "effect": "when casting lightning bolt +a ATK",
-    "Stock": ""
+    "stock": ""
   },
   {
     "name": "Wizard Orb +1",
     "image": "https://blzmedia-a.akamaihd.net/d3/icons/items/large/orb_001_demonhunter_male.png",
     "value": 350,
-    "vendor": "TRUE",
+    "vender": "TRUE",
     "effect": "Only wizards, gives wizards +1 when casting spells",
-    "Stock": ""
+    "stock": ""
   },
   {
     "name": "Wizard Orb +2",
     "image": "https://blzmedia-a.akamaihd.net/d3/icons/items/large/orb_003_demonhunter_male.png",
     "value": 600,
-    "vendor": "TRUE",
+    "vender": "TRUE",
     "effect": "Only wizards, gives wizards +2 when casting spells",
-    "Stock": ""
+    "stock": ""
   },
   {
     "name": "Wizard Orb +3",
     "image": "https://blzmedia-a.akamaihd.net/d3/icons/items/large/ph_orb_demonhunter_male.png",
     "value": 1200,
-    "vendor": "TRUE",
+    "vender": "TRUE",
     "effect": "Only wizards, gives wizards +3 when casting spells",
-    "Stock": ""
+    "stock": ""
   },
   {
     "name": "lhCR Magic Wpn +1 atck",
     "image": "https://blzmedia-a.akamaihd.net/d3/icons/items/large/unique_ceremonialdagger_102_x1_demonhunter_male.png",
     "value": 10000,
-    "vendor": "TRUE",
+    "vender": "TRUE",
     "effect": "",
-    "Stock": ""
+    "stock": ""
   },
   {
     "name": "lhSL Magic Wpn +1 atck",
     "image": "https://blzmedia-a.akamaihd.net/d3/icons/items/large/p5_unique_dagger_003_x1_demonhunter_male.png",
     "value": 10000,
-    "vendor": "TRUE",
+    "vender": "TRUE",
     "effect": "",
-    "Stock": ""
+    "stock": ""
   },
   {
     "name": "1hCR Magic Wpn +1 atck",
     "image": "https://blzmedia-a.akamaihd.net/d3/icons/items/large/unique_mace_1h_009_1xx_demonhunter_male.png",
     "value": 10000,
-    "vendor": "TRUE",
+    "vender": "TRUE",
     "effect": "",
-    "Stock": ""
+    "stock": ""
   },
   {
     "name": "1hSL Magic Wpn +1 atck",
     "image": "https://blzmedia-a.akamaihd.net/d3/icons/items/large/unique_sword_1h_014_x1_demonhunter_male.png",
     "value": 10000,
-    "vendor": "TRUE",
+    "vender": "TRUE",
     "effect": "",
-    "Stock": ""
+    "stock": ""
   },
   {
     "name": "SL Magic Bow +1 atck",
     "image": "https://blzmedia-a.akamaihd.net/d3/icons/items/large/unique_bow_101_x1_demonhunter_male.png",
     "value": 10000,
-    "vendor": "TRUE",
+    "vender": "TRUE",
     "effect": "",
-    "Stock": ""
+    "stock": ""
   },
   {
     "name": "----hero lvl4----",
     "image": "",
     "value": "",
-    "vendor": "FALSE",
+    "vender": "FALSE",
     "effect": "",
-    "Stock": ""
+    "stock": ""
   },
   {
     "name": "lhCR staff +1",
     "image": "https://blzmedia-a.akamaihd.net/d3/icons/items/large/staff_102_demonhunter_male.png",
     "value": 740,
-    "vendor": "TRUE",
+    "vender": "TRUE",
     "effect": "",
-    "Stock": ""
+    "stock": ""
   },
   {
     "name": "lhCR sling +1",
     "image": "https://blzmedia-a.akamaihd.net/d3/icons/items/large/handxbow_005_demonhunter_male.png",
     "value": 740,
-    "vendor": "TRUE",
+    "vender": "TRUE",
     "effect": "",
-    "Stock": ""
+    "stock": ""
   },
   {
     "name": "lhSL dagger +1",
     "image": "https://blzmedia-a.akamaihd.net/d3/icons/items/large/dagger_001_demonhunter_male.png",
     "value": 740,
-    "vendor": "TRUE",
+    "vender": "TRUE",
     "effect": "",
-    "Stock": ""
+    "stock": ""
   },
   {
     "name": "1hCR mace +1",
     "image": "https://blzmedia-a.akamaihd.net/d3/icons/items/large/mace_1h_301_demonhunter_male.png",
     "value": 800,
-    "vendor": "TRUE",
+    "vender": "TRUE",
     "effect": "",
-    "Stock": ""
+    "stock": ""
   },
   {
     "name": "1hCR hammer +1",
     "image": "https://blzmedia-a.akamaihd.net/d3/icons/items/large/mace_1h_007_demonhunter_male.png",
     "value": 800,
-    "vendor": "TRUE",
+    "vender": "TRUE",
     "effect": "",
-    "Stock": ""
+    "stock": ""
   },
   {
     "name": "2hCR war-hammer +1",
     "image": "https://blzmedia-a.akamaihd.net/d3/icons/items/large/mace_2h_104_demonhunter_male.png",
     "value": 1000,
-    "vendor": "TRUE",
+    "vender": "TRUE",
     "effect": "",
-    "Stock": ""
+    "stock": ""
   },
   {
     "name": "2hCR quarterstaff +1",
     "image": "https://blzmedia-a.akamaihd.net/d3/icons/items/large/staff_007_demonhunter_male.png",
     "value": 1000,
-    "vendor": "TRUE",
+    "vender": "TRUE",
     "effect": "",
-    "Stock": ""
+    "stock": ""
   },
   {
     "name": "SL bow +1",
     "image": "https://blzmedia-a.akamaihd.net/d3/icons/items/large/bow_001_demonhunter_male.png",
     "value": 1200,
-    "vendor": "TRUE",
+    "vender": "TRUE",
     "effect": "",
-    "Stock": ""
+    "stock": ""
   },
   {
     "name": "SL crossbow +1",
     "image": "https://blzmedia-a.akamaihd.net/d3/icons/items/large/crossbow_004_demonhunter_male.png",
     "value": 1200,
-    "vendor": "TRUE",
+    "vender": "TRUE",
     "effect": "",
-    "Stock": ""
+    "stock": ""
   },
   {
     "name": "1hSL sword +1",
     "image": "https://blzmedia-a.akamaihd.net/d3/icons/items/large/p43_retrosword_002_demonhunter_male.png",
     "value": 800,
-    "vendor": "TRUE",
+    "vender": "TRUE",
     "effect": "",
-    "Stock": ""
+    "stock": ""
   },
   {
     "name": "1hSL axe +1",
     "image": "https://blzmedia-a.akamaihd.net/d3/icons/items/large/axe_1h_002_demonhunter_male.png",
     "value": 800,
-    "vendor": "TRUE",
+    "vender": "TRUE",
     "effect": "",
-    "Stock": ""
+    "stock": ""
   },
   {
     "name": "1hSL spear +1",
     "image": "https://blzmedia-a.akamaihd.net/d3/icons/items/large/spear_003_demonhunter_male.png",
     "value": 800,
-    "vendor": "TRUE",
+    "vender": "TRUE",
     "effect": "",
-    "Stock": ""
+    "stock": ""
   },
   {
     "name": "2hSL Scythe +1",
     "image": "https://blzmedia-a.akamaihd.net/d3/icons/items/large/scythe_1h_001_t2_demonhunter_male.png",
     "value": 1000,
-    "vendor": "TRUE",
+    "vender": "TRUE",
     "effect": "",
-    "Stock": ""
+    "stock": ""
   },
   {
     "name": "2hSL sword +1",
     "image": "https://blzmedia-a.akamaihd.net/d3/icons/items/large/sword_2h_002_demonhunter_male.png",
     "value": 1000,
-    "vendor": "TRUE",
+    "vender": "TRUE",
     "effect": "",
-    "Stock": ""
+    "stock": ""
   },
   {
     "name": "2hSL glaive +1",
     "image": "https://blzmedia-a.akamaihd.net/d3/icons/items/large/polearm_001_demonhunter_male.png",
     "value": 1000,
-    "vendor": "TRUE",
+    "vender": "TRUE",
     "effect": "",
-    "Stock": ""
+    "stock": ""
   },
   {
-    "name": "----hero lvl8----",
+    "name": "----hero lvl6----",
     "image": "",
     "value": "",
-    "vendor": "FALSE",
+    "vender": "FALSE",
     "effect": "",
-    "Stock": ""
+    "stock": ""
   },
   {
     "name": "lhCR staff +2",
     "image": "https://blzmedia-a.akamaihd.net/d3/icons/items/large/staff_302_demonhunter_male.png",
     "value": 1400,
-    "vendor": "TRUE",
+    "vender": "TRUE",
     "effect": "",
-    "Stock": ""
+    "stock": ""
   },
   {
     "name": "lhCR sling +2",
     "image": "https://blzmedia-a.akamaihd.net/d3/icons/items/large/unique_handxbow_006_1xx_demonhunter_male.png",
     "value": 1400,
-    "vendor": "TRUE",
+    "vender": "TRUE",
     "effect": "",
-    "Stock": ""
+    "stock": ""
   },
   {
     "name": "lhSL dagger +2",
     "image": "https://blzmedia-a.akamaihd.net/d3/icons/items/large/unique_dagger_007_x1_demonhunter_male.png",
     "value": 1400,
-    "vendor": "TRUE",
+    "vender": "TRUE",
     "effect": "",
-    "Stock": ""
+    "stock": ""
   },
   {
     "name": "1hCR mace +2",
     "image": "https://blzmedia-a.akamaihd.net/d3/icons/items/large/unique_axe_1h_005_p2_demonhunter_male.png",
     "value": 1600,
-    "vendor": "TRUE",
+    "vender": "TRUE",
     "effect": "",
-    "Stock": ""
+    "stock": ""
   },
   {
     "name": "1hCR hammer +2",
     "image": "https://blzmedia-a.akamaihd.net/d3/icons/items/large/unique_mace_1h_102_x1_demonhunter_male.png",
     "value": 1600,
-    "vendor": "TRUE",
+    "vender": "TRUE",
     "effect": "",
-    "Stock": ""
+    "stock": ""
   },
   {
     "name": "2hCR war-hammer +2",
     "image": "https://blzmedia-a.akamaihd.net/d3/icons/items/large/mace_2h_302_demonhunter_male.png",
     "value": 2000,
-    "vendor": "TRUE",
+    "vender": "TRUE",
     "effect": "",
-    "Stock": ""
+    "stock": ""
   },
   {
     "name": "2hCR quarterstaff +2",
     "image": "https://blzmedia-a.akamaihd.net/d3/icons/items/large/unique_mace_2h_009_p2_demonhunter_male.png",
     "value": 2000,
-    "vendor": "TRUE",
+    "vender": "TRUE",
     "effect": "",
-    "Stock": ""
+    "stock": ""
   },
   {
     "name": "SL bow +2",
     "image": "https://blzmedia-a.akamaihd.net/d3/icons/items/large/unique_bow_103_x1_demonhunter_male.png",
     "value": 2400,
-    "vendor": "TRUE",
+    "vender": "TRUE",
     "effect": "",
-    "Stock": ""
+    "stock": ""
   },
   {
     "name": "SL crossbow +2",
     "image": "https://blzmedia-a.akamaihd.net/d3/icons/items/large/p61_unique_xbow_001_demonhunter_male.png",
     "value": 2400,
-    "vendor": "TRUE",
+    "vender": "TRUE",
     "effect": "",
-    "Stock": ""
+    "stock": ""
   },
   {
     "name": "1hSL sword +2",
     "image": "https://blzmedia-a.akamaihd.net/d3/icons/items/large/unique_sword_1h_018_1xx_demonhunter_male.png",
     "value": 1600,
-    "vendor": "TRUE",
+    "vender": "TRUE",
     "effect": "",
-    "Stock": ""
+    "stock": ""
   },
   {
     "name": "1hSL axe +2",
     "image": "https://blzmedia-a.akamaihd.net/d3/icons/items/large/unique_axe_1h_007_x1_demonhunter_male.png",
     "value": 1600,
-    "vendor": "TRUE",
+    "vender": "TRUE",
     "effect": "",
-    "Stock": ""
+    "stock": ""
   },
   {
     "name": "1hSL spear +2",
     "image": "https://blzmedia-a.akamaihd.net/d3/icons/items/large/spear_204_demonhunter_male.png",
     "value": 1600,
-    "vendor": "TRUE",
+    "vender": "TRUE",
     "effect": "",
-    "Stock": ""
+    "stock": ""
   },
   {
     "name": "2hSL long spear +2",
     "image": "https://blzmedia-a.akamaihd.net/d3/icons/items/large/unique_spear_004_p3_demonhunter_male.png",
     "value": 2000,
-    "vendor": "TRUE",
+    "vender": "TRUE",
     "effect": "",
-    "Stock": ""
+    "stock": ""
   },
   {
     "name": "2hSL sword +2",
     "image": "https://blzmedia-a.akamaihd.net/d3/icons/items/large/unique_sword_2h_102_x1_demonhunter_male.png",
     "value": 2000,
-    "vendor": "TRUE",
+    "vender": "TRUE",
     "effect": "",
-    "Stock": ""
+    "stock": ""
   },
   {
     "name": "2hSL glaive +2",
     "image": "https://blzmedia-a.akamaihd.net/d3/icons/items/large/p61_unique_scythe2h_04_demonhunter_male.png",
     "value": 2000,
-    "vendor": "TRUE",
+    "vender": "TRUE",
     "effect": "",
-    "Stock": ""
+    "stock": ""
   },
   {
     "name": "-- Fiendish Foes --",
     "image": "",
     "value": "",
-    "vendor": "FALSE",
+    "vender": "FALSE",
     "effect": "",
-    "Stock": ""
+    "stock": ""
   },
   {
     "name": "lhCR Magic Wpn +1 atck",
     "image": "https://blzmedia-a.akamaihd.net/d3/icons/items/large/unique_ceremonialdagger_102_x1_demonhunter_male.png",
     "value": 10000,
-    "vendor": "TRUE",
+    "vender": "TRUE",
     "effect": "",
-    "Stock": ""
+    "stock": ""
   },
   {
     "name": "1hCR Magic Wpn +1 atck",
     "image": "https://blzmedia-a.akamaihd.net/d3/icons/items/large/unique_mace_1h_009_1xx_demonhunter_male.png",
     "value": 10000,
-    "vendor": "TRUE",
+    "vender": "TRUE",
     "effect": "",
-    "Stock": ""
+    "stock": ""
   },
   {
     "name": "1hSL Magic Wpn +1 atck",
     "image": "https://blzmedia-a.akamaihd.net/d3/icons/items/large/unique_sword_1h_014_x1_demonhunter_male.png",
     "value": 10000,
-    "vendor": "TRUE",
+    "vender": "TRUE",
     "effect": "",
-    "Stock": ""
+    "stock": ""
   },
   {
     "name": "2hCR Magic Wpn +1 atck",
     "image": "https://blzmedia-a.akamaihd.net/d3/icons/items/large/p61_unique_mighty_2h_001_demonhunter_male.png",
     "value": 10000,
-    "vendor": "TRUE",
+    "vender": "TRUE",
     "effect": "",
-    "Stock": ""
+    "stock": ""
   },
   {
     "name": "2hSL Magic Wpn +1 atck",
     "image": "https://blzmedia-a.akamaihd.net/d3/icons/items/large/unique_mighty_2h_101_x1_demonhunter_male.png",
     "value": 10000,
-    "vendor": "TRUE",
+    "vender": "TRUE",
     "effect": "",
-    "Stock": ""
+    "stock": ""
   },
   {
     "name": "lhCR Magic Wpn +2 atck",
     "image": "https://blzmedia-a.akamaihd.net/d3/icons/items/large/unique_ceremonialdagger_102_x1_demonhunter_male.png",
     "value": 10000,
-    "vendor": "TRUE",
+    "vender": "TRUE",
     "effect": "",
-    "Stock": ""
+    "stock": ""
   },
   {
     "name": "1hCR Magic Wpn +2 atck",
     "image": "https://blzmedia-a.akamaihd.net/d3/icons/items/large/unique_mace_1h_009_1xx_demonhunter_male.png",
     "value": 10000,
-    "vendor": "TRUE",
+    "vender": "TRUE",
     "effect": "",
-    "Stock": ""
+    "stock": ""
   },
   {
     "name": "1hSL Magic Wpn +2 atck",
     "image": "https://blzmedia-a.akamaihd.net/d3/icons/items/large/unique_sword_1h_014_x1_demonhunter_male.png",
     "value": 10000,
-    "vendor": "TRUE",
+    "vender": "TRUE",
     "effect": "",
-    "Stock": ""
+    "stock": ""
   },
   {
     "name": "2hCR Magic Wpn +2 atck",
     "image": "https://blzmedia-a.akamaihd.net/d3/icons/items/large/transmogaxe_241_003_demonhunter_male.png",
     "value": 10000,
-    "vendor": "TRUE",
+    "vender": "TRUE",
     "effect": "",
-    "Stock": ""
+    "stock": ""
   },
   {
     "name": "2hSL Magic Wpn +2 atck",
     "image": "https://blzmedia-a.akamaihd.net/d3/icons/items/large/unique_mighty_2h_012_x1_demonhunter_male.png",
     "value": 10000,
-    "vendor": "TRUE",
+    "vender": "TRUE",
     "effect": "",
-    "Stock": ""
+    "stock": ""
+  },
+  {
+    "name": "2hSL Silver Weapon",
+    "image": "https://blzmedia-a.akamaihd.net/d3/icons/items/large/unique_sword_1h_set_03_x1_demonhunter_male.png",
+    "value": "",
+    "vender": "FALSE",
+    "effect": "",
+    "stock": ""
   },
   {
     "name": "1hSL Silver Weapon",
     "image": "https://blzmedia-a.akamaihd.net/d3/icons/items/large/unique_sword_1h_set_03_x1_demonhunter_male.png",
     "value": "",
-    "vendor": "FALSE",
+    "vender": "FALSE",
     "effect": "",
-    "Stock": ""
+    "stock": ""
+  },
+  {
+    "name": "lhSL Silver Weapon",
+    "image": "https://blzmedia-a.akamaihd.net/d3/icons/items/large/dagger_004_demonhunter_male.png",
+    "value": "",
+    "vender": "FALSE",
+    "effect": "",
+    "stock": ""
   },
   {
     "name": "-- Abyss --",
     "image": "",
     "value": "",
-    "vendor": "FALSE",
+    "vender": "FALSE",
     "effect": "",
-    "Stock": ""
+    "stock": ""
   },
   {
     "name": "1hCR Baton of Righteousness",
     "image": "https://blzmedia-a.akamaihd.net/d3/icons/items/large/unique_combatstaff_2h_004_1xx_demonhunter_male.png",
     "value": "",
-    "vendor": "FALSE",
+    "vender": "FALSE",
     "effect": "",
-    "Stock": ""
+    "stock": ""
   },
   {
     "name": "lhSL Blessed stakes",
     "image": "https://blzmedia-a.akamaihd.net/d3/icons/items/large/dagger_003_demonhunter_male.png",
     "value": "",
-    "vendor": "FALSE",
+    "vender": "FALSE",
     "effect": "These count as magic weapons against vampires only. The effect is that they can hit vampires while other non-magical weapons cannot. Against other creatures, they count as light slashing weapons, so they are at -1 to attack. If you have one vial of holy water, you can dip a stake into it. The first attack from a holy-water dipped stake will inflict 2 wounds upon a vampire (and count as a single attack). All classes, including",
-    "Stock": ""
+    "stock": ""
   },
   {
     "name": "lhSL Silver Weapon +1",
     "image": "https://blzmedia-a.akamaihd.net/d3/icons/items/large/unique_sword_1h_set_03_x1_demonhunter_male.png",
     "value": "",
-    "vendor": "FALSE",
+    "vender": "FALSE",
     "effect": "",
-    "Stock": ""
+    "stock": ""
   },
   {
     "name": "1hSL Silver Weapon +1",
     "image": "https://blzmedia-a.akamaihd.net/d3/icons/items/large/unique_sword_1h_set_03_x1_demonhunter_male.png",
     "value": "",
-    "vendor": "FALSE",
+    "vender": "FALSE",
     "effect": "",
-    "Stock": ""
+    "stock": ""
   }
 ]

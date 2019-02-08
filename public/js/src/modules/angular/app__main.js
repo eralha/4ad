@@ -240,6 +240,9 @@ define('module/angular/app__main', [
 				hero.spells = new Array();
 				//heroDataTbl
 
+				//added later need to check this on store load
+				hero.expertSkills = new Array();
+
 			
 			dataService.loadHeroData().then(function(data){
 				console.log(data);
@@ -282,6 +285,15 @@ define('module/angular/app__main', [
 				scope.dataSpells = data;
 			});
 
+			dataService.loadSkillsData().then(function(data){
+				var c = 0;
+				for(var i in data){
+					data[i].id = c;
+					c ++;
+				}
+				scope.dataExpertSkills = data;
+			});
+
 			scope.heroClassSelected = function(){
 				var classData = scope.heroClasses[scope.selectedClass];
 				hero.class = classData.class;
@@ -293,11 +305,16 @@ define('module/angular/app__main', [
 				if(placeholder == 'items'){ item = scope.dataItems[item]; }
 				if(placeholder == 'armor'){ item = scope.dataArmor[item]; }
 				if(placeholder == 'spells'){ item = scope.dataSpells[item]; }
+				if(placeholder == 'expertSkills'){ item = scope.dataExpertSkills[item]; }
 
 				item = angular.copy(item);
 
-				item.controllValue = 1;
-				item.id = Math.random()*60000000;
+				if(placeholder == 'items' || placeholder == 'spells'){
+					item.controllValue = 1;
+					item.id = Math.random()*60000000;
+				}
+
+				console.log(hero);
 
 				hero[placeholder].push(item);
 			}
@@ -379,6 +396,12 @@ define('module/angular/app__main', [
 
 				if(stored){
 					hero = angular.copy(stored);
+
+					//check for missing propertis between versions
+					if(!hero.expertSkills){
+						hero.expertSkills = new Array();
+					}
+
 					scope.hero = hero;
 					$rootScope[sheetName] = scope.hero;
 					scope.$apply();

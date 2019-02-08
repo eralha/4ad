@@ -247,6 +247,30 @@ define('module/angular/services/main', [
             	return defer.promise;
 			}
 
+			this.loadSkillsData = function(){
+			    var lang = langService.lang;
+				var path = '/data/expert_skills.json';
+
+				//create defer object and call ajax
+				var defer = $q.defer();
+
+				//se já carregamos este url não o voltamos a carregar
+				if(sup.data[path]){
+					defer.resolve(sup.data[path]);
+					return defer.promise;
+				}
+
+            	$http.get(path).then(function(data, status, headers, config) {
+				  data = data.data;
+		          sup.data[path] = data;
+		          defer.resolve(sup.data[path]);
+		        }, function(data, status, headers, config) {
+		          defer.reject();
+		        });
+
+            	return defer.promise;
+			}
+
 
             return this;
         }]);
