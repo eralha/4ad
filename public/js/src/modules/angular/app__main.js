@@ -98,7 +98,7 @@ define('module/angular/app__main', [
 
 				var sc = $(selector).offset().top;
 
-	    		$("html, body").stop().animate({scrollTop: sc}, 0, 'swing');
+				$("html, body").stop().animate({scrollTop: sc}, 0, 'swing');
 	    	}
 
 		}]);
