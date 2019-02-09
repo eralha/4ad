@@ -243,7 +243,7 @@ define('module/angular/app__main', [
 
 			
 			dataService.loadHeroData().then(function(data){
-				console.log(data);
+				//console.log(data);
 				scope.heroClasses = data;
 			});
 
@@ -365,6 +365,8 @@ define('module/angular/app__main', [
 				armorSlot2 = (hero.armor[armorSlot2]) ? hero.armor[armorSlot2].name : '';
 
 				var searchArr = [armorSlot1, armorSlot2];
+
+				//console.log('searchArr', searchArr);
 				
 				var armorTypes = new Array({name:'light armor', mod: 1}, {name: 'heavy armor',mod: 2}, {name: 'shield', mod: 1});
 				var plusMods = new Array({name:'+1', mod: 1}, {name:'+2', mod: 2}, {name:'+3', mod: 3}, {name:'+4', mod: 4});
@@ -372,13 +374,16 @@ define('module/angular/app__main', [
 				for(var i = 0; i < searchArr.length; i++){
 					for(var j = 0; j < armorTypes.length; j++){
 						var name = String(armorTypes[j].name).toLocaleLowerCase();
-						if(String(searchArr[i]).indexOf(name) != -1){ data = data + armorTypes[j].mod; }
+						var searchName = searchArr[i].toLocaleLowerCase();
+						//console.log(searchName);
+						if(String(searchName).indexOf(name) != -1){ data = data + armorTypes[j].mod; }
 					}
 				}
 				
 				for(var i = 0; i < searchArr.length; i++){
 					for(var j = 0; j < plusMods.length; j++){
-						if(String(searchArr[i]).indexOf(plusMods[j].name) != -1){ data = data + plusMods[j].mod; }
+						var searchName = searchArr[i].toLocaleLowerCase();
+						if(String(searchName).indexOf(plusMods[j].name) != -1){ data = data + plusMods[j].mod; }
 					}
 				}
 

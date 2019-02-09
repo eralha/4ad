@@ -178,7 +178,7 @@ define('module/angular/directives/common', [
 		        //console.log($(e).html(), arguments);
 		        return function(scope, elem, attrs) {
 
-							console.log(scope);
+							//console.log(scope);
 
 							scope.remVal = function(){
 								if(!scope.obj[scope.prop]){ scope.obj[scope.prop] = 1; }
