@@ -319,7 +319,6 @@ define('module/angular/app__main', [
 				}
 
 				//console.log(item, hero[placeholder]);
-
 				hero[placeholder].push(item);
 			}
 			scope.removeItem = function(placeholder, index){
@@ -393,7 +392,7 @@ define('module/angular/app__main', [
 				if(heroName == 'Swashbuckler'){ data = data + Math.floor(lvl / 2); }
 				if(heroName == 'Rogue'){ data = data + lvl; }
 				
-				return 'Deffense ('+data+')';
+				return 'Defense ('+data+')';
 			}
 
 			scope.getItemImage = function(item){
