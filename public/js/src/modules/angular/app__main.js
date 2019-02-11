@@ -335,13 +335,21 @@ define('module/angular/app__main', [
 				//console.log('selectedWeapon', selectedWeapon, heroName, lvl);
 
 				if(selectedWeapon){
+					selectedWeapon = selectedWeapon.toLocaleLowerCase();
+					//console.log(selectedWeapon);
+
 					if(String(selectedWeapon).indexOf('lh') != -1){ data = -1; }
 					if(String(selectedWeapon).indexOf('1h') != -1 || String(selectedWeapon).indexOf('bow') != -1){ data = 0; }
 					if(String(selectedWeapon).indexOf('2h') != -1){ data = 1; }
+
+					if(String(selectedWeapon).indexOf('orb') != -1){ data = 0; }
 					
 					if(String(selectedWeapon).indexOf('+1') != -1){ data = data + 1; }
 					if(String(selectedWeapon).indexOf('+2') != -1){ data = data + 2; }
 					if(String(selectedWeapon).indexOf('+3') != -1){ data = data + 3; }
+					if(String(selectedWeapon).indexOf('+4') != -1){ data = data + 4; }
+					if(String(selectedWeapon).indexOf('+5') != -1){ data = data + 5; }
+					if(String(selectedWeapon).indexOf('+6') != -1){ data = data + 6; }
 					
 					if(heroName == 'Warrior'){ data = data + lvl; }
 					if(heroName == 'Dwarf'){ data = data + lvl; }
@@ -368,7 +376,7 @@ define('module/angular/app__main', [
 				//console.log('searchArr', searchArr);
 				
 				var armorTypes = new Array({name:'light armor', mod: 1}, {name: 'heavy armor',mod: 2}, {name: 'shield', mod: 1});
-				var plusMods = new Array({name:'+1', mod: 1}, {name:'+2', mod: 2}, {name:'+3', mod: 3}, {name:'+4', mod: 4});
+				var plusMods = new Array({name:'+1', mod: 1}, {name:'+2', mod: 2}, {name:'+3', mod: 3}, {name:'+4', mod: 4} , {name:'+5', mod: 5});
 				
 				for(var i = 0; i < searchArr.length; i++){
 					for(var j = 0; j < armorTypes.length; j++){
