@@ -21,17 +21,17 @@ define('module/angular/app__main', [
 			    .state('home', {
 				  url: "/",
 				  controller: 'HomeCtrll',
-			      templateUrl: "/templates/home.html"
+			      templateUrl: "/templates/home.html?v="+JS_VERSION
 				})
 				.state('parse_link', {
 					url: "/parse_link/:linkData",
 					controller: 'ParseLinkCtrll',
-					templateUrl: "/templates/parse_link.html"
+					templateUrl: "/templates/parse_link.html?v="+JS_VERSION
 				  })
 				.state('party', {
 					url: "/party/:partyId",
 					controller: 'PartyCtrll',
-					templateUrl: "/templates/party.html"
+					templateUrl: "/templates/party.html?v="+JS_VERSION
 				})
 				
 				;

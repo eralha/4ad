@@ -109,7 +109,7 @@ define('module/angular/directives/common', [
 		  return {
 				restrict: 'EA',
 				scope: {},
-				templateUrl: '/templates/dir_layer_roll.html',
+				templateUrl: '/templates/dir_layer_roll.html?v='+JS_VERSION,
 		    compile: function(e, a){
 		        //console.log($(e).html(), arguments);
 		        return function(scope, elem, attrs) {
@@ -118,6 +118,9 @@ define('module/angular/directives/common', [
 							var dice = parseInt(attrs.dirLayerRoll);
 							scope.hero = $rootScope[sheetName];
 							scope.roll = Math.ceil(Math.random()*dice);
+
+							if(dice == 6 && scope.roll >= 6){ scope.critical = true; }
+							if(dice == 8 && scope.roll >= 7){ scope.critical = true; }
 
 							scope.remWound = function(){
 								scope.hero.wounds = parseInt(scope.hero.wounds) - 1;
@@ -152,13 +155,41 @@ define('module/angular/directives/common', [
 		  return {
 				restrict: 'EA',
 				scope: {},
-				templateUrl: '/templates/dir_hero_sheet_ctrll.html',
+				templateUrl: '/templates/dir_hero_sheet_ctrll.html?v='+JS_VERSION,
 		    compile: function(e, a){
 		        //console.log($(e).html(), arguments);
 		        return function(scope, elem, attrs) {
 
 							scope.sheetName = attrs.dirHeroSheetCtrll;
 							scope.addLayerItemInfo = $rootScope.addLayerItemInfo;
+
+		        }
+		    }
+		  };
+		}]);
+
+
+		module.directive('dirTopInfo', ['$rootScope', '$injector', function($rootScope, $injector) {
+		  return {
+				restrict: 'EA',
+		    compile: function(e, a){
+		        //console.log($(e).html(), arguments);
+		        return function(scope, elem, attrs) {
+
+							var ww = $(window).width();
+
+							$(window).scroll(function(){
+
+								var st = $(window).scrollTop();
+								var showAt = 100;//px scroll
+
+								if(ww <= ipadPortrait && st >= showAt){
+									$(elem).addClass('visible');
+								}else{
+									$(elem).removeClass('visible');
+								}
+
+							});
 
 		        }
 		    }
@@ -173,7 +204,7 @@ define('module/angular/directives/common', [
 					obj: '=',
 					prop: '@'
 				},
-				templateUrl: '/templates/dir_qty_control.html',
+				templateUrl: '/templates/dir_qty_control.html?v='+JS_VERSION,
 		    compile: function(e, a){
 		        //console.log($(e).html(), arguments);
 		        return function(scope, elem, attrs) {

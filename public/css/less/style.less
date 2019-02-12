@@ -60,6 +60,34 @@ body, html{
 
 h1, h2, h3, h4, h5, h6 { .reset; }
 
+.shadow {
+  -webkit-box-shadow: 0px 0px 24px 1px rgba(0,0,0,0.75);
+  -moz-box-shadow: 0px 0px 24px 1px rgba(0,0,0,0.75);
+  box-shadow: 0px 0px 24px 1px rgba(0,0,0,0.75);
+}
+
+.c-fixed_info {
+  display: none;
+  position: fixed;
+  z-index: 100;
+  top: 0px;
+  left: 0px;
+  padding: 5px 0;
+  width: 100%;
+  color: #fff;
+  font-size: 14px;
+  text-align: center;
+  background-color: #630404;
+  .shadow;
+
+  &.visible { display: block; }
+  
+  .column {
+    display: inline-block;
+    margin: 0 5px;
+  }
+}
+
 .c-sheet_list {
   .wrapper {
     width: 100%;
@@ -297,9 +325,7 @@ h1, h2, h3, h4, h5, h6 { .reset; }
   z-index: 2000;
   bottom: 0px;
   width: 100%;
-  -webkit-box-shadow: 0px 0px 24px 1px rgba(0,0,0,0.75);
-  -moz-box-shadow: 0px 0px 24px 1px rgba(0,0,0,0.75);
-  box-shadow: 0px 0px 24px 1px rgba(0,0,0,0.75);
+  .shadow;
 
   .btn {
     padding: 6px 6px;
@@ -401,6 +427,7 @@ h1, h2, h3, h4, h5, h6 { .reset; }
     font-size: 44px;
     line-height: 44px;
     text-align: center;
+    .critical_hit { font-weight: normal; }
   }
   .wound_title {
     margin-top: 15px;

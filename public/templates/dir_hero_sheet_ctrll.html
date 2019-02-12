@@ -1,6 +1,20 @@
 ﻿
 
+
   <div class="container_12 c-hero_sheet cf" ng-controller="HeroCtrll" ng-class="{'c-hero_sheet--dead' : hero.life <= 0}">
+
+      <!-- WILL DISPLAY ON MOBILE -->
+      <div class="c-fixed_info" dir-Top-Info>
+        <div class="column">
+          <i class="fas fa-heart"></i> {{hero.life}}
+        </div>
+        <div class="column">
+          <i class="fas fa-male"></i> {{hero.class}} lvl{{hero.level}}
+        </div>
+      </div>
+
+
+
     <div class="wrapper">
 
       <div class="grid_12">

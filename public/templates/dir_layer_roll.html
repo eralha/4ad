@@ -1,7 +1,10 @@
 ﻿<div class="c-layer">
     <div class="bg"></div>
     <div class="content">
-      <div class="roll_result">{{roll}}</div>
+      <div class="roll_result">
+        {{roll}}
+        <div ng-if="critical" class="critical_hit"><i class="fab fa-critical-role"></i></div>
+      </div>
       <div class="info">
         <b>{{hero.class}}</b> lvl {{hero.level}}<br />
         H: {{hero.atkStr}}<br />

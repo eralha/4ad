@@ -176,7 +176,7 @@
     "stock": ""
   },
   {
-    "name": "Essence of Ruby +1 att",
+    "name": "Essence of Ruby +1 atk",
     "image": "https://blzmedia-a.akamaihd.net/d3/icons/items/large/p3_gem_convert_ruby_demonhunter_male.png",
     "value": 100,
     "vendor": "TRUE",
@@ -216,7 +216,7 @@
     "stock": ""
   },
   {
-    "name": "Steel Arrows +1",
+    "name": "Steel Arrows +1 atk",
     "image": "https://blzmedia-a.akamaihd.net/d3/icons/items/large/quiver_002_demonhunter_male.png",
     "value": 30,
     "vendor": "TRUE",
@@ -248,7 +248,7 @@
     "stock": 5
   },
   {
-    "name": "Sharpened Sling Arrows +1",
+    "name": "Sharpened Sling Arrows +1 atk",
     "image": "https://blzmedia-a.akamaihd.net/d3/icons/items/large/quiver_204_demonhunter_male.png",
     "value": 30,
     "vendor": "TRUE",
