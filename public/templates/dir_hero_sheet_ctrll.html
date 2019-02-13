@@ -284,7 +284,7 @@
           <h1 class="subtitle">Spells</h1>
           <div class="item_list item_list--items">
             <div class="item cf" ng-repeat="item in hero.spells track by item.id">
-              <div class="image"><img src="{{getItemImage(item)}}" alt=""></div>
+              <div class="image" ng-click="addLayerItemInfo(item);"><img src="{{getItemImage(item)}}" alt=""></div>
               <div class="name">{{item.name}}</div>
               <div class="ctrl">
                 <div dir-Qty-Control="" class="btn-group" obj="item" prop="controllValue"></div>

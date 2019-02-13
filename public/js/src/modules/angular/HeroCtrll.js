@@ -221,7 +221,7 @@ define('module/angular/HeroCtrll', [
 			}
 
 			scope.rollHeroDice = function(dice){
-				$rootScope.addLayerDice(dice, scope.hero);
+				$rootScope.addLayerDice(dice, scope.sheetName);
 			}
 
 			scope.hero = hero;
