@@ -35,6 +35,9 @@
         <div class="label">
           <input type="text" class="form-control form-control--big" ng-model="hero.conditionEffect" placeholder="Status/Condition"/>
         </div>
+        <div class="label">
+          <textarea class="form-control form-control--textarea" ng-model="hero.customNotes" placeholder="Notes"></textarea>
+        </div>
       </div>
 
       <div class="clear"></div>
@@ -122,12 +125,42 @@
       <div class="grid_6">
           <h1 class="subtitle">ATK</h1>
           <div class="label"><b>{{ GETHEROATTACK(hero.SelectedWeapon) }}</b></div>
-          <div class="label"><input type="text" placeholder="Custom ATK mod" class="form-control" ng-model="hero.customAtkMod" /></div>
+          <div class="label">
+            <select ng-model="hero.customAtkMod" class="form-control">
+              <option value="">Custom ATK mod</option>
+              <option value="-5">-5</option>
+              <option value="-4">-4</option>
+              <option value="-3">-3</option>
+              <option value="-2">-2</option>
+              <option value="-1">-1</option>
+              <option value="0">0</option>
+              <option value="-1">+1</option>
+              <option value="-2">+2</option>
+              <option value="-3">+3</option>
+              <option value="-4">+4</option>
+              <option value="-5">+5</option>
+            </select>
+          </div>
       </div>
       <div class="grid_6">
           <h1 class="subtitle">DEF</h1>
           <div class="label"><b>{{ GETHERODEFENSE(hero.armorSlot1, hero.armorSlot2, '', '') }}</b></div>
-          <div class="label"><input type="text" placeholder="Custom DEF mod" class="form-control" ng-model="hero.customDefMod" /></div>
+          <div class="label">
+            <select ng-model="hero.customDefMod" class="form-control">
+                <option value="">Custom DEF mod</option>
+                <option value="-5">-5</option>
+                <option value="-4">-4</option>
+                <option value="-3">-3</option>
+                <option value="-2">-2</option>
+                <option value="-1">-1</option>
+                <option value="0">0</option>
+                <option value="-1">+1</option>
+                <option value="-2">+2</option>
+                <option value="-3">+3</option>
+                <option value="-4">+4</option>
+                <option value="-5">+5</option>
+              </select>
+          </div>
       </div>
 
 

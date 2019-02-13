@@ -164,7 +164,7 @@
     "image": "https://i.imgur.com/8pOftgr.png",
     "value": 20,
     "vendor": "TRUE",
-    "effect": "Wiz or elf only, spend 1 to scout one room ahead",
+    "effect": "Wiz only, spend 1 to scout one room ahead",
     "stock": ""
   },
   {
@@ -266,7 +266,7 @@
   {
     "name": "Box of nails",
     "image": "https://i.imgur.com/Pz1trPO.png",
-    "value": "4",
+    "value": 4,
     "vendor": "FALSE",
     "effect": "To put on doors while resting",
     "stock": ""
@@ -300,7 +300,7 @@
     "image": "https://blzmedia-a.akamaihd.net/d3/icons/items/large/templar_special_103_demonhunter_male.png",
     "value": "",
     "vendor": "FALSE",
-    "effect": "",
+    "effect": "roll a d6 to use on a 1 result lose one life.",
     "stock": ""
   },
   {
