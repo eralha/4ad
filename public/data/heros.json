@@ -5,7 +5,8 @@
     "def": "roll+armor+shield",
     "abilities": "Undead: lvl + roll + wpn; Healing x3 d6 + lvl;",
     "startLife": 4,
-    "equipment": "wpn: 1H,2H,sling (no bow); armor: Any"
+    "equipment": "wpn: 1H,2H,sling (no bow); armor: Any",
+    "gold": "2d6"
   },
   {
     "class": "Rogue",
@@ -13,7 +14,8 @@
     "def": "roll+armor+lvl",
     "abilities": "If minion/vermin < party: lvl+roll+wpn; Disarm traps: +lvl",
     "startLife": 3,
-    "equipment": "wpn: Light wpn, sling; armor: light armor"
+    "equipment": "wpn: Light wpn, sling; armor: light armor",
+    "gold": "d6"
   },
   {
     "class": "Wizard",
@@ -21,7 +23,8 @@
     "def": "roll",
     "abilities": "spell attack: Roll + lvl; Puzzles/Riddles: +lvl",
     "startLife": 2,
-    "equipment": "wpn: light wpn,sling; armor: none"
+    "equipment": "wpn: light wpn,sling; armor: none",
+    "gold": "3d6"
   },
   {
     "class": "Barbarian",
@@ -29,7 +32,8 @@
     "def": "roll+armor+shield",
     "abilities": "Rage:Roll x3, take best one; 2 wounds if vs boss",
     "startLife": 7,
-    "equipment": "wpn: Any; armor: shield, light armor"
+    "equipment": "wpn: Any; armor: shield, light armor",
+    "gold": "4d6"
   },
   {
     "class": "Elf",
@@ -37,7 +41,8 @@
     "def": "roll+armor+shield",
     "abilities": "With 2h weapon: roll + wpn always +1 vs anything with \"orc\" in name",
     "startLife": 4,
-    "equipment": "wpn: any; armor: any"
+    "equipment": "wpn: any; armor: any",
+    "gold": "d6"
   },
   {
     "class": "Dwarf",
@@ -45,7 +50,8 @@
     "def": "roll+armor+shield | +1 vs troll,ogre,giant",
     "abilities": "Ranged attack: roll + wpn - always +1 vs goblin; paid 20% more for gems; can smell treasure d6+lvl",
     "startLife": 5,
-    "equipment": "apn: any; armor: any"
+    "equipment": "apn: any; armor: any",
+    "gold": "2d6"
   },
   {
     "class": "Warrior",
@@ -53,7 +59,8 @@
     "def": "roll+armor+shield",
     "abilities": "spell attack: Roll + lvl; Puzzles/Riddles: +lvl",
     "startLife": 6,
-    "equipment": "wpn: any; armor: any"
+    "equipment": "wpn: any; armor: any",
+    "gold": "3d6"
   },
   {
     "class": "Halfling",
@@ -61,7 +68,8 @@
     "def": "roll+armor | + lvl if vs giant, troll, ogre",
     "abilities": "roll+wpn; Luck points (lvl +1) May re-roll dice attack,defense, search,treasure, magic treasure tables (may not reroll a reroll)",
     "startLife": 3,
-    "equipment": "wpn: Light wpn, sling; armor: light armor"
+    "equipment": "wpn: Light wpn, sling; armor: light armor",
+    "gold": "2d6"
   },
   {
     "class": "Swashbuckler",
@@ -69,6 +77,7 @@
     "def": "1/2 lvl+roll",
     "abilities": "When kill amonster gain a panache point (max = lvl), can be spent to add +1 to ATK or DEF, only one per roll.",
     "startLife": 4,
-    "equipment": "wpn: 1h, lh, no bow; armor: rings only"
+    "equipment": "wpn: 1h, lh, no bow; armor: rings only",
+    "gold": "2d6"
   }
 ]

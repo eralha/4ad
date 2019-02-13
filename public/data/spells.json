@@ -2,32 +2,32 @@
   {
     "name": "Fireball",
     "image": "https://blzmedia-a.akamaihd.net/d3/icons/skills/64/wizard_meteor.png",
-    "effect": ""
+    "effect": "(dragons immune) slays multiple minions (roll + lvl of wizard/elf - lvl of minion = number killed).  If used vs boss, auto 1 wound"
   },
   {
     "name": "Blessing",
     "image": "https://blzmedia-a.akamaihd.net/d3/icons/skills/64/x1_crusader_heavensfury3.png",
-    "effect": ""
+    "effect": "removes curse or petrified"
   },
   {
     "name": "Lightning Bolt",
     "image": "https://blzmedia-a.akamaihd.net/d3/icons/skills/64/wizard_shockpulse.png",
-    "effect": ""
+    "effect": "kills just one minion but 2 wounds vs boss (if it hits)"
   },
   {
     "name": "Sleep",
     "image": "https://blzmedia-a.akamaihd.net/d3/icons/skills/64/x1_crusader_smite.png",
-    "effect": ""
+    "effect": "perform attack roll, if it hits, defeats boss or d6+L minions.  Dragons and undead are immune"
   },
   {
     "name": "Escape",
     "image": "https://blzmedia-a.akamaihd.net/d3/icons/skills/64/wizard_teleport.png",
-    "effect": ""
+    "effect": "disappear without defense roll"
   },
   {
     "name": "Protect",
     "image": "https://blzmedia-a.akamaihd.net/d3/icons/skills/64/wizard_diamondskin.png",
-    "effect": ""
+    "effect": "Defense roll +1 for a single hero during battle"
   },
   {
     "name": "Healing",
