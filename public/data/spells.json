@@ -37,7 +37,7 @@
   {
     "name": "Frost Nova",
     "image": "https://blzmedia-a.akamaihd.net/d3/icons/skills/64/wizard_frostnova.png",
-    "effect": "When hit, on minion roll + lvl - minion lvl = num minion paralized, they will not attack on their next turn, if boss hit it will lose 2 attacks for his next combat round, on explode lose one more attack."
+    "effect": "When hit, on minion roll + lvl - minion lvl = num minion paralized, they will not attack on their next turn, if boss hit it will lose 2 attacks for his next combat round, on explode lose one more attack. Can be used against meduse gaze, if hit no gaze roll."
   },
   {
     "name": "-- Abyss --",
