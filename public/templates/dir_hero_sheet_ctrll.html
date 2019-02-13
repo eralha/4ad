@@ -122,10 +122,12 @@
       <div class="grid_6">
           <h1 class="subtitle">ATK</h1>
           <div class="label"><b>{{ GETHEROATTACK(hero.SelectedWeapon) }}</b></div>
+          <div class="label"><input type="text" placeholder="Custom ATK mod" class="form-control" ng-model="hero.customAtkMod" /></div>
       </div>
       <div class="grid_6">
           <h1 class="subtitle">DEF</h1>
           <div class="label"><b>{{ GETHERODEFENSE(hero.armorSlot1, hero.armorSlot2, '', '') }}</b></div>
+          <div class="label"><input type="text" placeholder="Custom DEF mod" class="form-control" ng-model="hero.customDefMod" /></div>
       </div>
 
 
@@ -263,6 +265,13 @@
               <option value="{{$index}}" ng-repeat="item in dataSpells">{{item.name}}</option>
             </select>
           <button type="button" class="btn btn--full btn-dark">Add Spells</button>
+      </div>
+
+
+      <div class="btn-group list hero_dice_roller">
+          <!-- <button type="button" class="btn btn-warning" ng-click="saveSheetData();">Save</button> -->
+          <button type="button" class="btn btn-secondary" ng-click="rollHeroDice(6);">Roll d6</button>
+          <button type="button" class="btn btn-secondary" ng-click="rollHeroDice(8);">Roll d8</button>
       </div>
 
 

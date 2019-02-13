@@ -224,6 +224,8 @@ h1, h2, h3, h4, h5, h6 { .reset; }
       height: 100%;
       line-height: 20px;
       padding: 0;
+      font-size: 13px;
+      height: 22px;
       text-align: center !important;
       .rounded(0px);
     }
@@ -315,9 +317,20 @@ h1, h2, h3, h4, h5, h6 { .reset; }
     .grid_3,
     .label{ background-color: #616161; }
   }
-}
+  .hero_dice_roller {
+    width: 100%;
+    height: 40px;
+    margin-top: 20px;
+  }
+}//end hero sheet
 .c-hero_sheet--dead {
   opacity: 0.5;
+}
+@media only screen and (max-width: @ipadPortrait){
+  .c-hero_sheet {
+    //só mostra este dice roller em desktop
+    .hero_dice_roller { display: none; }
+  }
 }
 
 .c-bottom_controlls {

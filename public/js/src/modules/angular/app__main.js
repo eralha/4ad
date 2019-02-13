@@ -361,6 +361,11 @@ define('module/angular/app__main', [
 					if(heroName == 'Wizard'){}
 					if(heroName == 'Swashbuckler'){ data = data + Math.floor(lvl / 2); }
 				}
+
+				//reading custom modifiers from game effects
+				if(hero.customAtkMod && hero.customAtkMod != ''){
+					data = data + (parseInt(hero.customAtkMod));
+				}
 				
 				return 'Attack ('+data+'+roll)';
 			}
@@ -399,6 +404,11 @@ define('module/angular/app__main', [
 				var lvl = parseInt(hero.level);
 				if(heroName == 'Swashbuckler'){ data = data + Math.floor(lvl / 2); }
 				if(heroName == 'Rogue'){ data = data + lvl; }
+
+				//reading custom modifiers from game effects
+				if(hero.customDefMod && hero.customDefMod != ''){
+					data = data + (parseInt(hero.customDefMod));
+				}
 				
 				return 'Defense ('+data+')';
 			}
@@ -407,6 +417,10 @@ define('module/angular/app__main', [
 				if(String(item.name).indexOf('Scroll') != -1){ return 'https://blzmedia-a.akamaihd.net/d3/icons/items/large/p2_actbountyreagent_01_demonhunter_male.png'; }
 
 				return item.image;
+			}
+
+			scope.rollHeroDice = function(dice){
+				$rootScope.addLayerDice(dice, scope.hero);
 			}
 
 			scope.hero = hero;
