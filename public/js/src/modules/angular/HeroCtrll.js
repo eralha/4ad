@@ -183,8 +183,6 @@ define('module/angular/HeroCtrll', [
 
 				var searchArr = [armorSlot1, armorSlot2, armorSlot3, armorSlot4];
 
-				console.log(searchArr);
-
 				//console.log('searchArr', searchArr);
 				
 				var armorTypes = new Array({name:'light armor', mod: 1}, {name: 'heavy armor',mod: 2}, {name: 'shield', mod: 1});
