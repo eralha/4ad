@@ -10,7 +10,7 @@ define('module/angular/PartyCtrll', [
 
 			scope.partyId = $stateParams.partyId;
 
-			var stored = gameDataService.getSheetData($stateParams.partyId, sheetName);
+			var stored = gameDataService.getPartyData($stateParams.partyId);
 
 			dataLayer.push({'event' : 'Party_Loaded', 'party_name' : stored.name});
 
