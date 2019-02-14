@@ -40,7 +40,9 @@
 
         <h1>Saved Parties</h1>
         <ul class="list-group">
-          <a ui-sref="party({partyId: item.id})" ng-repeat="item in gamesData track by item.id"><li class="list-group-item">{{item.name}}</li></a>
+          <a ui-sref="party({partyId: item.id})" ng-repeat="item in gamesData track by item.id">
+            <li class="list-group-item">{{item.name}}</li>
+          </a>
 
           <li class="list-group-item" ng-if="gamesData.length == 0">No Parties found, start by creating one.</li>
         </ul>
@@ -54,7 +56,7 @@
             <div class="alert alert-info mt_10" ng-if="dataCopied">
               Party data link copied to clip board, use the link to access your data on another device.
             </div>
-            <button type="button" class="btn btn-primary btn-sm mt_10" ng-if="dataCopied" ng-click="shareData();">Share party on FB</button>
+            <button type="button" class="btn btn-primary btn-sm mt_10 hidden" ng-if="dataCopied" ng-click="shareData();">Share party on FB</button>
         </div>
 
         <div class="text mt_20">

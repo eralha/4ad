@@ -10,6 +10,10 @@ define('module/angular/PartyCtrll', [
 
 			scope.partyId = $stateParams.partyId;
 
+			var stored = gameDataService.getSheetData($stateParams.partyId, sheetName);
+
+			dataLayer.push({'event' : 'Party_Loaded', 'party_name' : stored.name});
+
 			scope.sheetSelected = 'heroSheet1';
 			scope.selectHeroSheet = function(sheetNum){
 				scope.sheetSelected = 'heroSheet'+sheetNum;
