@@ -3,8 +3,8 @@ define('module/angular/PartyCtrll', [
 	], function (app) {
 
 		
-		app.controller('PartyCtrll', ['$scope', '$rootScope', 'dataService', 'langService', 'ngProgressFactory', '$state', '$sce', '$filter', '$stateParams',
-		function($scope, $rootScope, dataService, langService, ngProgressFactory, $state, $sce, $filter, $stateParams) {
+		app.controller('PartyCtrll', ['$scope', '$rootScope', 'dataService', 'langService', 'ngProgressFactory', '$state', '$sce', '$filter', '$stateParams', 'gameDataService',
+		function($scope, $rootScope, dataService, langService, ngProgressFactory, $state, $sce, $filter, $stateParams, gameDataService) {
 
 			var scope = $scope;
 
