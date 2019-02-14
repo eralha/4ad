@@ -1,7 +1,12 @@
 define('module/angular/directives/common', [
 	'module/angular/directives/main',
 	'module/angular/directives/cycle',
-	'module/angular/directives/dir_slider_component'
+	'module/angular/directives/dir_slider_component',
+	'module/angular/directives/dir_Qty_Control',
+	'module/angular/directives/dir_Hero_Sheet_Ctrll',
+	'module/angular/directives/dir_Top_Info',
+	'module/angular/directives/dir_Layer_Roll',
+	'module/angular/directives/dir_Layer_Item_Info'
 ], function (module) {
 
 
@@ -105,36 +110,6 @@ define('module/angular/directives/common', [
 		  };
 		}]);
 
-		module.directive('dirLayerRoll', ['$rootScope', '$injector', function($rootScope, $injector) {
-		  return {
-				restrict: 'EA',
-				scope: {},
-				templateUrl: '/templates/dir_layer_roll.html?v='+JS_VERSION,
-		    compile: function(e, a){
-		        //console.log($(e).html(), arguments);
-		        return function(scope, elem, attrs) {
-
-							var sheetName = attrs.sheet;
-							var dice = parseInt(attrs.dirLayerRoll);
-							scope.hero = $rootScope[sheetName];
-							scope.roll = Math.ceil(Math.random()*dice);
-
-							if(dice == 6 && scope.roll >= 6){ scope.critical = true; }
-							if(dice == 8 && scope.roll >= 7){ scope.critical = true; }
-
-							scope.remWound = function(){
-								scope.hero.wounds = parseInt(scope.hero.wounds) - 1;
-							}
-
-							scope.addWound = function(){
-								scope.hero.wounds = parseInt(scope.hero.wounds) + 1;
-							}
-
-		        }
-		    }
-		  };
-		}]);
-
 		module.directive('dirLayerItemInfo', ['$rootScope', '$injector', function($rootScope, $injector) {
 		  return {
 				restrict: 'EA',
@@ -145,82 +120,6 @@ define('module/angular/directives/common', [
 		    compile: function(e, a){
 		        //console.log($(e).html(), arguments);
 		        return function(scope, elem, attrs) {
-		        }
-		    }
-		  };
-		}]);
-
-
-		module.directive('dirHeroSheetCtrll', ['$rootScope', '$injector', function($rootScope, $injector) {
-		  return {
-				restrict: 'EA',
-				scope: {},
-				templateUrl: '/templates/dir_hero_sheet_ctrll.html?v='+JS_VERSION,
-		    compile: function(e, a){
-		        //console.log($(e).html(), arguments);
-		        return function(scope, elem, attrs) {
-
-							scope.sheetName = attrs.dirHeroSheetCtrll;
-							scope.addLayerItemInfo = $rootScope.addLayerItemInfo;
-
-		        }
-		    }
-		  };
-		}]);
-
-
-		module.directive('dirTopInfo', ['$rootScope', '$injector', function($rootScope, $injector) {
-		  return {
-				restrict: 'EA',
-		    compile: function(e, a){
-		        //console.log($(e).html(), arguments);
-		        return function(scope, elem, attrs) {
-
-							var ww = $(window).width();
-
-							$(window).scroll(function(){
-
-								var st = $(window).scrollTop();
-								var showAt = 100;//px scroll
-
-								if(ww <= ipadPortrait && st >= showAt){
-									$(elem).addClass('visible');
-								}else{
-									$(elem).removeClass('visible');
-								}
-
-							});
-
-		        }
-		    }
-		  };
-		}]);
-
-		
-		module.directive('dirQtyControl', ['$rootScope', '$injector', function($rootScope, $injector) {
-		  return {
-				restrict: 'EA',
-				scope: {
-					obj: '=',
-					prop: '@'
-				},
-				templateUrl: '/templates/dir_qty_control.html?v='+JS_VERSION,
-		    compile: function(e, a){
-		        //console.log($(e).html(), arguments);
-		        return function(scope, elem, attrs) {
-
-							//console.log(scope);
-
-							scope.remVal = function(){
-								if(scope.obj[scope.prop] == undefined){ scope.obj[scope.prop] = 1; }
-								scope.obj[scope.prop] = parseInt(scope.obj[scope.prop]) - 1;
-							}
-
-							scope.addVal = function(){
-								if(scope.obj[scope.prop] == undefined){ scope.obj[scope.prop] = 1; }
-								scope.obj[scope.prop] = parseInt(scope.obj[scope.prop]) + 1;
-							}
-
 		        }
 		    }
 		  };
