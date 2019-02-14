@@ -167,6 +167,8 @@ define('module/angular/HeroCtrll', [
 				if(hero.customAtkMod && hero.customAtkMod != ''){
 					data = data + (parseInt(hero.customAtkMod));
 				}
+
+				hero.atkValue = data;
 				
 				return 'Attack ('+data+'+roll)';
 			}
@@ -176,8 +178,12 @@ define('module/angular/HeroCtrll', [
 
 				armorSlot1 = (hero.armor[armorSlot1]) ? hero.armor[armorSlot1].name : '';
 				armorSlot2 = (hero.armor[armorSlot2]) ? hero.armor[armorSlot2].name : '';
+				armorSlot3 = (hero.armor[armorSlot3]) ? hero.armor[armorSlot3].name : '';
+				armorSlot4 = (hero.armor[armorSlot4]) ? hero.armor[armorSlot4].name : '';
 
-				var searchArr = [armorSlot1, armorSlot2];
+				var searchArr = [armorSlot1, armorSlot2, armorSlot3, armorSlot4];
+
+				console.log(searchArr);
 
 				//console.log('searchArr', searchArr);
 				
@@ -210,6 +216,8 @@ define('module/angular/HeroCtrll', [
 				if(hero.customDefMod && hero.customDefMod != ''){
 					data = data + (parseInt(hero.customDefMod));
 				}
+
+				hero.defValue = data;
 				
 				return 'Defense ('+data+')';
 			}
@@ -255,7 +263,7 @@ define('module/angular/HeroCtrll', [
 
 						hero.atkStr = scope.GETHEROATTACK(hero.SelectedWeapon);
 						hero.atkStrOH = scope.GETHEROATTACK(hero.SelectedWeaponOffHand);
-						hero.defStr = scope.GETHERODEFENSE(hero.armorSlot1, hero.armorSlot2, '', '');
+						hero.defStr = scope.GETHERODEFENSE(hero.armorSlot1, hero.armorSlot2, hero.armorSlot3, hero.armorSlot4);
 					}
 	
 					if(!$rootScope.sheetData){ $rootScope.sheetData = {}; }

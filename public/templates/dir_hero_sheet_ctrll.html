@@ -6,10 +6,16 @@
       <!-- WILL DISPLAY ON MOBILE -->
       <div class="c-fixed_info" dir-Top-Info>
         <div class="column">
-          <i class="fas fa-heart"></i> {{hero.life}}
+          <i class="fas fa-male"></i> {{hero.class}} lvl{{hero.level}}
         </div>
         <div class="column">
-          <i class="fas fa-male"></i> {{hero.class}} lvl{{hero.level}}
+            <i class="fas fa-heart"></i> {{hero.life}}
+          </div>
+        <div class="column">
+            <i class="fas fa-fist-raised"></i> {{ hero.atkValue }}
+        </div>
+        <div class="column">
+            <i class="fas fa-shield"></i> {{ hero.defValue }}
         </div>
       </div>
 
@@ -145,7 +151,7 @@
       </div>
       <div class="grid_6">
           <h1 class="subtitle">DEF</h1>
-          <div class="label"><b>{{ GETHERODEFENSE(hero.armorSlot1, hero.armorSlot2, '', '') }}</b></div>
+          <div class="label"><b>{{ GETHERODEFENSE(hero.armorSlot1, hero.armorSlot2, hero.armorSlot3, hero.armorSlot4) }}</b></div>
           <div class="label">
             <select ng-model="hero.customDefMod" class="form-control">
                 <option value="">Custom DEF mod</option>
@@ -211,6 +217,30 @@
                 </select>
             </div>
         </div>
+
+        <!-- rings -->
+        <div class="grid_3">&nbsp;</div>
+        <div class="grid_3 mt_5">
+            <h1 class="subtitle">Ring 1</h1>
+            <div class="label">
+                <div class="equiped_item_img" ng-if="hero.armorSlot3 && hero.armorSlot3 != emptyVal"><img src="{{hero.armor[hero.armorSlot3].image}}" alt="" /></div>
+                <select class="form-control" ng-model="hero.armorSlot3">
+                  <option value="{{emptyVal}}">None</option>
+                  <option value="{{$index}}" ng-repeat="item in hero.armor track by item.id">{{item.name}}</option>
+                </select>
+            </div>
+        </div>
+        <div class="grid_3 mt_5">
+            <h1 class="subtitle">Ring 2</h1>
+            <div class="label">
+                <div class="equiped_item_img" ng-if="hero.armorSlot4 && hero.armorSlot4 != emptyVal"><img src="{{hero.armor[hero.armorSlot4].image}}" alt="" /></div>
+                <select class="form-control" ng-model="hero.armorSlot4">
+                  <option value="{{emptyVal}}">None</option>
+                  <option value="{{$index}}" ng-repeat="item in hero.armor track by item.id">{{item.name}}</option>
+                </select>
+            </div>
+        </div>
+        <div class="grid_3">&nbsp;</div>
       </div>
 
 
