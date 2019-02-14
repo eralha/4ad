@@ -261,8 +261,10 @@ define('module/angular/HeroCtrll', [
 						hero.life = hero.heroDataTbl.startLife + parseInt(hero.level);
 						hero.life = hero.life - parseInt(hero.wounds);
 
-						hero.atkStr = scope.GETHEROATTACK(hero.SelectedWeapon);
+						//esta linah tem de vir primeiro para não sobrepor valor negativo na var hero.atkStr
 						hero.atkStrOH = scope.GETHEROATTACK(hero.SelectedWeaponOffHand);
+						//vem depois
+						hero.atkStr = scope.GETHEROATTACK(hero.SelectedWeapon);
 						hero.defStr = scope.GETHERODEFENSE(hero.armorSlot1, hero.armorSlot2, hero.armorSlot3, hero.armorSlot4);
 					}
 	
