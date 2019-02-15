@@ -19,7 +19,7 @@ function parseRowData(holder, row){
   });
 }
 
-function getSheetData(sheetIndex, res){
+function getSheetDataByIndex(sheetIndex, res){
   // spreadsheet key is the long id in the sheets URL
   var doc = new GoogleSpreadsheet('1fn-l3VrxWTMx_sDIJAyYYoprQA2tQzVSyJU8637yYw8');
   var sheet;
@@ -38,6 +38,37 @@ function getSheetData(sheetIndex, res){
 
           res.send(data);
         });//end get rows
+  
+  });//end get info
+}
+
+function getSheetDataByTitle(sheetTitle, res){
+  // spreadsheet key is the long id in the sheets URL
+  var doc = new GoogleSpreadsheet('1fn-l3VrxWTMx_sDIJAyYYoprQA2tQzVSyJU8637yYw8');
+  var sheet;
+
+  doc.getInfo(function(err, info) {
+    
+    var data = new Array();
+
+    for(var i in info.worksheets){
+      //console.log(info.worksheets[i].title)
+      if(info.worksheets[i].title == sheetTitle){ sheet = info.worksheets[i];}
+    }
+
+    var data = new Array();
+
+    sheet.getRows({
+      offset: 1
+    }, function( err, rows ){
+      
+      for(i in rows){
+        parseRowData(data, rows[i]);
+      }
+
+      res.send(data);
+    });//end get rows
+
   
   });//end get info
 }
@@ -66,7 +97,7 @@ app.use(express.static('public'));
 
 app.get('/heros', function(req, res){
   var doc = new GoogleSpreadsheet('1fn-l3VrxWTMx_sDIJAyYYoprQA2tQzVSyJU8637yYw8');
-  
+
   res.setHeader('Content-Type', 'application/json');
 
   doc.getInfo(function(err, info) {
@@ -103,31 +134,36 @@ app.get('/heros', function(req, res){
 app.get('/items', function(req, res){
   res.setHeader('Content-Type', 'application/json');
 
-  getSheetData(2, res);
+  //getSheetDataByIndex(2, res);
+  getSheetDataByTitle('Data - items', res);
 });
 
 app.get('/spells', function(req, res){
   res.setHeader('Content-Type', 'application/json');
 
-  getSheetData(5, res);
+  //getSheetDataByIndex(5, res);
+  getSheetDataByTitle('Data - Spels', res);
 });
 
 app.get('/weapons', function(req, res){
   res.setHeader('Content-Type', 'application/json');
 
-  getSheetData(3, res);
+  //getSheetDataByIndex(3, res);
+  getSheetDataByTitle('Data - Weapons', res);
 });
 
 app.get('/armor', function(req, res){
   res.setHeader('Content-Type', 'application/json');
 
-  getSheetData(4, res);
+  //getSheetDataByIndex(4, res);
+  getSheetDataByTitle('Data - Armor', res);
 });
 
 app.get('/expert_skills', function(req, res){
   res.setHeader('Content-Type', 'application/json');
 
-  getSheetData(1, res);
+  //getSheetDataByIndex(1, res);
+  getSheetDataByTitle('Data - Expert Skills', res);
 });
 
 
