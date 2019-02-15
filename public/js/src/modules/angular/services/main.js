@@ -129,7 +129,8 @@ define('module/angular/services/main', [
 
 			this.loadHeroData = function(){
 			    var lang = langService.lang;
-				var path = '/data/heros.json';
+				//var path = '/data/heros.json';
+				var path = '/heros';
 
 				//create defer object and call ajax
 				var defer = $q.defer();
@@ -153,7 +154,8 @@ define('module/angular/services/main', [
 
 			this.loadWeaponsData = function(){
 			    var lang = langService.lang;
-				var path = '/data/weapons.json';
+				//var path = '/data/weapons.json';
+				var path = '/weapons';
 
 				//create defer object and call ajax
 				var defer = $q.defer();
@@ -177,7 +179,8 @@ define('module/angular/services/main', [
 
 			this.loadItemsData = function(){
 			    var lang = langService.lang;
-				var path = '/data/items.json';
+				//var path = '/data/items.json';
+				var path = '/items';
 
 				//create defer object and call ajax
 				var defer = $q.defer();
@@ -201,7 +204,8 @@ define('module/angular/services/main', [
 
 			this.loadArmorData = function(){
 			    var lang = langService.lang;
-				var path = '/data/armor.json';
+				//var path = '/data/armor.json';
+				var path = '/armor';
 
 				//create defer object and call ajax
 				var defer = $q.defer();
@@ -225,7 +229,8 @@ define('module/angular/services/main', [
 
 			this.loadSpellsData = function(){
 			    var lang = langService.lang;
-				var path = '/data/spells.json';
+				//var path = '/data/spells.json';
+				var path = '/spells';
 
 				//create defer object and call ajax
 				var defer = $q.defer();
@@ -249,7 +254,8 @@ define('module/angular/services/main', [
 
 			this.loadSkillsData = function(){
 			    var lang = langService.lang;
-				var path = '/data/expert_skills.json';
+				//var path = '/data/expert_skills.json';
+				var path = '/expert_skills';
 
 				//create defer object and call ajax
 				var defer = $q.defer();
