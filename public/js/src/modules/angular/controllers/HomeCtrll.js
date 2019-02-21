@@ -41,7 +41,7 @@ define('module/angular/controllers/HomeCtrll', [
 			  }
 
 			$scope.getLinkToData = function(){
-				var adress = 'http://fouragainstdarkness.herokuapp.com/#!/parse_link/';
+				var adress = 'https://fouragainstdarkness.herokuapp.com/#!/parse_link/';
 				//var adress = 'http://localhost:8080/#!/parse_link/';
 				var data = gameDataService.getGamesData();
 
