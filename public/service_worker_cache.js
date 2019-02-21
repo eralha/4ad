@@ -1,6 +1,6 @@
-var cacheNames = ['web-assets_v1'];//old caches to delete on a new service worker activation
-var version = 'sdfkjsdfkljsklfdklsjflkjsklfjklsjfklj90s09d8f09sd8f09890jsdkjashd';
-var cacheName = 'web-assets_v2';
+var cacheNamesToDelete = ['web-assets_v1', 'web-assets_v2'];//old caches to delete on a new service worker activation
+var version = '543809A3AB8F6E6A87ED821E14047FC22BEB414EA569F0F9499719F0EB341F91';
+var cacheName = 'web-assets_v3';
 
 self.addEventListener('install', function(event) {
     console.log('install');
@@ -26,13 +26,19 @@ self.addEventListener('install', function(event) {
 
     event.waitUntil(caches.keys().then(function(cacheNames) {
         return Promise.all(
-          cacheNames.filter(function(cacheName) {
-            console.log('Worker Deleting Cache');
+          cacheNames.filter(function(name) {
             // Return true if you want to remove this cache,
             // but remember that caches are shared across
             // the whole origin
-            return true;
+            if(cacheNamesToDelete.indexOf(name) != -1){
+              console.log('Worker Deleting Cache', name);
+              return true;
+            }else{
+              return false;
+            }
+
           }).map(function(cacheName) {
+            console.log('Deleting', cacheName);
             return caches.delete(cacheName);
           })
         );

@@ -42,6 +42,14 @@ define('module/angular/controllers/HeroCtrll', [
 				//added later need to check this on store load
 				hero.expertSkills = new Array();
 
+			function parseItemImageData(data){
+				for(var i in data){
+					//se as imagens de base de dados não estiverem a vir do heroku colocamos a pasta de nomes estáticos
+					if(String(data[i].image).indexOf('/images/4ad/') == -1){
+						data[i].image = '/images/4ad/items_by_name/'+data[i].name+'.png';
+					}
+				}
+			}
 			
 			dataService.loadData('/json/heros?v='+JS_VERSION).then(function(data){
 				//console.log(data);
@@ -54,6 +62,7 @@ define('module/angular/controllers/HeroCtrll', [
 					data[i].id = c;
 					c ++;
 				}
+				parseItemImageData(data);
 				scope.dataWeapons = data;
 			});
 
@@ -63,6 +72,7 @@ define('module/angular/controllers/HeroCtrll', [
 					data[i].id = c;
 					c ++;
 				}
+				parseItemImageData(data);
 				scope.dataItems = data;
 			});
 
@@ -72,6 +82,7 @@ define('module/angular/controllers/HeroCtrll', [
 					data[i].id = c;
 					c ++;
 				}
+				parseItemImageData(data);
 				scope.dataArmor = data;
 			});
 
@@ -81,6 +92,7 @@ define('module/angular/controllers/HeroCtrll', [
 					data[i].id = c;
 					c ++;
 				}
+				parseItemImageData(data);
 				scope.dataSpells = data;
 			});
 
