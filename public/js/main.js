@@ -8,69 +8,14 @@ requirejs.config({
     paths: {
         'lib' : './libs/',
         'module' : appCFO_baseUrl+'/modules',
-        'angular' : 'libs/angular.min',
         'TweenLite' : './libs/greensock/TweenLite.min',
+        'angular' : 'libs/angular.min',
         'plugins' : appCFO_baseUrl+'/modules/plugins'
     },
     priority: [
         "plugins"
     ]
 });
-
-function initCycleWithPager(cycleConfig, CycleSelector, PagerSelector){
-    if($(CycleSelector).hasClass('cycle__noparse')){ return; }
-
-    $(CycleSelector).on('cycle-before', function(event, optionHash, outgoingSlideEl, incomingSlideEl, forwardFlag){
-        $(PagerSelector).find("li").removeClass("selected");
-        $(PagerSelector).find("li._slide_"+optionHash.nextSlide).addClass("selected");
-    });
-
-    //we initialize the pager when the cycle is initialized
-    $(CycleSelector).on('cycle-initialized', function(event, optionHash){
-        var pagerbase = '<ul class="cycle_pager">{content}</ul>';
-
-        var h = "";
-        if(optionHash.slideCount > 1){
-            for(var i = 0; i < optionHash.slideCount; i++){
-            h += "<li class='_slide_"+i+"' data-index='"+i+"'></li>";
-            }
-        }
-
-        pagerbase = String(pagerbase).replace("{content}", h);
-
-        var html = "";
-        //html += pagerbase;
-        (optionHash.slideCount <= 1)? html = h : html += pagerbase;
-
-        //select the first element of the pager
-        if($(PagerSelector).find('ul').length){
-            $(PagerSelector).find('ul').html(html);
-            $(PagerSelector).find("li._slide_0").addClass("selected");
-            //$(PagerSelector+" li._slide_0").addClass("selected");
-
-            //assign li click functions
-            $(PagerSelector).find("li").click(function(){
-                $(CycleSelector).cycle('goto', $(this).attr("data-index"));
-            });
-        }
-
-        //left and right buttons event handler
-            $(PagerSelector).find(".prev").click(function(){
-                $(CycleSelector).cycle('prev');
-            });
-            $(PagerSelector).find(".next").click(function(){
-                $(CycleSelector).cycle('next');
-            });
-    });
-
-    $(CycleSelector).removeClass('cycle__component-no_js');
-    $(CycleSelector).cycle(cycleConfig);
-}
-function wrapCenter(selector){
-    $(selector).each(function(){
-       $(this).wrap("<div class='outer-center'><div class='inner-center'></div></div>");
-    });
-}
 
 function fbShare(){
     window.open("http://www.facebook.com/sharer/sharer.php?u="+window.location+"?v="+Math.random());
@@ -146,51 +91,19 @@ var desktop = 1024;
 //Jquery Initialization
 require(['plugins'], function(plugins){
 
+    $("[data-angular-module]").each(function(){
+        var htmlElement = this;
 
-    //require dynamic Modules
-    if($("[data-pageModule]").length > 0){
-        require(["module/"+$("[data-pageModule]").attr("data-pageModule")]);        
-    }
+        if($(this).attr("data-init") == "false") { return; }
 
-    //loading Individual components
-    $("[data-component]").each(function(){
-        parseComponent(this);
-    });
-
-    require(['angular'], function(){
-        $("[data-angular-module]").each(function(){
-            var htmlElement = this;
-
-            if($(this).attr("data-init") == "false") { return; }
-
-            require([$(this).attr("data-angular-module")], function(){
-                $('.js_loading').removeClass('js_loading');
-                $('.angular-loading').removeClass('angular-loading');
-                
-                angular.bootstrap(document, ['app']);
-            });
+        require([$(this).attr("data-angular-module")], function(){
+            $('.js_loading').removeClass('js_loading');
+            $('.angular-loading').removeClass('angular-loading');
+            
+            angular.bootstrap(document, ['app']);
         });
     });
 
-    $('[data-load-template]').each(function(){
-        var url = $(this).attr('data-load-template');
-        var _self = this;
-
-        $.ajax({
-          content: 'html',
-          url: url,
-          context: this
-        }).done(function(data) {
-          $(_self).append(data);
-
-          var scope = $(_self).attr('data-scope');
-
-          //parsing components
-          $(_self).find("[data-component]").each(function(){
-            parseComponent(this, scope);
-          });
-        });//end done
-    });//end load template
 
     //set link to all data-href boxes
     $('[data-href]').click(function(){
@@ -210,3 +123,22 @@ require(['plugins'], function(plugins){
     })(jQuery);
 
 });
+
+if ('serviceWorker' in navigator) {
+    /*
+    navigator.serviceWorker.getRegistrations().then(function(registrations) {
+        for(i in registrations) {
+            registrations[i].unregister();
+        } 
+    });
+    /**/
+    
+    navigator.serviceWorker.register('/service_worker_cache.js').then(navigator.serviceWorker.ready)
+    .then(function () {
+        console.log('service worker registered')
+    })
+    .catch(function (error) {
+        console.log('error when registering service worker', error, arguments)
+    });
+    /**/
+}

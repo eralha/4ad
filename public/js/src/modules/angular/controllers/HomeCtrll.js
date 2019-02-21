@@ -1,5 +1,5 @@
-define('module/angular/HomeCtrll', [
-	'module/angular/MainCtrll',
+define('module/angular/controllers/HomeCtrll', [
+	'module/angular/controllers/MainCtrll',
 	], function (app) {
 
 		

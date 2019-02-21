@@ -95,7 +95,7 @@ app.use(function (req, res, next) {
 app.use(express.static('public'));
 
 
-app.get('/heros', function(req, res){
+app.get('/json/heros', function(req, res){
   var doc = new GoogleSpreadsheet('1fn-l3VrxWTMx_sDIJAyYYoprQA2tQzVSyJU8637yYw8');
 
   res.setHeader('Content-Type', 'application/json');
@@ -131,35 +131,35 @@ app.get('/heros', function(req, res){
 
 });
 
-app.get('/items', function(req, res){
+app.get('/json/items', function(req, res){
   res.setHeader('Content-Type', 'application/json');
 
   //getSheetDataByIndex(2, res);
   getSheetDataByTitle('Data - items', res);
 });
 
-app.get('/spells', function(req, res){
+app.get('/json/spells', function(req, res){
   res.setHeader('Content-Type', 'application/json');
 
   //getSheetDataByIndex(5, res);
   getSheetDataByTitle('Data - Spels', res);
 });
 
-app.get('/weapons', function(req, res){
+app.get('/json/weapons', function(req, res){
   res.setHeader('Content-Type', 'application/json');
 
   //getSheetDataByIndex(3, res);
   getSheetDataByTitle('Data - Weapons', res);
 });
 
-app.get('/armor', function(req, res){
+app.get('/json/armor', function(req, res){
   res.setHeader('Content-Type', 'application/json');
 
   //getSheetDataByIndex(4, res);
   getSheetDataByTitle('Data - Armor', res);
 });
 
-app.get('/expert_skills', function(req, res){
+app.get('/json/expert_skills', function(req, res){
   res.setHeader('Content-Type', 'application/json');
 
   //getSheetDataByIndex(1, res);

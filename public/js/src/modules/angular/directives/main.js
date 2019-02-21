@@ -1,6 +1,4 @@
-define('module/angular/directives/main', [
-	'angular'
-	], function () {
+define('module/angular/directives/main', [], function () {
 
 
 	var module = angular.module('app.Directives', []);

@@ -34,8 +34,7 @@ module.exports = function(grunt) {
               'public/js/src/modules/validators/*.js',
               'public/js/src/modules/forms/*.js',
               'public/js/src/modules/angular/app__main.js',
-              'public/js/dist/template.js',
-              'public/js/src/modules/angular/app__bootstrap.js',
+              'public/js/dist/template.js'
             ]//end files
           }
         }
@@ -70,7 +69,7 @@ module.exports = function(grunt) {
   
     // Default task(s).
     //grunt.registerTask('css', ['less', 'cssmin', 'autoprefixer']);
-    //grunt.registerTask('def', ['ngtemplates', 'uglify', 'less', 'cssmin']);
-    grunt.registerTask('def', ['uglify', 'less', 'cssmin']);
+    grunt.registerTask('def', ['ngtemplates', 'uglify', 'less', 'cssmin']);
+    //grunt.registerTask('def', ['uglify', 'less', 'cssmin']);
   
   };

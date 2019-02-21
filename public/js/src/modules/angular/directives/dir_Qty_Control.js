@@ -10,7 +10,7 @@ define('module/angular/directives/dir_Qty_Control', [
                         obj: '=',
                         prop: '@'
                     },
-                    templateUrl: '/templates/dir_qty_control.html?v='+JS_VERSION,
+                    templateUrl: '/templates/dir_qty_control.html',
                     compile: function(e, a){
                         //console.log($(e).html(), arguments);
                         return function(scope, elem, attrs) {

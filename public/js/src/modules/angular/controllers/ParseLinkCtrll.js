@@ -1,5 +1,5 @@
-define('module/angular/ParseLinkCtrll', [
-	'module/angular/MainCtrll',
+define('module/angular/controllers/ParseLinkCtrll', [
+	'module/angular/controllers/MainCtrll',
 	], function (app) {
 
 		

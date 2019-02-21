@@ -1,6 +1,4 @@
-define('module/angular/MainCtrll', [
-	'angular'
-	], function () {
+define('module/angular/controllers/MainCtrll', [], function () {
 
 
 	var app = angular.module('app.Controllers', []);

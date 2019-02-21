@@ -1,5 +1,5 @@
-define('module/angular/PartyCtrll', [
-	'module/angular/MainCtrll',
+define('module/angular/controllers/PartyCtrll', [
+	'module/angular/controllers/MainCtrll',
 	], function (app) {
 
 		
@@ -13,13 +13,6 @@ define('module/angular/PartyCtrll', [
 			var stored = gameDataService.getPartyData($stateParams.partyId);
 
 			//dataLayer.push({'event' : 'Party_Loaded', 'party_name' : stored.name});
-
-			ga('send', {
-				hitType: 'event',
-				eventCategory: 'Party',
-				eventAction: 'Load',
-				eventLabel: 'Name: '+stored.name
-			  });
 
 			scope.sheetSelected = 'heroSheet1';
 			scope.selectHeroSheet = function(sheetNum){

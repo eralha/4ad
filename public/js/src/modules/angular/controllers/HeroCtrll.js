@@ -1,5 +1,5 @@
-define('module/angular/HeroCtrll', [
-	'module/angular/MainCtrll',
+define('module/angular/controllers/HeroCtrll', [
+	'module/angular/controllers/MainCtrll',
 	], function (app) {
 
 		
@@ -43,12 +43,12 @@ define('module/angular/HeroCtrll', [
 				hero.expertSkills = new Array();
 
 			
-			dataService.loadHeroData().then(function(data){
+			dataService.loadData('/json/heros?v='+JS_VERSION).then(function(data){
 				//console.log(data);
 				scope.heroClasses = data;
 			});
 
-			dataService.loadWeaponsData().then(function(data){
+			dataService.loadData('/json/weapons?v='+JS_VERSION).then(function(data){
 				var c = 0;
 				for(var i in data){
 					data[i].id = c;
@@ -57,7 +57,7 @@ define('module/angular/HeroCtrll', [
 				scope.dataWeapons = data;
 			});
 
-			dataService.loadItemsData().then(function(data){
+			dataService.loadData('/json/items?v='+JS_VERSION).then(function(data){
 				var c = 0;
 				for(var i in data){
 					data[i].id = c;
@@ -66,7 +66,7 @@ define('module/angular/HeroCtrll', [
 				scope.dataItems = data;
 			});
 
-			dataService.loadArmorData().then(function(data){
+			dataService.loadData('/json/armor?v='+JS_VERSION).then(function(data){
 				var c = 0;
 				for(var i in data){
 					data[i].id = c;
@@ -75,7 +75,7 @@ define('module/angular/HeroCtrll', [
 				scope.dataArmor = data;
 			});
 
-			dataService.loadSpellsData().then(function(data){
+			dataService.loadData('/json/spells?v='+JS_VERSION).then(function(data){
 				var c = 0;
 				for(var i in data){
 					data[i].id = c;
@@ -84,7 +84,7 @@ define('module/angular/HeroCtrll', [
 				scope.dataSpells = data;
 			});
 
-			dataService.loadSkillsData().then(function(data){
+			dataService.loadData('/json/expert_skills?v='+JS_VERSION).then(function(data){
 				var c = 0;
 				for(var i in data){
 					data[i].id = c;

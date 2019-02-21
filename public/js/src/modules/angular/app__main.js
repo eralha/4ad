@@ -1,18 +1,27 @@
+var app = angular.module('app', []);
+
 define('module/angular/app__main', [
 	'lib/ngProgress',
 	'lib/ngAnimate',
 	'lib/ui.router',
 	'module/angular/services/main',
 	'module/angular/directives/common',
-	'module/angular/MainCtrll',
-	'module/angular/HeroCtrll',
-	'module/angular/HomeCtrll',
-	'module/angular/ParseLinkCtrll',
-	'module/angular/PartyCtrll'
+	'module/angular/controllers/MainCtrll',
+	'module/angular/controllers/HeroCtrll',
+	'module/angular/controllers/HomeCtrll',
+	'module/angular/controllers/ParseLinkCtrll',
+	'module/angular/controllers/PartyCtrll'
 	], function () {
 
 
-	var app = angular.module('app', ['app.Services', 'app.Directives', 'app.Controllers', 'ui.router', 'ngAnimate', 'ngProgress']);
+	angular.module("app").requires.push('app.Services');
+	angular.module("app").requires.push('app.Directives');
+	angular.module("app").requires.push('app.Controllers');
+	angular.module("app").requires.push('ui.router');
+	angular.module("app").requires.push('ngAnimate');
+	angular.module("app").requires.push('ngProgress');
+
+	//app = angular.module('app', ['app.Services', 'app.Directives', 'app.Controllers', 'ui.router', 'ngAnimate', 'ngProgress']);
 
 
 		app.config(['$stateProvider', '$urlRouterProvider', '$locationProvider', function($stateProvider, $urlRouterProvider, $locationProvider) {
@@ -26,17 +35,17 @@ define('module/angular/app__main', [
 			    .state('home', {
 				  url: "/",
 				  controller: 'HomeCtrll',
-			      templateUrl: "/templates/home.html?v="+JS_VERSION
+			      templateUrl: "/templates/home.html"
 				})
 				.state('parse_link', {
 					url: "/parse_link/:linkData",
 					controller: 'ParseLinkCtrll',
-					templateUrl: "/templates/parse_link.html?v="+JS_VERSION
+					templateUrl: "/templates/parse_link.html"
 				  })
 				.state('party', {
 					url: "/party/:partyId",
 					controller: 'PartyCtrll',
-					templateUrl: "/templates/party.html?v="+JS_VERSION
+					templateUrl: "/templates/party.html"
 				})
 				
 				;

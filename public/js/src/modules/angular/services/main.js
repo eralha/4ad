@@ -1,6 +1,4 @@
-define('module/angular/services/main', [
-	'angular'
-	], function () {
+define('module/angular/services/main', [], function () {
 
 
 	var module = angular.module('app.Services', []);
@@ -125,7 +123,39 @@ define('module/angular/services/main', [
 			this.pageListDefer = {};
 			this.pagesDefer = {};
 			this.loading = false;
+
+			this.deferList = {};
+
 			sup = this;
+
+			this.loadData = function(path){
+				//var path = '/data/heros.json';
+
+				//create defer object and call ajax
+				if(this.deferList[path]){
+					return this.deferList[path].promise;
+				}
+
+				this.deferList[path] = $q.defer();
+
+				var defer = this.deferList[path];
+
+				//se já carregamos este url não o voltamos a carregar
+				if(sup.data[path]){
+					defer.resolve(sup.data[path]);
+					return defer.promise;
+				}
+
+            	$http.get(path).then(function(data, status, headers, config) {
+				  data = data.data;
+		          sup.data[path] = data;
+		          defer.resolve(sup.data[path]);
+		        }, function(data, status, headers, config) {
+		          defer.reject();
+		        });
+
+            	return defer.promise;
+			}
 
 			this.loadHeroData = function(){
 			    var lang = langService.lang;

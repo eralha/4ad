@@ -7,7 +7,7 @@ define('module/angular/directives/dir_Layer_Roll', [
             return {
             restrict: 'EA',
             scope: {},
-            templateUrl: '/templates/dir_layer_roll.html?v='+JS_VERSION,
+            templateUrl: '/templates/dir_layer_roll.html',
               compile: function(e, a){
                   //console.log($(e).html(), arguments);
                   return function(scope, elem, attrs) {

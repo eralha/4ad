@@ -7,7 +7,7 @@ define('module/angular/directives/dir_Hero_Sheet_Ctrll', [
             return {
                     restrict: 'EA',
                     scope: {},
-                    templateUrl: '/templates/dir_hero_sheet_ctrll.html?v='+JS_VERSION,
+                    templateUrl: '/templates/dir_hero_sheet_ctrll.html',
                 compile: function(e, a){
                     //console.log($(e).html(), arguments);
                     return function(scope, elem, attrs) {
