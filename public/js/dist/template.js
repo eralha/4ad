@@ -18,7 +18,7 @@ angular.module('app').run(['$templateCache', function($templateCache) {
     "\n" +
     "        <div class=\"column\">\r" +
     "\n" +
-    "          <i class=\"fas fa-male\"></i> {{hero.class}} lvl{{hero.level}}\r" +
+    "          <i class=\"fas fa-male\"></i> {{hero.class}} L({{hero.level}})\r" +
     "\n" +
     "        </div>\r" +
     "\n" +

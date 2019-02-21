@@ -1,9 +1,12 @@
-var cacheNames = [];//old caches to delete on a new service worker activation
+var cacheNames = ['web-assets_v1'];//old caches to delete on a new service worker activation
 var version = 'sdfkjsdfkljsklfdklsjflkjsklfjklsjfklj90s09d8f09sd8f09890jsdkjashd';
-var cacheName = 'web-assets_v1';
+var cacheName = 'web-assets_v2';
 
 self.addEventListener('install', function(event) {
     console.log('install');
+
+    //forca nova versão
+    self.skipWaiting();
     
     event.waitUntil(
       caches.open(cacheName).then(function(cache) {
