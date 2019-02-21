@@ -894,7 +894,7 @@ angular.module('app').run(['$templateCache', function($templateCache) {
     "\n" +
     "          This module is in developmen, ui will change with future versions.<br>\r" +
     "\n" +
-    "          Beta version 0.0.1\r" +
+    "          Beta version 0.0.1 (JS_version_{{JS_VERSION}})\r" +
     "\n" +
     "        </div>\r" +
     "\n" +

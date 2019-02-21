@@ -1,6 +1,6 @@
-var cacheNamesToDelete = ['web-assets_v1', 'web-assets_v2'];//old caches to delete on a new service worker activation
+var cacheNamesToDelete = ['web-assets_v1', 'web-assets_v2', 'web-assets_v3'];//old caches to delete on a new service worker activation
 var version = '543809A3AB8F6E6A87ED821E14047FC22BEB414EA569F0F9499719F0EB341F91';
-var cacheName = 'web-assets_v3';
+var cacheName = 'web-assets_v4';
 
 self.addEventListener('install', function(event) {
     console.log('install');

@@ -7,6 +7,8 @@ define('module/angular/controllers/MainCtrll', [], function () {
 	app.controller('MainCtrll', ['$scope', '$rootScope', 'dataService', 'langService', 'ngProgressFactory', '$state', '$sce', '$filter', '$compile',
 	function($scope, $rootScope, dataService, langService, ngProgressFactory, $state, $sce, $filter, $compile) {
 
+		$rootScope.JS_VERSION = JS_VERSION;
+
 		$scope.progressbar = ngProgressFactory.createInstance();
 
 		$rootScope.$on('$viewContentLoading', 
