@@ -14,7 +14,8 @@ self.addEventListener('install', function(event) {
           [
             '/',
             '/index.html',
-            '/js/dist/main.min.js'
+            '/js/dist/main.min.js',
+            '/css/style.css'
             /*
             '/css/style.css'
             '/css/fa_all.min.css',
