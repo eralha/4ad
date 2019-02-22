@@ -1,6 +1,6 @@
-var cacheNamesToDelete = ['web-assets_v1', 'web-assets_v2', 'web-assets_v3'];//old caches to delete on a new service worker activation
+var cacheNamesToDelete = ['web-assets_v1', 'web-assets_v2', 'web-assets_v3', 'web-assets_v4', 'web-assets_v5'];//old caches to delete on a new service worker activation
 var version = '543809A3AB8F6E6A87ED821E14047FC22BEB414EA569F0F9499719F0EB341F91';
-var cacheName = 'web-assets_v4';
+var cacheName = 'web-assets_v6';
 
 self.addEventListener('install', function(event) {
     console.log('install');
@@ -14,6 +14,14 @@ self.addEventListener('install', function(event) {
           [
             '/',
             '/index.html'
+            /*
+            '/css/style.css'
+            '/css/fa_all.min.css',
+            '/css/bootstrap.min.css',
+            '/js/dist/main.min.js',
+            '/js/libs/angular.min.js',
+            '/js/libs/jquery-1.9.1.min.js'
+            */
           ] //File list goes here
         );//end addAll 
       })
@@ -65,7 +73,7 @@ self.addEventListener('install', function(event) {
             || String(event.request.url).indexOf('/webfonts/') != -1
             || String(event.request.url).indexOf('/js/libs/') != -1
             || String(event.request.url).indexOf('/js/dist/') != -1
-            || String(event.request.url).indexOf('/json/') != -1
+            //|| String(event.request.url).indexOf('/json/') != -1
             || String(event.request.url).indexOf('/css/') != -1
             || String(event.request.url).indexOf('#!/') != -1
           ){
