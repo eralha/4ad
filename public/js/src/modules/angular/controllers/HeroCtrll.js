@@ -43,12 +43,19 @@ define('module/angular/controllers/HeroCtrll', [
 				hero.expertSkills = new Array();
 
 			function parseItemImageData(data){
+				var folder = '/images/4ad/items_by_name/';
 				for(var i in data){
 					//se as imagens de base de dados não estiverem a vir do heroku colocamos a pasta de nomes estáticos
 					if(String(data[i].image).indexOf('/images/4ad/') == -1){
-						data[i].image = '/images/4ad/items_by_name/'+data[i].name+'.png';
+						data[i].image = folder + data[i].name+'.png';
+
+						if(String(data[i].name).indexOf('Gem') == 0){
+							var lvl = (hero.level >= 5) ? 2 : 1;
+							var img = folder + 'gem_'+lvl+'_'+Math.round(Math.random()*5)+'.png.png';
+							data[i].image = img;
+						}
 					}
-				}
+				}//for
 			}
 			
 			dataService.loadData('/json/heros?v='+JS_VERSION).then(function(data){
@@ -233,7 +240,9 @@ define('module/angular/controllers/HeroCtrll', [
 			}
 
 			scope.getItemImage = function(item){
-				if(String(item.name).indexOf('Scroll') != -1){ return 'https://blzmedia-a.akamaihd.net/d3/icons/items/large/p2_actbountyreagent_01_demonhunter_male.png'; }
+				if(String(item.name).indexOf('Scroll') != -1){ 
+					return 'https://blzmedia-a.akamaihd.net/d3/icons/items/large/p2_actbountyreagent_01_demonhunter_male.png'; 
+				}
 
 				return item.image;
 			}
