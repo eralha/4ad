@@ -1,6 +1,6 @@
-var cacheNamesToDelete = ['web-assets_v1', 'web-assets_v2', 'web-assets_v3', 'web-assets_v4', 'web-assets_v5', 'web-assets_v6'];//old caches to delete on a new service worker activation
+var cacheNamesToDelete = ['web-assets_v1', 'web-assets_v2', 'web-assets_v3', 'web-assets_v4', 'web-assets_v5', 'web-assets_v6', 'web-assets_v7'];//old caches to delete on a new service worker activation
 var version = '543809A3AB8F6E6A87ED821E14047FC22BEB414EA569F0F9499719F0EB341F91';
-var cacheName = 'web-assets_v7';
+var cacheName = 'web-assets_v8';
 
 self.addEventListener('install', function(event) {
     console.log('install');
@@ -13,12 +13,12 @@ self.addEventListener('install', function(event) {
         return cache.addAll(
           [
             '/',
-            '/index.html'
+            '/index.html',
+            '/js/dist/main.min.js'
             /*
             '/css/style.css'
             '/css/fa_all.min.css',
             '/css/bootstrap.min.css',
-            '/js/dist/main.min.js',
             '/js/libs/angular.min.js',
             '/js/libs/jquery-1.9.1.min.js'
             */
