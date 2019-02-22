@@ -140,6 +140,9 @@ define('module/angular/services/main', [], function () {
 
 				var defer = this.deferList[path];
 
+				var pathID = String(path).split('?');
+					pathID = pathID[0];
+
 				//se já carregamos este url não o voltamos a carregar
 				if(sup.data[path]){
 					defer.resolve(sup.data[path]);
@@ -148,10 +151,24 @@ define('module/angular/services/main', [], function () {
 
             	$http.get(path).then(function(data, status, headers, config) {
 				  data = data.data;
-		          sup.data[path] = data;
+				  sup.data[path] = data;
+				  
+				  //put the data on local storage for offline use only
+				  localStorage.setItem(pathID, angular.toJson(data));
+
 		          defer.resolve(sup.data[path]);
 		        }, function(data, status, headers, config) {
-		          defer.reject();
+					
+					var data = localStorage.getItem(pathID);
+						data = angular.fromJson(data);
+
+					if(data){
+						console.log('Resolving from local storage', pathID);
+						defer.resolve(data);
+					}else{
+						console.log('defer rejected', path);
+						defer.reject();
+					}
 		        });
 
             	return defer.promise;
