@@ -51,7 +51,7 @@ define('module/angular/controllers/HeroCtrll', [
 
 						if(String(data[i].name).indexOf('Gem') == 0){
 							var lvl = (hero.level >= 5) ? 2 : 1;
-							var img = folder + 'gem_'+lvl+'_'+Math.round(Math.random()*5)+'.png.png';
+							var img = folder + 'gem_'+lvl+'_'+Math.ceil(Math.random()*5)+'.png.png';
 							data[i].image = img;
 						}
 					}
