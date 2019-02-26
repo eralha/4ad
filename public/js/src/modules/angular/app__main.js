@@ -10,7 +10,8 @@ define('module/angular/app__main', [
 	'module/angular/controllers/HeroCtrll',
 	'module/angular/controllers/HomeCtrll',
 	'module/angular/controllers/ParseLinkCtrll',
-	'module/angular/controllers/PartyCtrll'
+	'module/angular/controllers/PartyCtrll',
+	'module/angular/controllers/GetallCtrll'
 	], function () {
 
 
@@ -46,6 +47,11 @@ define('module/angular/app__main', [
 					url: "/party/:partyId",
 					controller: 'PartyCtrll',
 					templateUrl: "/templates/party.html"
+				})
+				.state('getall', {
+					url: "/getall/",
+					controller: 'GetallCtrll',
+					templateUrl: "/templates/getall.html"
 				})
 				
 				;

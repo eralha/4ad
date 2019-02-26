@@ -767,6 +767,36 @@ angular.module('app').run(['$templateCache', function($templateCache) {
   );
 
 
+  $templateCache.put('/templates/getall.html',
+    "\r" +
+    "\n" +
+    "  <div class=\"container_12 c-sheet_list\">\r" +
+    "\n" +
+    "    <div class=\"wrapper\">\r" +
+    "\n" +
+    "\r" +
+    "\n" +
+    "      \r" +
+    "\n" +
+    "        <div class=\"grid_12\">\r" +
+    "\n" +
+    "            <div ng-repeat=\"item in dataWeapons\"><img src=\"{{item.image}}\" /></div>\r" +
+    "\n" +
+    "            <div ng-repeat=\"item in dataItems\"><img src=\"{{item.image}}\" /></div>\r" +
+    "\n" +
+    "            <div ng-repeat=\"item in dataArmor\"><img src=\"{{item.image}}\" /></div>\r" +
+    "\n" +
+    "        </div>\r" +
+    "\n" +
+    "\r" +
+    "\n" +
+    "    </div>\r" +
+    "\n" +
+    "  </div>\r" +
+    "\n"
+  );
+
+
   $templateCache.put('/templates/home.html',
     "\r" +
     "\n" +
