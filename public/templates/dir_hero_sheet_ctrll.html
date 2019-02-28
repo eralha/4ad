@@ -92,8 +92,8 @@
     <div class="grid_12">
         <h1 class="subtitle">Expert Skills</h1>
         <div class="item_list">
-          <div class="item cf" ng-repeat="item in hero.expertSkills track by item.id">
-            <div class="name" ng-click="addLayerItemInfo(item);">{{item.name}}</div>
+          <div class="item cf" ng-repeat="item in hero.expertSkills track by item.id" ng-click="addLayerItemInfo(item);">
+            <div class="name">{{item.name}}</div>
             <div class="ctrl">
               <button type="button" class="btn btn-danger" ng-click="removeItem('expertSkills', $index);">X</button>
             </div>

@@ -57,6 +57,16 @@ define('module/angular/controllers/HeroCtrll', [
 					}
 				}//for
 			}
+
+			function updateItemEffects(heroData, loadedData){
+				for(var i in heroData){
+					var item = $filter('filter')(loadedData, {name: heroData[i].name}, true);
+					if(item[0]){
+						item = item[0];
+						heroData[i].effect = item.effect;
+					}
+				}
+			}
 			
 			dataService.loadData('/json/heros?v='+JS_VERSION).then(function(data){
 				//console.log(data);
@@ -80,6 +90,7 @@ define('module/angular/controllers/HeroCtrll', [
 					c ++;
 				}
 				parseItemImageData(data);
+				updateItemEffects(hero.items, data);
 				scope.dataItems = data;
 			});
 
@@ -100,6 +111,7 @@ define('module/angular/controllers/HeroCtrll', [
 					c ++;
 				}
 				parseItemImageData(data);
+				updateItemEffects(hero.spells, data);
 				scope.dataSpells = data;
 			});
 
@@ -109,6 +121,8 @@ define('module/angular/controllers/HeroCtrll', [
 					data[i].id = c;
 					c ++;
 				}
+
+				updateItemEffects(hero.expertSkills, data);
 				scope.dataExpertSkills = data;
 			});
 
@@ -277,11 +291,13 @@ define('module/angular/controllers/HeroCtrll', [
 				scope.$watch('hero', function(){
 					//console.log(hero, scope.sheetName);
 					if(hero.heroDataTbl){
+						//calculate hero life
 						hero.life = hero.heroDataTbl.startLife + parseInt(hero.level);
 						hero.life = hero.life - parseInt(hero.wounds);
 
-						//esta linah tem de vir primeiro para não sobrepor valor negativo na var hero.atkStr
+						//esta linha tem de vir primeiro para não sobrepor valor negativo na var hero.atkStr
 						hero.atkStrOH = scope.GETHEROATTACK(hero.SelectedWeaponOffHand);
+
 						//vem depois
 						hero.atkStr = scope.GETHEROATTACK(hero.SelectedWeapon);
 						hero.defStr = scope.GETHERODEFENSE(hero.armorSlot1, hero.armorSlot2, hero.armorSlot3, hero.armorSlot4);

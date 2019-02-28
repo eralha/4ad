@@ -105,7 +105,7 @@ app.get('/solucoes', function(req, res){
   
     doc.getInfo(function(err, info) {
       //heros
-      sheet = info.worksheets[7];
+      sheet = info.worksheets[8];
     
       sheet.getRows({
         offset: 1
@@ -114,8 +114,12 @@ app.get('/solucoes', function(req, res){
         var heros = new Array();
         var block = '';
         var sector = 1;
+        var sub = '';
   
         for(i in rows){
+
+          console.log(rows[i]);
+
           var c1 = (rows[i].essential != '') ? '' : 'off';
           var c2 = (rows[i].smart != '') ? '' : 'off';
           var c3 = (rows[i].expert != '') ? '' : 'off';
@@ -143,8 +147,9 @@ app.get('/solucoes', function(req, res){
           }//end sector parse
 
           if(rows[i].sub != ''){
+            sub = rows[i].sub;
             block += `
-            <div class="row row--sub_title">
+            <div class="row row--sub_title" data-sub-id="${sub}" ng-click="openSubContent('${sub}');">
                 <div class="column c1">${rows[i].sub}</div>
                 <div class="column c2"></div>
                 <div class="column c3"><div class="mark ${c2}"></div></div>
@@ -156,7 +161,7 @@ app.get('/solucoes', function(req, res){
 
           if(rows[i].subsub != ''){
             block += `
-            <div class="row row--content">
+            <div class="row row--content" data-subparent-id="${sub}">
               <div class="column c1">${rows[i].subsub}</div>
               <div class="column c2"></div>
               <div class="column c3"><div class="mark ${c2}"></div></div>

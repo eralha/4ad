@@ -190,9 +190,9 @@ angular.module('app').run(['$templateCache', function($templateCache) {
     "\n" +
     "        <div class=\"item_list\">\r" +
     "\n" +
-    "          <div class=\"item cf\" ng-repeat=\"item in hero.expertSkills track by item.id\">\r" +
+    "          <div class=\"item cf\" ng-repeat=\"item in hero.expertSkills track by item.id\" ng-click=\"addLayerItemInfo(item);\">\r" +
     "\n" +
-    "            <div class=\"name\" ng-click=\"addLayerItemInfo(item);\">{{item.name}}</div>\r" +
+    "            <div class=\"name\">{{item.name}}</div>\r" +
     "\n" +
     "            <div class=\"ctrl\">\r" +
     "\n" +
