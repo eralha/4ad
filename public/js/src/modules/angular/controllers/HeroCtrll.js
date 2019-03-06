@@ -292,7 +292,7 @@ define('module/angular/controllers/HeroCtrll', [
 					//console.log(hero, scope.sheetName);
 					if(hero.heroDataTbl){
 						//calculate hero life
-						hero.life = hero.heroDataTbl.startLife + parseInt(hero.level);
+						hero.life = parseInt(hero.heroDataTbl.startLife) + parseInt(hero.level);
 						hero.life = hero.life - parseInt(hero.wounds);
 
 						//esta linha tem de vir primeiro para não sobrepor valor negativo na var hero.atkStr

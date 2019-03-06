@@ -1,4 +1,4 @@
-var JS_VERSION = 23;
+var JS_VERSION = 24;
 
 //requirejs configurations
 var appCFO_baseUrl = "src";
