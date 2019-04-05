@@ -149,7 +149,7 @@ app.get('/solucoes', function(req, res){
           if(rows[i].sub != ''){
             sub = rows[i].sub;
             block += `
-            <div class="row row--sub_title" data-sub-id="${sub}" ng-click="openSubContent('${sub}');">
+            <div class="row row--sub_title" data-sub-id="${sector}_${sub}" ng-click="openSubContent('${sector}_${sub}');">
                 <div class="column c1">${rows[i].sub}</div>
                 <div class="column c2"></div>
                 <div class="column c3"><div class="mark ${c2}"></div></div>
@@ -161,7 +161,7 @@ app.get('/solucoes', function(req, res){
 
           if(rows[i].subsub != ''){
             block += `
-            <div class="row row--content" data-subparent-id="${sub}">
+            <div class="row row--content" data-subparent-id="${sector}_${sub}">
               <div class="column c1">${rows[i].subsub}</div>
               <div class="column c2"></div>
               <div class="column c3"><div class="mark ${c2}"></div></div>
