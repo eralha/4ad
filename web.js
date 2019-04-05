@@ -166,16 +166,6 @@ app.get('/json/expert_skills', function(req, res){
   getSheetDataByTitle('Data - Expert Skills', res);
 });
 
-//testing git webhooks
-app.post('/gitpushevent', function(req, res){
-  res.setHeader('Content-Type', 'application/json');
-
-  console.log(res.body);
-
-  res.send(["ok"]);
-});
-
-
 app.listen(port, function(){
 	console.log('Listen on '+port);
 });
