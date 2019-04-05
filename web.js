@@ -167,7 +167,7 @@ app.get('/json/expert_skills', function(req, res){
 });
 
 //testing git webhooks
-app.get('/gitpushevent', function(req, res){
+app.post('/gitpushevent', function(req, res){
   res.setHeader('Content-Type', 'application/json');
 
   console.log(res.body);
