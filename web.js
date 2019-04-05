@@ -169,5 +169,3 @@ app.get('/json/expert_skills', function(req, res){
 app.listen(port, function(){
 	console.log('Listen on '+port);
 });
-
-//test
